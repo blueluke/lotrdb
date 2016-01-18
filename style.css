@@ -93,7 +93,7 @@ body {
 }
 
 .leftdiv {
-  width: 25%;
+  width: 20%;
   min-width: 200px;
   float: left;
   height:108%;
@@ -101,9 +101,19 @@ body {
   padding-left: 5px;
 }
 
+.suggesteddiv {
+  width: 20%;
+  min-width: 200px;
+  float: left;
+  height:108%;
+  overflow-y: auto;
+  padding-left: 5px;
+}
+
+
 .cardpreviewdiv {
   text-align: center;
-  width:30%;
+  width:25%;
   min-width: 100px;
   float: left;
   height:108%;
@@ -111,7 +121,7 @@ body {
 }
 
 .rightdiv {
-  width: 45%;
+  width: 35%;
   min-width: 300px;
   height: 100%;
   float:left;
@@ -199,6 +209,13 @@ table.deck {
   margin: 0;
   width: 100%
 }
+
+table.suggested {
+  padding:0;
+  margin: 0;
+  width: 100%
+}
+
 
 tr.head {
   font-weight: bold;
