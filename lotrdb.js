@@ -371,7 +371,8 @@
           }
         }
       }
-      deck.clearSuggestedBlacklist();
+      suggested.clearBlacklist();
+      suggested.deckChange(this);
     };
     
     deck.loadLegacy = function(deckObject) {
@@ -1333,7 +1334,7 @@
   });
   
   
-  app.controller('myDecks',['deck','$localStorage','translate','$scope','cardObject','$location',function(deck,$localStorage,translate,$scope,cardObject,$location){
+  app.controller('myDecks',['deck','suggested','$localStorage','translate','$scope','cardObject','$location',function(deck,suggested,$localStorage,translate,$scope,cardObject,$location){
     if (!$localStorage.decks){
       $localStorage.decks={};
     }
@@ -1399,7 +1400,9 @@
         deck["4event"] = [];
         deck["5quest"] = [];
         deck.deckname = "";
-	deck.clearSuggestedBlacklist();
+	suggested.clearBlacklist();
+	suggested.deckChange(deck);
+
       //};
     };
     
