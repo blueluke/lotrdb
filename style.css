@@ -175,6 +175,7 @@ h3 {
 
 table.cardlist {
   width:100%;
+  margin-bottom: 15px;
 }
 
 
@@ -196,7 +197,7 @@ table.cardlist {
 
 table.deck {
   padding:0;
-  margin: 0;
+  margin: 0 0 15px 0;
   width: 100%
 }
 
