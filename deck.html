@@ -2,7 +2,7 @@
   <!-- panel containing deck name and total card count -->
   <div class="panel panel-primary" ng-show="deck.countHeroes()">
     <div class="panel-heading">
-      <h3 class="panel-title">{{deck.deckname}} <span class="pull-right"> {{deck.countTotal()}} </span></h3>
+      <h3 class="panel-title">{{(deck.deckname) || "Custom Deck"}} <span class="pull-right"> {{deck.countTotal()}} </span></h3>
     </div>
   </div>
 
