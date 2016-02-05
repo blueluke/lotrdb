@@ -1,49 +1,109 @@
-<div class="leftdiv">
-  
-  <h3 >{{deck.deckname}}</h3>
-  <h4 ng-show="deck.countTotal()">Total Cards: {{deck.countTotal()}}</h4>
-  <table class="deck">
-    <tr class="head" ng-show="deck.countHeroes()"><td style="width:100px"></td><td>Heroes (Starting threat: {{deck.startingThreat()}})</td></tr>
-    <tr class="card" ng-repeat="card in deck['1hero'] | orderBy:['sphere','name_norm']" ng-mouseover="deckC.changepreview(card)">
-      <td style="font-size:0;text-align:center;">
-        <button class="cardbutton" ng-class="{selected: deck.quantity(card)==0}" ng-click="deck.change(card,0)">X</button>
-      </td>
-      <td class="c{{card.sphere}}">{{card.name}}</td></li>
-    <tr class="head" ng-show="deck.countAllies()"><td></td><td>Allies ({{deck.countAllies()}})</td></tr>
-    <tr class="card" ng-repeat="card in deck['2ally'] | orderBy:['sphere','name_norm']" ng-mouseover="deckC.changepreview(card)">
-      <td style="font-size:0;">
-        <button class="cardbutton" ng-class="{selected: deck.quantity(card)==0}" ng-click="deck.change(card,0)">X</button>
-        <button class="cardbutton" ng-class="{selected: deck.quantity(card)==1}" ng-click="deck.change(card,1)">1</button>
-        <button class="cardbutton" ng-class="{selected: deck.quantity(card)==2}" ng-click="deck.change(card,2)" ng-hide="card.restrict || (deck.filtersettings.onecore && card.corequantity < 2 && deck.quantity(card)<2 )">2</button>
-        <button class="cardbutton" ng-class="{selected: deck.quantity(card)==3}" ng-click="deck.change(card,3)" ng-hide="card.restrict || (deck.filtersettings.onecore && card.corequantity < 3 && deck.quantity(card)<3 ) || (deck.filtersettings.twocore && card.corequantity < 2 && deck.quantity(card) < 3)">3</button>
-      </td>
-      <td class="c{{card.sphere}}">{{card.name}}</td></li>
-    <tr class="head" ng-show="deck.countAttachments()"><td></td><td>Attachments ({{deck.countAttachments()}})</td></tr>
-    <tr class="card" ng-repeat="card in deck['3attachment'] | orderBy:['sphere','name_norm']" ng-mouseover="deckC.changepreview(card)">
-      <td style="font-size:0;">
-        <button class="cardbutton" ng-class="{selected: deck.quantity(card)==0}" ng-click="deck.change(card,0)">X</button>
-        <button class="cardbutton" ng-class="{selected: deck.quantity(card)==1}" ng-click="deck.change(card,1)">1</button>
-        <button class="cardbutton" ng-class="{selected: deck.quantity(card)==2}" ng-click="deck.change(card,2)" ng-hide="card.restrict || (deck.filtersettings.onecore && card.corequantity < 2 && deck.quantity(card)<2 )">2</button>
-        <button class="cardbutton" ng-class="{selected: deck.quantity(card)==3}" ng-click="deck.change(card,3)" ng-hide="card.restrict || (deck.filtersettings.onecore && card.corequantity < 3 && deck.quantity(card)<3 ) || (deck.filtersettings.twocore && card.corequantity < 2 && deck.quantity(card) < 3)">3</button>
-      </td>
-      <td class="c{{card.sphere}}">{{card.name}}</td></li>
-    <tr class="head" ng-show="deck.countEvents()"><td></td><td>Events ({{deck.countEvents()}})</td></tr>
-    <tr class="card" ng-repeat="card in deck['4event'] | orderBy:['sphere','name_norm']" ng-mouseover="deckC.changepreview(card)">
-      <td style="font-size:0;">
-        <button class="cardbutton" ng-class="{selected: deck.quantity(card)==0}" ng-click="deck.change(card,0)">X</button>
-        <button class="cardbutton" ng-class="{selected: deck.quantity(card)==1}" ng-click="deck.change(card,1)">1</button>
-        <button class="cardbutton" ng-class="{selected: deck.quantity(card)==2}" ng-click="deck.change(card,2)" ng-hide="card.restrict || (deck.filtersettings.onecore && card.corequantity < 2 && deck.quantity(card)<2 )">2</button>
-        <button class="cardbutton" ng-class="{selected: deck.quantity(card)==3}" ng-click="deck.change(card,3)" ng-hide="card.restrict || (deck.filtersettings.onecore && card.corequantity < 3 && deck.quantity(card)<3 ) || (deck.filtersettings.twocore && card.corequantity < 2 && deck.quantity(card) < 3)">3</button>
-      </td>
-      <td class="c{{card.sphere}}">{{card.name}}</td></tr>
-    <tr class="head" ng-show="deck.countQuests()"><td></td><td>Quests ({{deck.countQuests()}})</td></tr>
-    <tr class="card" ng-repeat="card in deck['5quest'] | orderBy:['sphere','name_norm']" ng-mouseover="deckC.changepreview(card)">
-      <td style="font-size:0;">
-        <button class="cardbutton" ng-class="{selected: deck.quantity(card)==0}" ng-click="deck.change(card,0)">X</button>
-        <button class="cardbutton" ng-class="{selected: deck.quantity(card)==1}" ng-click="deck.change(card,1)">1</button>
-        <button class="cardbutton" ng-class="{selected: deck.quantity(card)==2}" ng-click="deck.change(card,2)" ng-hide="card.restrict || (deck.filtersettings.onecore && card.corequantity < 2 && deck.quantity(card)<2 )">2</button>
-        <button class="cardbutton" ng-class="{selected: deck.quantity(card)==3}" ng-click="deck.change(card,3)" ng-hide="card.restrict || (deck.filtersettings.onecore && card.corequantity < 3 && deck.quantity(card)<3 ) || (deck.filtersettings.twocore && card.corequantity < 2 && deck.quantity(card) < 3)">3</button>
-      </td>
-      <td class="c{{card.sphere}}">{{card.name}}</td></tr>
-  </table>
+<div>
+  <!-- panel containing deck name and total card count -->
+  <div class="panel panel-primary" ng-show="deck.countHeroes()">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{deck.deckname}} <span class="pull-right"> {{deck.countTotal()}} </span></h3>
+    </div>
+  </div>
+
+  <!-- collapsible panel group for all cards (replaces old table) -->
+  <div class="panel-group" id="deckpanel">
+    <div class="panel panel-default" id="heropanel" ng-show="deck.countHeroes()">
+      <div class="panel-heading" data-toggle="collapse" data-parent="#heropanel" style="cursor: pointer" href="#herolist">
+         <h2 class="panel-title">
+           <a data-toggle="collapse" href="#herolist">Heroes <span class="pull-right"> Threat: {{deck.startingThreat()}}</span> </a>
+         </h2>
+      </div>
+      <div id="herolist" class="panel-collapse collapse in">
+        <table class="table">
+          <tr class="card" ng-repeat="card in deck['1hero'] | orderBy:['sphere','name_norm']" ng-mouseover="deckC.changepreview(card)">
+            <td>
+              <button class="cardbutton" ng-class="{selected: deck.quantity(card)==0}" ng-click="deck.change(card,0)">X</button>
+            </td>
+            <td class="c{{card.sphere}}">{{card.name}}</td>
+          </td>
+        </table>
+       </div>
+     </div>
+
+     <div class="panel panel-default" id="allypanel" ng-show="deck.countAllies()">
+       <div class="panel-heading" data-toggle="collapse" data-parent="#allypanel" style="cursor: pointer" href="#allylist">
+          <h2 class="panel-title">
+            <a data-toggle="collapse" href="#allylist">Allies <span class="pull-right"> {{deck.countAllies()}} </span> </a>
+          </h2>
+       </div>
+       <div id="allylist" class="panel-collapse collapse">
+         <table class="table">
+           <tr class="card" ng-repeat="card in deck['2ally'] | orderBy:['sphere','name_norm']" ng-mouseover="deckC.changepreview(card)">
+             <td>
+               <button class="cardbutton" ng-class="{selected: deck.quantity(card)==0}" ng-click="deck.change(card,0)">X</button>
+               <button class="cardbutton" ng-class="{selected: deck.quantity(card)==1}" ng-click="deck.change(card,1)">1</button>
+               <button class="cardbutton" ng-class="{selected: deck.quantity(card)==2}" ng-click="deck.change(card,2)" ng-hide="card.restrict || (deck.filtersettings.onecore && card.corequantity < 2 && deck.quantity(card)<2 )">2</button>
+               <button class="cardbutton" ng-class="{selected: deck.quantity(card)==3}" ng-click="deck.change(card,3)" ng-hide="card.restrict || (deck.filtersettings.onecore && card.corequantity < 3 && deck.quantity(card)<3 ) || (deck.filtersettings.twocore && card.corequantity < 2 && deck.quantity(card) < 3)">3</button>             </td>
+             <td class="c{{card.sphere}}">{{card.name}}</td>
+           </tr>
+         </table>
+        </div>
+      </div>
+
+      <div class="panel panel-default" id="attchmentpanel" ng-show="deck.countAttachments()">
+        <div class="panel-heading" data-toggle="collapse" data-parent="#attachmentpanel" style="cursor: pointer" href="#attchmentlist">
+           <h2 class="panel-title">
+             <a data-toggle="collapse" href="#attachmentlist">Attachments <span class="pull-right"> {{deck.countAttachments()}} </span> </a>
+           </h2>
+        </div>
+        <div id="attachmentlist" class="panel-collapse collapse">
+          <table class="table">
+            <tr class="card" ng-repeat="card in deck['3attachment'] | orderBy:['sphere','name_norm']" ng-mouseover="deckC.changepreview(card)">
+              <td>
+                <button class="cardbutton" ng-class="{selected: deck.quantity(card)==0}" ng-click="deck.change(card,0)">X</button>
+                <button class="cardbutton" ng-class="{selected: deck.quantity(card)==1}" ng-click="deck.change(card,1)">1</button>
+                <button class="cardbutton" ng-class="{selected: deck.quantity(card)==2}" ng-click="deck.change(card,2)" ng-hide="card.restrict || (deck.filtersettings.onecore && card.corequantity < 2 && deck.quantity(card)<2 )">2</button>
+                <button class="cardbutton" ng-class="{selected: deck.quantity(card)==3}" ng-click="deck.change(card,3)" ng-hide="card.restrict || (deck.filtersettings.onecore && card.corequantity < 3 && deck.quantity(card)<3 ) || (deck.filtersettings.twocore && card.corequantity < 2 && deck.quantity(card) < 3)">3</button>             </td>
+              <td class="c{{card.sphere}}">{{card.name}}</td>
+            </tr>
+          </table>
+         </div>
+       </div>
+
+       <div class="panel panel-default" id="eventpanel" ng-show="deck.countEvents()">
+         <div class="panel-heading" data-toggle="collapse" data-parent="#eventpanel" style="cursor: pointer" href="#eventlist">
+            <h2 class="panel-title">
+              <a data-toggle="collapse" href="#eventlist">Events <span class="pull-right"> {{deck.countEvents()}} </span> </a>
+            </h2>
+         </div>
+         <div id="eventlist" class="panel-collapse collapse">
+           <table class="table">
+             <tr class="card" ng-repeat="card in deck['4event'] | orderBy:['sphere','name_norm']" ng-mouseover="deckC.changepreview(card)">
+              <td>
+                 <button class="cardbutton" ng-class="{selected: deck.quantity(card)==0}" ng-click="deck.change(card,0)">X</button>
+                 <button class="cardbutton" ng-class="{selected: deck.quantity(card)==1}" ng-click="deck.change(card,1)">1</button>
+                 <button class="cardbutton" ng-class="{selected: deck.quantity(card)==2}" ng-click="deck.change(card,2)" ng-hide="card.restrict || (deck.filtersettings.onecore && card.corequantity < 2 && deck.quantity(card)<2 )">2</button>
+                 <button class="cardbutton" ng-class="{selected: deck.quantity(card)==3}" ng-click="deck.change(card,3)" ng-hide="card.restrict || (deck.filtersettings.onecore && card.corequantity < 3 && deck.quantity(card)<3 ) || (deck.filtersettings.twocore && card.corequantity < 2 && deck.quantity(card) < 3)">3</button>             </td>
+              <td class="c{{card.sphere}}">{{card.name}}</td>
+           </tr>
+         </table>
+        </div>
+      </div>
+
+      <div class="panel panel-default" id="questpanel" ng-show="deck.countQuests()">
+        <div class="panel-heading" data-toggle="collapse" data-parent="#questpanel" style="cursor: pointer" href="#questlist">
+           <h2 class="panel-title">
+             <a data-toggle="collapse" href="#questlist">Sidequests <span class="pull-right"> {{deck.countQuests()}} </span> </a>
+           </h2>
+        </div>
+        <div id="questlist" class="panel-collapse collapse">
+          <table class="table">
+            <tr class="card" ng-repeat="card in deck['5quest'] | orderBy:['sphere','name_norm']" ng-mouseover="deckC.changepreview(card)">
+             <td>
+                <button class="cardbutton" ng-class="{selected: deck.quantity(card)==0}" ng-click="deck.change(card,0)">X</button>
+                <button class="cardbutton" ng-class="{selected: deck.quantity(card)==1}" ng-click="deck.change(card,1)">1</button>
+                <button class="cardbutton" ng-class="{selected: deck.quantity(card)==2}" ng-click="deck.change(card,2)" ng-hide="card.restrict || (deck.filtersettings.onecore && card.corequantity < 2 && deck.quantity(card)<2 )">2</button>
+                <button class="cardbutton" ng-class="{selected: deck.quantity(card)==3}" ng-click="deck.change(card,3)" ng-hide="card.restrict || (deck.filtersettings.onecore && card.corequantity < 3 && deck.quantity(card)<3 ) || (deck.filtersettings.twocore && card.corequantity < 2 && deck.quantity(card) < 3)">3</button>             </td>
+             <td class="c{{card.sphere}}">{{card.name}}</td>
+          </tr>
+        </table>
+       </div>
+     </div>
+   </div>
 </div>
