@@ -1,5 +1,32 @@
-<div class="headerdiv">
-<h1>
- The Rivendell Councilroom
-</h1>
-</div>
+<!-- Header with navbar (replaces tabs) -->
+</div><nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">The Rivendell Councilroom</a>
+          </div>
+          <div class="collapse navbar-collapse" id="navbar">
+            <section class="tab">
+              <ul class="nav navbar-nav navbar-right">
+                <li>
+                  <a href ng-click="tab.setTab(1)" ng-class="{activetab: tab.isSet(1)}">Cards</a></li>
+                <li>
+                  <a href ng-click="tab.setTab(2)" ng-class="{activetab: tab.isSet(2)}">Packs</a></li>
+                <li>
+                  <a href ng-click="tab.setTab(3)" ng-class="{activetab: tab.isSet(3)}">Decks</a></li>
+                <li>
+                  <a href ng-click="tab.setTab(4)" ng-class="{activetab: tab.isSet(4)}">Stats</a></li>
+                <li>
+                  <a href ng-click="tab.setTab(5)" ng-class="{activetab: tab.isSet(5)}">Help</a></li>
+                <li>
+                  <a href ng-click="tab.setTab(6)" ng-class="{activetab: tab.isSet(6)}">Updates</a></li>
+              </ul>
+            </section>
+          </div>
+      </div>
+</nav></div>
