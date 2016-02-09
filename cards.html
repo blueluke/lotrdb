@@ -102,16 +102,16 @@
                   <button class="cardbutton" ng-class="{selected: deck.quantity(card)==2}" ng-click="deck.change(card,2)" ng-hide="card.type=='1hero' || card.restrict || (cards.filtersettings.onecore && card.corequantity < 2)">2</button>
                   <button class="cardbutton" ng-class="{selected: deck.quantity(card)==3}" ng-click="deck.change(card,3)" ng-hide="card.type=='1hero' || card.restrict || (cards.filtersettings.onecore && card.corequantity < 3) || (deck.filtersettings.twocore && card.corequantity < 2 && deck.quantity(card) < 3)">3</button>
                 </td>
-                <td>
+                <td data-toggle="modal" data-target="#previewModal">
                   <img class="unique" src="img/unique.png" ng-show="card.unique"/>
                   {{card.name}}</td>
-                <td class="text-center"><img src="img/spheres/{{card.sphere}}.png"/></td>
-                <td class="text-center">{{card.cost}}</td>
-                <td class="text-center"><img src="img/types/{{card.type}}.png"/></td>
-                <td class="text-center">{{card.willpower}}</td>
-                <td class="text-center">{{card.strength}}</td>
-                <td class="text-center">{{card.defense}}</td>
-                <td class="text-center">{{card.hitpoints}}</td>
+                <td class="text-center" data-toggle="modal" data-target="#previewModal"><img src="img/spheres/{{card.sphere}}.png"/></td>
+                <td class="text-center" data-toggle="modal" data-target="#previewModal">{{card.cost}}</td>
+                <td class="text-center" data-toggle="modal" data-target="#previewModal"><img src="img/types/{{card.type}}.png"/></td>
+                <td class="text-center" data-toggle="modal" data-target="#previewModal">{{card.willpower}}</td>
+                <td class="text-center" data-toggle="modal" data-target="#previewModal">{{card.strength}}</td>
+                <td class="text-center" data-toggle="modal" data-target="#previewModal">{{card.defense}}</td>
+                <td class="text-center" data-toggle="modal" data-target="#previewModal">{{card.hitpoints}}</td>
               </tr>
             </tbody>
           </table>
