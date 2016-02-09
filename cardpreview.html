@@ -1,18 +1,18 @@
 <div id="previewModal" class="modal" role="dialog">
-  <div class="modal-dialog modal-sm" ng-controller="tabController as tab">
+  <div class="modal-dialog modal-sm" ng-controller="tabController as previewTab">
     <div class="modal-content">
       <div class="modal-header clearfix">
         <div class="btn-group pull-left btn-group-sm">
-          <button type="button" class="btn btn-default" ng-click="tab.setTab(1)" ng-class="{'btn-primary': tab.isSet(1)}">Image</button>
-          <button type="button" class="btn btn-default" ng-click="tab.setTab(2); preview.image.loaded=false" ng-class="{'btn-primary': tab.isSet(2)}">Text</button>
+          <button type="button" class="btn btn-default" ng-click="previewTab.setTab(1)" ng-class="{'btn-primary': previewTab.isSet(1)}">Image</button>
+          <button type="button" class="btn btn-default" ng-click="previewTab.setTab(2); preview.image.loaded=false" ng-class="{'btn-primary': previewTab.isSet(2)}">Text</button>
         </div>
         <button type="button" class="btn btn-danger btn-sm pull-right" data-dismiss="modal">Close</button>
       </div>
       <div class="modal-body">
         <!-- Card image -->
-        <img class="img-responsive center-block" ng-if="preview.image.url&&tab.isSet(1)" ng-src="{{preview.getImg()}}" class="cardpreview" alt="{{preview.alt()}}" title="{{preview.alt()}}" imageonload ng-show="preview.image.loaded" />
+        <img class="img-responsive center-block" ng-if="preview.image.url&&previewTab.isSet(1)" ng-src="{{preview.getImg()}}" class="cardpreview" alt="{{preview.alt()}}" title="{{preview.alt()}}" imageonload ng-show="preview.image.loaded" />
         <!-- Card text panel -->
-        <div class="panel panel-default" ng-hide="preview.image.url&&tab.isSet(1)&&preview.image.loaded">
+        <div class="panel panel-default" ng-hide="preview.image.url&&previewTab.isSet(1)&&preview.image.loaded">
           <div class="panel-heading">
             <h2 class="panel-title text-center"><img class="unique" src="img/unique.png" ng-show="preview.image.unique"/> <strong>{{preview.image.name}}</strong></h2>
           </div>
@@ -41,7 +41,7 @@
               </div>
               <div class="col-xs-10">
                 <p><strong>{{preview.image.traits}}</strong></p>
-                <p ng-hide="preview.image.url&&tab.isSet(1)&&preview.image.loaded" style="text-align:left;white-space: pre-wrap;line-height:1.5;" ng-bind-html="trust(preview.image.textc)"></p>
+                <p ng-hide="preview.image.url&&previewTab.isSet(1)&&preview.image.loaded" style="text-align:left;white-space: pre-wrap;line-height:1.5;" ng-bind-html="trust(preview.image.textc)"></p>
               </div>
             </div>
           </div>
