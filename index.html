@@ -16,22 +16,23 @@
     <link rel="apple-itouch-icon" href="img/favicon.png">
   </head>
   <body ng-controller="tabController as tab">
+    <!-- Page header with bootstrap navbar -->
     <header></header>
+    <!-- Grid layout for the main pages -->
     <div class="container"><div class="row">
       <div class="col-md-4 col-md-push-8">
         <deck></deck>
       </div>
       <div class="col-md-8 col-md-pull-4">
-        <packs></packs>
         <cards></cards>
+        <packs></packs>
         <mydecks></mydecks>
         <stats></stats>
-        <about></about>
-        <news></news>
       </div>
-      <!-- As a popup modal: -->
-      <cardpreview></cardpreview>
     </div></div>
-    <!--  <myfooter></myfooter> -->
+    <!-- "About! page with its own grid layout -->
+    <about></about>
+    <!-- As a popup modal: -->
+    <cardpreview></cardpreview>
   </body>
 </html>
