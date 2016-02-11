@@ -405,7 +405,20 @@
     };
   });
 
-  app.factory('suggested', ['filtersettings','cardObject',function(filtersettings,cardObject){
+  app.factory('style',function(){
+    style={};
+    style.clear = function() {
+      style.width = undefined,
+      style.minwidth = undefined,
+      style.left = undefined,
+      style.preview = undefined,
+      style.right = undefined;
+    };
+    return style;
+  });
+
+  app.factory('suggested', ['filtersettings','cardObject','style','$rootScope',function(filtersettings,cardObject,style,$rootScope){
+      $rootScope.style = style;
       var suggested={};
       suggested.hidden=0;
       suggested.deck=[];
@@ -1200,10 +1213,16 @@
       // Show/hide suggested
       suggested.hide = function() {
 	  suggested.hidden = 1;
+          style.width=0;
+          style.minwidth=0;
+          style.left='25%';
+          style.preview='30%';
+          style.right='44%';
       }
       suggested.show = function() {
 	  suggested.hidden = 0;
           suggested.deckChange(suggested.deck);
+          style.clear();
       }
 
       

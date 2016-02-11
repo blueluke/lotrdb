@@ -1,10 +1,8 @@
-<div class="suggesteddiv">
+
+<div class="suggesteddiv" ng-style="{'width':style.width, 'min-width':style.minwidth}">
   
   <button class="packbutton" style="width:200px;height:25px" ng-show="(!suggested.empty()||suggested.blacklist.length)&&!suggested.hidden&&!deck.empty()" ng-click="suggested.hide()" ng-class="">
     Hide Suggestions
-  </button>
-  <button class="packbutton" style="width:200px;height:25px" ng-show="(!suggested.empty()||suggested.blacklist.length)&&suggested.hidden&&!deck.empty()" ng-click="suggested.show()" ng-class="">
-    Show Suggestions
   </button>
   <button class="packbutton" style="width:200px;height:25px" ng-show="suggested.blacklist.length&&!suggested.hidden&&!deck.empty()" ng-click="suggested.clearBlacklist()" ng-class="">
     Clear Blocked Suggestions

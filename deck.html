@@ -1,5 +1,9 @@
-<div class="leftdiv">
+<div class="leftdiv" ng-style="{'width':style.left}">
   
+  <button class="packbutton" style="width:100px;height:25px;float:right;" ng-show="(!suggested.empty()||suggested.blacklist.length)&&suggested.hidden&&!deck.empty()" ng-click="suggested.show()" ng-class="">
+    Show Suggestions
+  </button>
+
   <h3 >{{deck.deckname}}</h3>
   <h4 ng-show="deck.countTotal()">Total Cards: {{deck.countTotal()}}</h4>
   <table class="deck">
