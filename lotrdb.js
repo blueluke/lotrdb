@@ -437,6 +437,9 @@
 
       // This is the main function, it gets called whenever the cards in the deck change and updates the suggestions
       suggested.deckChange = function(deck) {
+          if (suggested.hidden){
+            return 0; //Don't do anything if suggestions are hidden, saves memory
+          }
 	  suggested.deck=deck;
 	  // Clear the suggestions
 	  suggested['1hero']=[];
@@ -1200,6 +1203,7 @@
       }
       suggested.show = function() {
 	  suggested.hidden = 0;
+          suggested.deckChange(suggested.deck);
       }
 
       
