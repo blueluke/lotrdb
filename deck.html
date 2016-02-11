@@ -18,7 +18,7 @@
         <table class="table">
           <tr class="card" ng-repeat="card in deck['1hero'] | orderBy:['sphere','name_norm']" ng-mouseover="deckC.changepreview(card)">
             <td>
-              <button class="cardbutton" ng-class="{selected: deck.quantity(card)==0}" ng-click="deck.change(card,0)">X</button>
+              <button class="btn btn-danger btn-sm" ng-class="{selected: deck.quantity(card)==0}" ng-click="deck.change(card,0)">X</button>
             </td>
             <td class="c{{card.sphere}}" data-toggle="modal" data-target="#previewModal">{{card.name}}</td>
           </td>
@@ -36,10 +36,13 @@
          <table class="table">
            <tr class="card" ng-repeat="card in deck['2ally'] | orderBy:['sphere','name_norm']" ng-mouseover="deckC.changepreview(card)">
              <td>
-               <button class="cardbutton" ng-class="{selected: deck.quantity(card)==0}" ng-click="deck.change(card,0)">X</button>
-               <button class="cardbutton" ng-class="{selected: deck.quantity(card)==1}" ng-click="deck.change(card,1)">1</button>
-               <button class="cardbutton" ng-class="{selected: deck.quantity(card)==2}" ng-click="deck.change(card,2)" ng-hide="card.restrict || (deck.filtersettings.onecore && card.corequantity < 2 && deck.quantity(card)<2 )">2</button>
-               <button class="cardbutton" ng-class="{selected: deck.quantity(card)==3}" ng-click="deck.change(card,3)" ng-hide="card.restrict || (deck.filtersettings.onecore && card.corequantity < 3 && deck.quantity(card)<3 ) || (deck.filtersettings.twocore && card.corequantity < 2 && deck.quantity(card) < 3)">3</button>             </td>
+               <button class="btn btn-danger btn-sm" ng-class="{selected: deck.quantity(card)==0}" ng-click="deck.change(card,0)">X</button>
+               <div class="btn-group btn-group-sm">
+                 <button class="btn btn-default" ng-class="{'btn-success': deck.quantity(card)==1}" ng-click="deck.change(card,1)">1</button>
+                 <button class="btn btn-default" ng-class="{'btn-success': deck.quantity(card)==2}" ng-click="deck.change(card,2)" ng-hide="card.restrict || (deck.filtersettings.onecore && card.corequantity < 2 && deck.quantity(card)<2 )">2</button>
+                 <button class="btn btn-default" ng-class="{'btn-success': deck.quantity(card)==3}" ng-click="deck.change(card,3)" ng-hide="card.restrict || (deck.filtersettings.onecore && card.corequantity < 3 && deck.quantity(card)<3 ) || (deck.filtersettings.twocore && card.corequantity < 2 && deck.quantity(card) < 3)">3</button>
+               </div>
+             </td>
              <td class="c{{card.sphere}}" data-toggle="modal" data-target="#previewModal">{{card.name}}</td>
            </tr>
          </table>
@@ -56,10 +59,13 @@
           <table class="table">
             <tr class="card" ng-repeat="card in deck['3attachment'] | orderBy:['sphere','name_norm']" ng-mouseover="deckC.changepreview(card)">
               <td>
-                <button class="cardbutton" ng-class="{selected: deck.quantity(card)==0}" ng-click="deck.change(card,0)">X</button>
-                <button class="cardbutton" ng-class="{selected: deck.quantity(card)==1}" ng-click="deck.change(card,1)">1</button>
-                <button class="cardbutton" ng-class="{selected: deck.quantity(card)==2}" ng-click="deck.change(card,2)" ng-hide="card.restrict || (deck.filtersettings.onecore && card.corequantity < 2 && deck.quantity(card)<2 )">2</button>
-                <button class="cardbutton" ng-class="{selected: deck.quantity(card)==3}" ng-click="deck.change(card,3)" ng-hide="card.restrict || (deck.filtersettings.onecore && card.corequantity < 3 && deck.quantity(card)<3 ) || (deck.filtersettings.twocore && card.corequantity < 2 && deck.quantity(card) < 3)">3</button>             </td>
+                <button class="btn btn-danger btn-sm" ng-class="{selected: deck.quantity(card)==0}" ng-click="deck.change(card,0)">X</button>
+                <div class="btn-group btn-group-sm">
+                  <button class="btn btn-default" ng-class="{'btn-success': deck.quantity(card)==1}" ng-click="deck.change(card,1)">1</button>
+                  <button class="btn btn-default" ng-class="{'btn-success': deck.quantity(card)==2}" ng-click="deck.change(card,2)" ng-hide="card.restrict || (deck.filtersettings.onecore && card.corequantity < 2 && deck.quantity(card)<2 )">2</button>
+                  <button class="btn btn-default" ng-class="{'btn-success': deck.quantity(card)==3}" ng-click="deck.change(card,3)" ng-hide="card.restrict || (deck.filtersettings.onecore && card.corequantity < 3 && deck.quantity(card)<3 ) || (deck.filtersettings.twocore && card.corequantity < 2 && deck.quantity(card) < 3)">3</button>
+                </div>
+              </td>
               <td class="c{{card.sphere}}" data-toggle="modal" data-target="#previewModal">{{card.name}}</td>
             </tr>
           </table>
@@ -76,10 +82,13 @@
            <table class="table">
              <tr class="card" ng-repeat="card in deck['4event'] | orderBy:['sphere','name_norm']" ng-mouseover="deckC.changepreview(card)">
               <td>
-                 <button class="cardbutton" ng-class="{selected: deck.quantity(card)==0}" ng-click="deck.change(card,0)">X</button>
-                 <button class="cardbutton" ng-class="{selected: deck.quantity(card)==1}" ng-click="deck.change(card,1)">1</button>
-                 <button class="cardbutton" ng-class="{selected: deck.quantity(card)==2}" ng-click="deck.change(card,2)" ng-hide="card.restrict || (deck.filtersettings.onecore && card.corequantity < 2 && deck.quantity(card)<2 )">2</button>
-                 <button class="cardbutton" ng-class="{selected: deck.quantity(card)==3}" ng-click="deck.change(card,3)" ng-hide="card.restrict || (deck.filtersettings.onecore && card.corequantity < 3 && deck.quantity(card)<3 ) || (deck.filtersettings.twocore && card.corequantity < 2 && deck.quantity(card) < 3)">3</button>             </td>
+                <button class="btn btn-danger btn-sm" ng-class="{selected: deck.quantity(card)==0}" ng-click="deck.change(card,0)">X</button>
+                <div class="btn-group btn-group-sm">
+                  <button class="btn btn-default" ng-class="{'btn-success': deck.quantity(card)==1}" ng-click="deck.change(card,1)">1</button>
+                  <button class="btn btn-default" ng-class="{'btn-success': deck.quantity(card)==2}" ng-click="deck.change(card,2)" ng-hide="card.restrict || (deck.filtersettings.onecore && card.corequantity < 2 && deck.quantity(card)<2 )">2</button>
+                  <button class="btn btn-default" ng-class="{'btn-success': deck.quantity(card)==3}" ng-click="deck.change(card,3)" ng-hide="card.restrict || (deck.filtersettings.onecore && card.corequantity < 3 && deck.quantity(card)<3 ) || (deck.filtersettings.twocore && card.corequantity < 2 && deck.quantity(card) < 3)">3</button>
+                </div>
+              </td>
               <td class="c{{card.sphere}}" data-toggle="modal" data-target="#previewModal">{{card.name}}</td>
            </tr>
          </table>
@@ -95,12 +104,15 @@
         <div id="questlist" class="panel-collapse collapse">
           <table class="table">
             <tr class="card" ng-repeat="card in deck['5quest'] | orderBy:['sphere','name_norm']" ng-mouseover="deckC.changepreview(card)">
-             <td>
-                <button class="cardbutton" ng-class="{selected: deck.quantity(card)==0}" ng-click="deck.change(card,0)">X</button>
-                <button class="cardbutton" ng-class="{selected: deck.quantity(card)==1}" ng-click="deck.change(card,1)">1</button>
-                <button class="cardbutton" ng-class="{selected: deck.quantity(card)==2}" ng-click="deck.change(card,2)" ng-hide="card.restrict || (deck.filtersettings.onecore && card.corequantity < 2 && deck.quantity(card)<2 )">2</button>
-                <button class="cardbutton" ng-class="{selected: deck.quantity(card)==3}" ng-click="deck.change(card,3)" ng-hide="card.restrict || (deck.filtersettings.onecore && card.corequantity < 3 && deck.quantity(card)<3 ) || (deck.filtersettings.twocore && card.corequantity < 2 && deck.quantity(card) < 3)">3</button>             </td>
-             <td class="c{{card.sphere}}" data-toggle="modal" data-target="#previewModal">{{card.name}}</td>
+              <td>
+                <button class="btn btn-danger btn-sm" ng-class="{selected: deck.quantity(card)==0}" ng-click="deck.change(card,0)">X</button>
+                <div class="btn-group btn-group-sm">
+                  <button class="btn btn-default" ng-class="{'btn-success': deck.quantity(card)==1}" ng-click="deck.change(card,1)">1</button>
+                  <button class="btn btn-default" ng-class="{'btn-success': deck.quantity(card)==2}" ng-click="deck.change(card,2)" ng-hide="card.restrict || (deck.filtersettings.onecore && card.corequantity < 2 && deck.quantity(card)<2 )">2</button>
+                  <button class="btn btn-default" ng-class="{'btn-success': deck.quantity(card)==3}" ng-click="deck.change(card,3)" ng-hide="card.restrict || (deck.filtersettings.onecore && card.corequantity < 3 && deck.quantity(card)<3 ) || (deck.filtersettings.twocore && card.corequantity < 2 && deck.quantity(card) < 3)">3</button>
+                </div>
+              </td>
+              <td class="c{{card.sphere}}" data-toggle="modal" data-target="#previewModal">{{card.name}}</td>
           </tr>
         </table>
        </div>
