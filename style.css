@@ -383,3 +383,9 @@ canvas {
   margin: 0;
   padding: 0;
 }
+
+
+/* mydecks.html */
+.decknotes-area {
+  margin-top: 10px;
+}
