@@ -389,3 +389,14 @@ canvas {
 .decknotes-area {
   margin-top: 10px;
 }
+
+/* deck.html */
+tr.card td {
+  vertical-align: middle !important;
+  font-size: 16px;
+  padding: 6px !important;
+}
+
+.img-cardtype {
+  padding-bottom: 2px;
+}
