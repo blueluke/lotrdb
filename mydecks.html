@@ -26,6 +26,9 @@
           <input name="upload" type="file" style="display:none;" onchange="angular.element(this).scope().mydecks.uploadDeck(event)" accept=".txt,.o8d" id="deckfile-selector">
       </label>
       <button class="btn btn-danger"  ng-click="mydecks.clearDeck()"><span class="glyphicon glyphicon-trash"></span> Clear Deck</button>
+      <div class="form-group">
+        <textarea class="form-control" ng-model="decknotes" rows="4" placeholder="You can type notes about your deck here. Use this for strategy tips, notes about proxies for future cards, or whatever you want.">></textarea>
+      </div>
     </form>
   </div></div>
 
