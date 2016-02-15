@@ -391,10 +391,6 @@ tr.card td {
   padding: 6px !important;
 }
 
-.img-cardtype {
-  padding-bottom: 2px;
-}
-
 /* cards.html */
 table.cardlist td {
   vertical-align: middle !important;
@@ -403,6 +399,68 @@ table.cardlist td {
 button.disabled {
   background-color: #f5f5f5 !important;
 }
+
+.img-sphere {
+  max-width: 20px;
+  max-height: 20px;
+}
+
+.img-cardtype {
+  width: 22px;
+  height: 22px;
+}
+
+.panel-title img.img-cardtype {
+  margin-left: 3px;
+  margin-top: -3px;
+}
+
+/* Filter buttons from CalebKester/lotrdb@75d94a0b473a13f30197c12883837bd953a6a820 */
+.filter-button {
+  position: relative;
+  -webkit-flex: 0 0 34px;
+      -ms-flex: 0 0 34px;
+          flex: 0 0 34px;
+  background: url(../img/encounter.png) 50% 50%;
+  background-size: 100% 100%;
+  padding: 0;
+  border: 0;
+  width: 34px;
+  height: 34px;
+  opacity: 0.24;
+  outline: 0;
+  transition: all 0.2s ease-out;
+}
+
+.filter-button:hover, .filter-button:focus {
+  opacity: 0.5;
+}
+
+.filter-button.selected {
+    opacity: 1;
+}
+
+.filter-button img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-width: 18px;
+  max-height: 18px;
+}
+
+.filter-button svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 18px;
+  height: 18px;
+  fill: #fff;
+}
+
 
 /* header.html */
 .navbar-brand > img {

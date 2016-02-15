@@ -16,46 +16,22 @@
           </div>
           <div class="list-group-item">
             <div class="btn-group btn-group-justified btn-group-md">
-              <div class="btn-group">
-                <button title="Heroes" class="btn btn-default" ng-class="{'btn-info': cards.filtersettings.type['1hero']}" ng-click="cards.toggleType('1hero',$event)"><img src="img/types/1hero.png"/></button>
-              </div>
-              <div class="btn-group">
-                <button title="Allies" class="btn btn-default" ng-class="{'btn-info': cards.filtersettings.type['2ally']}" ng-click="cards.toggleType('2ally',$event)"><img src="img/types/2ally.png"/></button>
-              </div>
-              <div class="btn-group">
-                <button title="Attachments" class="btn btn-default" ng-class="{'btn-info': cards.filtersettings.type['3attachment']}" ng-click="cards.toggleType('3attachment',$event)"><img src="img/types/3attachment.png"/></button>
-              </div>
-              <div class="btn-group">
-                <button title="Events" class="btn btn-default" ng-class="{'btn-info': cards.filtersettings.type['4event']}" ng-click="cards.toggleType('4event',$event)"><img src="img/types/4event.png"/></button>
-              </div>
-              <div class="btn-group">
-                <button title="Side Quests" class="btn btn-default" ng-class="{'btn-info': cards.filtersettings.type['5quest']}" ng-click="cards.toggleType('5quest',$event)"><img src="img/types/5quest.png"/></button>
-              </div>
+              <button title="Heroes" class="filter-button" ng-class="{selected: cards.filtersettings.type['1hero']}" ng-click="cards.toggleType('1hero',$event)"><ng-include src="'img/types/1hero.svg'"></ng-include></button>
+              <button title="Allies" class="filter-button" ng-class="{selected: cards.filtersettings.type['2ally']}" ng-click="cards.toggleType('2ally',$event)"><ng-include src="'img/types/2ally.svg'"></ng-include></button>
+              <button title="Attachments" class="filter-button" ng-class="{selected: cards.filtersettings.type['3attachment']}" ng-click="cards.toggleType('3attachment',$event)"><ng-include src="'img/types/3attachment.svg'"></ng-include></button>
+              <button title="Events" class="filter-button" ng-class="{selected: cards.filtersettings.type['4event']}" ng-click="cards.toggleType('4event',$event)"><ng-include src="'img/types/4event.svg'"></ng-include></button>
+              <button title="Side Quests" class="filter-button" ng-class="{selected: cards.filtersettings.type['5quest']}" ng-click="cards.toggleType('5quest',$event)"><ng-include src="'img/types/5quest.svg'"></ng-include></button>
             </div>
           </div>
           <div class="list-group-item">
             <div class="btn-group btn-group-justified btn-group-md">
-              <div class="btn-group">
-                <button title="Leadership" class="btn btn-default" ng-class="{'btn-info': cards.filtersettings.spheres['1leadership']}" ng-click="cards.toggleSphere('1leadership',$event)"><img src="img/spheres/1leadership.png"/></button>
-              </div>
-              <div class="btn-group">
-                <button title="Tactics" class="btn btn-default" ng-class="{'btn-info': cards.filtersettings.spheres['2tactics']}" ng-click="cards.toggleSphere('2tactics',$event)"><img src="img/spheres/2tactics.png"/></button>
-              </div>
-              <div class="btn-group">
-                <button title="Spirit" class="btn btn-default" ng-class="{'btn-info': cards.filtersettings.spheres['3spirit']}" ng-click="cards.toggleSphere('3spirit',$event)"><img src="img/spheres/3spirit.png"/></button>
-              </div>
-              <div class="btn-group">
-                <button title="Lore" class="btn btn-default" ng-class="{'btn-info': cards.filtersettings.spheres['4lore']}" ng-click="cards.toggleSphere('4lore',$event)"><img src="img/spheres/4lore.png"/></button>
-              </div>
-              <div class="btn-group">
-                <button title="Neutral" class="btn btn-default" ng-class="{'btn-info': cards.filtersettings.spheres['5neutral']}" ng-click="cards.toggleSphere('5neutral',$event)"><img src="img/spheres/5neutral.png"/></button>
-              </div>
-              <div class="btn-group">
-                <button title="Baggins" class="btn btn-default" ng-class="{'btn-info': cards.filtersettings.spheres['6baggins']}" ng-click="cards.toggleSphere('6baggins',$event)"><img src="img/spheres/6baggins.png"/></button>
-              </div>
-              <div class="btn-group">
-                <button title="Fellowship" class="btn btn-default" ng-class="{'btn-info': cards.filtersettings.spheres['7fellowship']}" ng-click="cards.toggleSphere('7fellowship',$event)"><img src="img/spheres/7fellowship.png"/></button>
-              </div>
+              <button title="Leadership" class="filter-button" ng-class="{selected: cards.filtersettings.spheres['1leadership']}" ng-click="cards.toggleSphere('1leadership',$event)"><img src="img/spheres/1leadership.png"/></button>
+              <button title="Tactics" class="filter-button" ng-class="{selected: cards.filtersettings.spheres['2tactics']}" ng-click="cards.toggleSphere('2tactics',$event)"><img src="img/spheres/2tactics.png"/></button>
+              <button title="Spirit" class="filter-button" ng-class="{selected: cards.filtersettings.spheres['3spirit']}" ng-click="cards.toggleSphere('3spirit',$event)"><img src="img/spheres/3spirit.png"/></button>
+              <button title="Lore" class="filter-button" ng-class="{selected: cards.filtersettings.spheres['4lore']}" ng-click="cards.toggleSphere('4lore',$event)"><img src="img/spheres/4lore.png"/></button>
+              <button title="Neutral" class="filter-button" ng-class="{selected: cards.filtersettings.spheres['5neutral']}" ng-click="cards.toggleSphere('5neutral',$event)"><img src="img/spheres/5neutral.png"/></button>
+              <button title="Baggins" class="filter-button" ng-class="{selected: cards.filtersettings.spheres['6baggins']}" ng-click="cards.toggleSphere('6baggins',$event)"><img src="img/spheres/6baggins.png"/></button>
+              <button title="Fellowship" class="filter-button" ng-class="{selected: cards.filtersettings.spheres['7fellowship']}" ng-click="cards.toggleSphere('7fellowship',$event)"><img src="img/spheres/7fellowship.png"/></button>
             </div>
           </div>
       </div>
@@ -107,9 +83,9 @@
                 <td class="text-center" data-toggle="modal" data-target="#previewModal">
                   <img class="unique" src="img/unique.png" ng-show="card.unique"/>
                   {{card.name}}</td>
-                <td class="text-center" data-toggle="modal" data-target="#previewModal"><img src="img/spheres/{{card.sphere}}.png"/></td>
+                <td class="text-center" data-toggle="modal" data-target="#previewModal"><img class="img-sphere" src="img/spheres/{{card.sphere}}.png"/></td>
                 <td class="text-center" data-toggle="modal" data-target="#previewModal">{{card.cost}}</td>
-                <td class="text-center" data-toggle="modal" data-target="#previewModal"><img src="img/types/{{card.type}}.png"/></td>
+                <td class="text-center" data-toggle="modal" data-target="#previewModal"><img class="img-cardtype" src="img/types/{{card.type}}.svg"/></td>
                 <td class="text-center" data-toggle="modal" data-target="#previewModal">{{card.willpower}}</td>
                 <td class="text-center" data-toggle="modal" data-target="#previewModal">{{card.strength}}</td>
                 <td class="text-center" data-toggle="modal" data-target="#previewModal">{{card.defense}}</td>
