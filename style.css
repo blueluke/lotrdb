@@ -151,12 +151,6 @@
 }
 
 
-table.cardlist {
-  width:100%;
-  margin-bottom: 15px;
-}
-
-
 .cardrow:nth-child(even) {
   background-color: #EEEEEE;
 }
@@ -399,4 +393,10 @@ tr.card td {
 
 .img-cardtype {
   padding-bottom: 2px;
+}
+
+/* cards.html */
+table.cardlist td {
+  vertical-align: middle !important;
+  padding: 6px !important;
 }
