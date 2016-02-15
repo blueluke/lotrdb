@@ -245,11 +245,11 @@ td.decks {
 }
 
 
-.activetab {
+/*.activetab {
   color: #fff !important;
   background-color: #337ab7 !important;
 }
-
+*/
 
 section.tab{
 margin-bottom:2px;
@@ -402,4 +402,15 @@ table.cardlist td {
 
 button.disabled {
   background-color: #f5f5f5 !important;
+}
+
+/* header.html */
+.navbar-brand > img {
+  height: 30px;
+  margin-top: -5px;
+  padding-right: 10px;
+}
+
+.navbar {
+  background-color: #313843;
 }
