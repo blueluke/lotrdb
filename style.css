@@ -398,5 +398,8 @@ tr.card td {
 /* cards.html */
 table.cardlist td {
   vertical-align: middle !important;
-  padding: 6px !important;
+}
+
+button.disabled {
+  background-color: #f5f5f5 !important;
 }

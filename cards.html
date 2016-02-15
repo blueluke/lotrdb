@@ -79,11 +79,11 @@
     <div class="list-group">
       <div class="list-group-item">
         <div class="table-responsive">
-          <table class="table table-hover cardlist">
+          <table class="table table-hover cardlist table-condensed">
             <thead>
               <tr>
-                <td class="text-center"></td>
-                <td><a href ng-click="cards.orderby('name_norm')">Name</a></td>
+                <td class="text-center"><a href>Add to Deck</a></td>
+                <td class="text-center"><a href ng-click="cards.orderby('name_norm')">Name</a></td>
                 <td class="text-center"><a href ng-click="cards.orderby(['sphere','name_norm'])">Sphere</a></td>
                 <td class="text-center"><a href ng-click="cards.orderby(['cost','name_norm'])">Cost</a></td>
                 <td class="text-center"><a href ng-click="cards.orderby(['type','name_norm'])">Type</a></td>
@@ -95,16 +95,16 @@
             </thead>
             <tbody>
               <tr ng-repeat="card in cards.allcards | cardfilter:cards | filter:cards.filtersettings.search | orderBy:cards.order" ng-mouseover="cards.changepreview(card)">
-                <td>
+                <td class="text-center">
                   <img class="preload"  ng-src="{{cards.image.loaded && card.img || ''}}" /> <!-- This doesn't preload images if there's an image we want to load right now -->
                   <div class="btn-group btn-group-sm" style="min-width: 115px;">
                     <button class="btn btn-default" ng-class="{'btn-danger': deck.quantity(card)==0}" ng-click="deck.change(card,0)">0</button>
                     <button class="btn btn-default" ng-class="{'btn-success': deck.quantity(card)==1}" ng-click="deck.change(card,1)">1</button>
-                    <button class="btn btn-default" ng-class="{'btn-success': deck.quantity(card)==2}" ng-click="deck.change(card,2)" ng-hide="card.type=='1hero' || card.restrict || (cards.filtersettings.onecore && card.corequantity < 2)">2</button>
-                    <button class="btn btn-default" ng-class="{'btn-success': deck.quantity(card)==3}" ng-click="deck.change(card,3)" ng-hide="card.type=='1hero' || card.restrict || (cards.filtersettings.onecore && card.corequantity < 3) || (deck.filtersettings.twocore && card.corequantity < 2 && deck.quantity(card) < 3)">3</button>
+                    <button class="btn btn-default" ng-class="{'btn-success': deck.quantity(card)==2, 'disabled': (card.type=='1hero' || card.restrict || (cards.filtersettings.onecore && card.corequantity < 2))}" ng-click="deck.change(card,2)">2</button>
+                    <button class="btn btn-default" ng-class="{'btn-success': deck.quantity(card)==3, 'disabled': (card.type=='1hero' || card.restrict || (cards.filtersettings.onecore && card.corequantity < 3) || (deck.filtersettings.twocore && card.corequantity < 2 && deck.quantity(card) < 3))}" ng-click="deck.change(card,3)">3</button>
                   </div>
                 </td>
-                <td data-toggle="modal" data-target="#previewModal">
+                <td class="text-center" data-toggle="modal" data-target="#previewModal">
                   <img class="unique" src="img/unique.png" ng-show="card.unique"/>
                   {{card.name}}</td>
                 <td class="text-center" data-toggle="modal" data-target="#previewModal"><img src="img/spheres/{{card.sphere}}.png"/></td>
