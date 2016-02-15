@@ -421,9 +421,9 @@ button.disabled {
   -webkit-flex: 0 0 34px;
       -ms-flex: 0 0 34px;
           flex: 0 0 34px;
-  background: url(../img/encounter.png) 50% 50%;
+  background: url(./img/encounter.png) 50% 50%;
   background-size: 100% 100%;
-  padding: 0;
+  padding: 3px;
   border: 0;
   width: 34px;
   height: 34px;
