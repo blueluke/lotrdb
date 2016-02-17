@@ -472,3 +472,17 @@ button.disabled {
 .navbar {
   background-color: #313843;
 }
+
+/* packs.html */
+.pack-panel h2 {
+  padding-top: 6.5px;
+  padding-bottom: 6.5px;
+}
+
+.pack-panel .panel-heading > button {
+  margin-right: 5px;
+}
+
+.pack-panel .panel-heading {
+  padding: 5px 0px 5px 15px;
+}

@@ -1,6 +1,6 @@
 (function() {
 
-  
+
   var app = angular.module('deckbuilder', ['ngStorage']);
 
   app.filter('toArray', function () {
@@ -16,7 +16,7 @@
       });
     };
       });
-  
+
   app.factory('getData', function($http) {
     var promise;
     var getData = {
@@ -36,22 +36,62 @@
     };
     return getData;
   });
-  
-  
-  
+
+
   //Logic for the pack selection
   app.controller('packSelect',["filtersettings","$localStorage",function(filtersettings,$localStorage){
     this.filtersettings=filtersettings;
+
+    if ($localStorage.pack) {
+      // localStorage contains previous pack selection
+      this.filtersettings.pack = $localStorage.pack;
+    } else {
+      // on first page load
+      this.filtersettings.pack = ["core"];
+    }
+
+    // Core and Mirkwood cycle
+    this.core;
+    this.core_full=["core","thfg", "catc", "ajtr", "thoem", "tdm", "rtm"];
+    // Khazad-Dum and cycle
+    this.kd;
+    this.kd_full=["kd", "trg", "rtr", "twitw", "tld", "fos", "saf"];
+    // Heirs of Numenor and AtS
+    this.hon;
+    this.hon_full=["hon", "tsf", "tdf", "eaad", "aoo", "tbog", "tmv"];
+    // Voice of Isengard and Ringmaker
+    this.voi;
+    this.voi_full=["voi", "tdt", "ttt", "tit", "nie", "cs", "tac"];
+    // Lost Realm and Angmar Awakens
+    this.tlr;
+    this.tlr_full=["tlr", "twoe", "efmg", "ate", "ttor", "tbocd", "tdr"];
+    // Grey Havens
+    this.tgh;
+    this.tgh_full=["tgh"];
+    // Saga packs
+    this.saga;
+    this.saga_full=["thohauh", "thotd", "tbr", "rd", "tos", "tlos"]
+    // All packs
     this.full=["core", "kd", "hon", "voi", "tlr", "thohauh", "thfg", "trg", "tsf", "tdt", "twoe", "thotd", "catc", "rtr", "tdf", "ttt", "efmg", "tbr", "ajtr", "twitw", "eaad", "tit", "rd", "thoem", "tld", "aoo", "nie", "tdm", "fos", "tbog", "cs", "rtm", "saf", "tmv", "tac", "tos", "tlos", "ate", "ttor", "tbocd", "tdr", "tgh"]; //all expansions so far
-    this.toggle=function(exp){
-      var ind = this.filtersettings.pack.indexOf(exp);
-      if (ind<0) { //index will be -1 if not found
-        this.filtersettings.pack.push(exp);
-      } else {
-        this.filtersettings.pack.splice(ind,1);
-      }
+
+    // triggered by ng-change
+    this.update = function() {
+      // merge the seperate arrays to the master pack array
+      this.filtersettings.pack = this.core.concat(this.kd, this.hon, this.voi, this.tlr, this.tgh, this.saga);
+      // save to localStorage
       $localStorage.pack = this.filtersettings.pack;
-    };
+    }
+
+    // this.toggle=function(exp){
+    //   var ind = this.filtersettings.pack.indexOf(exp);
+    //   if (ind<0) { //index will be -1 if not found
+    //     this.filtersettings.pack.push(exp);
+    //   } else {
+    //     this.filtersettings.pack.splice(ind,1);
+    //   }
+    //   $localStorage.pack = this.filtersettings.pack;
+    // };
+
     this.toggleonecore = function(){
       if(this.filtersettings.onecore){
         this.filtersettings.onecore=false;
@@ -74,23 +114,73 @@
       }
       $localStorage.twocore = this.filtersettings.twocore;
     }
-    this.selectNone=function(){
-      this.filtersettings.pack=[];
-      $localStorage.pack = this.filtersettings.pack;
+
+    this.selectNone = function(target){
+      switch (target) {
+        case 'core':
+          this.core=[];
+          break;
+        case 'kd':
+          this.kd=[];
+          break;
+        case 'hon':
+          this.hon=[];
+          break;
+        case 'voi':
+          this.voi=[];
+          break;
+        case 'tlr':
+          this.tlr=[];
+          break;
+        case 'tgh':
+          this.tgh=[];
+          break
+        case 'saga':
+          this.saga=[];
+          break;
+        default:
+          this.filtersettings.pack=[];
+      }
+      this.update();
     };
-    this.selectAll=function(){
-      this.filtersettings.pack=this.full.slice(0); //make a clone
-      $localStorage.pack = this.filtersettings.pack;
+
+    this.selectAll = function(target){
+      switch (target) {
+        case 'core':
+          this.core=this.core_full.slice(0);
+          break;
+        case 'kd':
+          this.kd=this.kd_full.slice(0);
+          break;
+        case 'hon':
+          this.hon=this.hon_full.slice(0);
+          break;
+        case 'voi':
+          this.voi=this.voi_full.slice(0);
+          break;
+        case 'tlr':
+          this.tlr=this.tlr_full.slice(0);
+          break;
+        case 'tgh':
+          this.tgh=this.tgh_full.slice(0);
+          break
+        case 'saga':
+          this.saga=this.saga_full.slice(0);
+          break;
+        default:
+        this.filtersettings.pack=this.full.slice(0); //make a clone
+      }
+      this.update();
     };
   }]);
-  
+
   app.directive('about', function() {
     return {
       restrict: 'E',
       templateUrl: 'about.html'
     };
   });
-  
+
   app.directive('news', function() {
     return {
       restrict: 'E',
@@ -113,7 +203,7 @@
       templateUrl: 'auto.html',
     };
   });
-  
+
   //Tabs in the right div
   app.controller('tabController',[function(){
     this.tab=1;
@@ -124,10 +214,10 @@
       return this.tab === tabName;
     };
   }]);
-  
-  
+
+
   app.controller('init',['getData','$location','deck','cardObject','$scope',function(getData,$location,deck,cardObject,$scope){
-    
+
     getData.async('cards.json').then(function(data) {
       for (var d in data) {
         cardObject.push(data[d]);
@@ -144,8 +234,8 @@
       $scope.$apply();
     },1000);
   }]);
-  
-  
+
+
   //Page header
   app.directive('header', function() {
     return {
@@ -161,7 +251,7 @@
       templateUrl: 'footer.html'
     };
   });
-  
+
   app.filter('cardfilter', function(){
     return function (input, scope) {
       var output=[];
@@ -174,7 +264,7 @@
       return output;
     };
   });
-  
+
   app.factory('filtersettings',["$localStorage",function ($localStorage) {
     var filtersettings={};
     filtersettings.onecore = $localStorage.onecore;
@@ -184,13 +274,13 @@
     filtersettings.spheres={'1leadership': true, '4lore': true, '3spirit': true, '2tactics': true, '5neutral': true, '6baggins':false, '7fellowship':false};
     return filtersettings;
   }]);
-  
-  
+
+
   app.factory('cardObject',["getData",function(getData){
     var cardObject = [];
     return cardObject;
   }]);
-  
+
   //Logic for the card selection
   app.controller('cardControl',["$http","$scope","filtersettings","deck","suggested","image","cardObject",function($http,$scope,filtersettings,deck,suggested,image,cardObject){
     $scope.allcards=[];
@@ -229,7 +319,7 @@
       this.image.update(card);
     };
   }]);
-  
+
   app.directive('cards', function() {
     return {
       restrict: 'E',
@@ -238,16 +328,16 @@
       controllerAs: 'cards'
     };
   });
-  
+
   app.directive('traits', function() {
     return {
       restrict: 'E',
       templateUrl: 'traitchoice.html'
     };
   });
-  
-  
-  
+
+
+
   app.factory('deck', ['filtersettings','suggested','cardObject', function(filtersettings,suggested,cardObject){
     var deck={};
     deck.filtersettings = filtersettings;
@@ -258,7 +348,7 @@
     deck['3attachment']=[];
     deck['4event']=[];
     deck['5quest']=[];
-    
+
     deck.change = function(card,quantity){
       if (quantity>0){
 	if (deck.quantity(card)==0) {
@@ -303,7 +393,7 @@
       if(mirlonde) threat-=loreheroes;
       return threat;
     };
-    
+
     deck.countAllies = function(){
       var allies=0;
       for (var a in deck['2ally']) {
@@ -339,11 +429,11 @@
       }
       return heroes;
     };
-    
+
     deck.countTotal = function() {
       return deck.countAllies()+deck.countAttachments()+deck.countEvents()+deck.countQuests();
     };
-    
+
     deck.empty = function() {
       return (deck.countAllies()+deck.countAttachments()+deck.countEvents()+deck.countQuests()+deck.countHeroes())==0;
     };
@@ -354,7 +444,7 @@
         deck.decknotes = decknotes;
         deck.loadLegacy(deckArray);
         return 0;
-        
+
       }
       deck['1hero']=[];
       deck['2ally']=[];
@@ -376,7 +466,7 @@
       suggested.clearBlacklist();
       suggested.deckChange(this);
     };
-    
+
     deck.loadLegacy = function(deckObject) {
       deck['1hero']=deckObject['1hero'];
       deck['2ally']=deckObject['2ally'];
@@ -384,18 +474,18 @@
       deck['4event']=deckObject['4event'];
       deck['5quest']=deckObject['5quest'];
     };
-    
-    
+
+
     return deck;
   }]);
-  
+
   app.controller('deckController',['$scope','deck','image',function($scope,deck,image){
     $scope.deck=deck;
     this.changepreview = function(card){
       image.update(card);
     };
   }]);
-  
+
   app.directive('deck', function() {
     return {
       restrict: 'E',
@@ -490,7 +580,7 @@
 	      if (suggested.isInDeck('Damrod','tlos') && suggested.isWordInString('Trap',cardc.traits)) {
 	      	  suggestions.push(cardc);
 	      }
-	      
+
 	      // Suggest heal/hit point cards for Gloin, Treebeard, Gimil
 	      if ( (suggested.isInDeck('Gloin','core') || suggested.isInDeck('Gimli','core') || suggested.isInDeck('Treebeard','tos')) && (suggested.isWordInString('heal',cardc.text) || suggested.isWordInString('hit point',cardc.text)) )
 	      	  suggestions.push(cardc);
@@ -520,13 +610,13 @@
 	      // Suggest threat reudction for Boromir, Dunhere, or Hobbit Gandalf
 	      if ((suggested.isInDeck('Boromir','tdm') || suggested.isInDeck('Gandalf','thohauh') || suggested.isInDeck('Dunhere','core')) && (/([L|l]ower|[R|r]educe)/.test(cardc.text)) && (/[T|t]hreat/.test(cardc.text)) && !(/[E|e]ncounter/.test(cardc.text)))
 	  suggestions.push(cardc);
-	      
+
 	      // Suggest location cards for Idraen
 	      if (suggested.isInDeck('Idraen','ttt') && suggested.isWordInString('explored',cardc.text))
 	      	  suggestions.push(cardc);
 	      if (suggested.isInDeck('Idraen','ttt') && suggested.isWordInString('progress',cardc.text) && suggested.isWordInString('location',cardc.text))
 	      	  suggestions.push(cardc);
-	      
+
 	      // Sugest discard pile cards for Arwen or Erestor
 	      if ((suggested.isInDeck('Arwen Undomiel','tdr')||suggested.isInDeck('Erestor','ttor')) && suggested.isWordInString('discard pile',cardc.text) && !suggested.isWordInString('encounter',cardc.text))
 	      	  suggestions.push(cardc);
@@ -538,13 +628,13 @@
 	      // Sugest Tactics Events for Hama
 	      if (suggested.isInDeck('Hama','tld') && (cardc.sphere=='2tactics') && (cardc.type=='4event'))
 	      	  suggestions.push(cardc);
-	      
+
 	      // Suggest weapon/armour for Beregond
 	      if (suggested.isInDeck('Beregond','hon') && suggested.isWordInString('Weapon',cardc.traits))
-	      	  suggestions.push(cardc);	    
+	      	  suggestions.push(cardc);
 	      if (suggested.isInDeck('Beregond','hon') && suggested.isWordInString('Armor',cardc.traits))
-	      	  suggestions.push(cardc);	    
-	      
+	      	  suggestions.push(cardc);
+
 	      // Suggest engage cards
 	      if (suggested.isWordInDeck('engage ') && (suggested.isWordInCard('engage ',cardc) || suggested.isWordInCard('into play engaged',cardc)))
 	      	  suggestions.push(cardc);
@@ -567,11 +657,11 @@
 	      for (var t in monoTrait)
 	  if (suggested.isWordInString(monoTrait[t],cardc.traits))
 	      suggestions.push(cardc);
-	      
+
 	      // Suggest secrecy
 	      if (suggested.isSecrecy() && (/[S|s]ecrecy/.test(cardc.textc)))
-	  suggestions.push(cardc);	  
- 
+	  suggestions.push(cardc);
+
 	      // Suggest Weapons for Warriors
 	      if (suggested.isTraitInHeroTraits('Warrior') && suggested.isWordInCard('eapon',cardc) && (cardc.type=='3attachment'||cardc.type=='4event'))
 	       	  suggestions.push(cardc);
@@ -593,12 +683,12 @@
 
 	  // Loop over list of suggested cards
 	  for(var c in suggestions) {
-	      
+
 	      var cardc = suggestions[c];
 	      // Only suggest cards that are not already in suggested
 	      if(suggested.isCardInList(cardc,suggested[cardc.type])) continue;
 	      suggested.check(cardc);
-	  }	  
+	  }
       };
 
       // Check to make sure the card makes sense to suggest
@@ -609,7 +699,7 @@
 	  var propertarget=suggested.deckHasTargetOption(card);
 	  // Cards that have been hand-picked to never be suggested
 	  var vetolisted=suggested.isCardInVetoList(card.name_norm,card.exp);
-	  
+
 	  var debug = '';
 	  if (vetolisted) return;
 	  if (!propersphere && card.type!='1hero') return; // Hero suggestions are exempt from requiring a sphere match
@@ -634,7 +724,7 @@
 	  if (!properexp) return;
 
 	  suggested[card.type].push(card);
-	  
+
       };
       // Define the vetolist here
       suggested.isCardInVetoList = function(name,exp) {
@@ -656,7 +746,7 @@
 	      suggested['sphere'].push('2tactics');
 	  if(suggested.isInDeck('Amarthiul','tbocd'))
 	      suggested['sphere'].push('2tactics');
-	  
+
       };
 
       // Returns true if deck has access to given sphere
@@ -672,9 +762,9 @@
 	      return 1;
 	  return 0;
       };
-      
-      
-      
+
+
+
       // Returns 1 if the deck has an eligible target for the card
       suggested.deckHasTargetOption = function(card) {
 	  var targetsincard = suggested.getTargetsInCard(card);
@@ -685,7 +775,7 @@
 	   	  return 1;
 	  return 0;
       };
-      
+
       // Returns list of target options for the card. If Core Gloin was the card, the returned list would look like:
       // [{trait:'None',type:'hero'},
       //  {trait:'None',type:'character'},
@@ -698,7 +788,7 @@
       suggested.getTargetOptionsForCard = function(card) {
 	  // Special case
 	  if (card.name_norm=='Beorn' && card.exp=='thohauh') return []; // Beorn cannot be a target option for any player card
-	  // 
+	  //
 	  var targets = [];
 	  var regextrait = /([A-Z][\u00BF-\u1FFF\u2C00-\uD7FF\w]+)/g;
 	  var typen = suggested.normalize(card.type);
@@ -726,7 +816,7 @@
       suggested.getTraitSpecificTargetOptionsForCard = function(card) {
 	  return suggested.traitSpecificFilter(suggested.getTargetOptionsForCard(card));
       };
-      
+
       // Returns a list of targets that are in the card and specific to the given trait
       suggested.getTraitSpecificTargetsInCard = function(card) {
 	  return suggested.traitSpecificFilter(suggested.getTargetsInCard(card));
@@ -760,7 +850,7 @@
 	  var deck = suggested.deck;
 	  suggested.traitSpecificTargetsInDeck = suggested.traitSpecificFilter(suggested.targetsInDeck);
       };
-            
+
       // Sets list of targets options for the deck.
       suggested.setTargetOptionsForDeck = function() {
 	  var deck = suggested.deck;
@@ -772,7 +862,7 @@
 	      for (var c in deck[types[t]]) {
 	  var newtargets = suggested.getTargetOptionsForCard(deck[types[t]][c]);
 	  targets=targets.concat(newtargets);
-	  
+
 	      }
 	  suggested.targetOptionsForDeck = targets;
       };
@@ -790,9 +880,9 @@
 	      var target = list[t];
 	      string=string+target.trait+' '+target.type+' / ';
 	  }
-	  return string;	      
+	  return string;
       };
-      
+
       // Checks if a target is in a list of targets
       suggested.isTargetInList = function(target,list) {
 	  for (var t in list)
@@ -800,7 +890,7 @@
 	  return 1;
 	  return 0;
       };
-      
+
       // Returns 1 if there is a target in listA that matches a target in listB
       suggested.matchInTargetLists = function(listA,listB) {
 	  for (var t in listA)
@@ -808,7 +898,7 @@
 	  return 1;
 	  return 0;
       };
-      
+
       // Converts '2tactics' to 'Tactics', etc.
       suggested.normalize = function(word) {
 	  if (word=='1leadership') return 'Leadership';
@@ -828,7 +918,7 @@
 
       // Returns list of targets targetted by the card text
       suggested.getTargetsInCard = function(card) {
-	  var targets = []; // List of targets named by the card. 
+	  var targets = []; // List of targets named by the card.
 	  // A returned list for Quick Ears would look like [{trait:'Dunedain',type:'hero'},{trait:'Ranger',type:'hero'}]
 	  // A returned list for Unexpected Courage would look like [{trait:'None',type:'hero'}]
 	  // A returned list for Spear of the Citadel would look like [{trait:'Tactics',type:'character'}]
@@ -867,7 +957,7 @@
 	  // Match targets like 'a hero'
 	  var acharacter = /(?: (?:a|an|1)) (hero|character|ally)(?! (?:you control )?with)/.exec(card.text);
 	  if (acharacter) targets.push({trait:'None',type:acharacter[1]});
-	  
+
 	  // Match targets like 'a Ranger hero'
 	  var atraithero = /(?:(?:a|an|1|Each|each) )([A-Z][\u00BF-\u1FFF\u2C00-\uD7FF\w]+) (?:or )?([A-Z][\u00BF-\u1FFF\u2C00-\uD7FF\w]+)? ?(?:hero)/.exec(card.text);
 	  if (atraithero) {
@@ -895,19 +985,19 @@
 	  // Match cards like 'with ranged' or 'sentinel character'
 	  var withranged = /(hero|character).+with (the |printed )?([R|r]anged)/.exec(card.text);
 	  if (withranged) {
-	      targets.push({trait:'Ranged',type:withranged[1]});  
+	      targets.push({trait:'Ranged',type:withranged[1]});
 	  }
 	  var withsentinel = /(hero|character).+with (the |printed )?([S|s]entinel)/.exec(card.text);
 	  if (withsentinel) {
-	      targets.push({trait:'Sentinel',type:withsentinel[1]});	      
+	      targets.push({trait:'Sentinel',type:withsentinel[1]});
 	  }
 	  var rangedcharacter = /[R|r]ranged character/.exec(card.text);
 	  if (rangedcharacter) {
-	      targets.push({trait:'Ranged',type:'character'});    
+	      targets.push({trait:'Ranged',type:'character'});
 	  }
 	  var sentinelcharacter = /[S|s]entinel character/.exec(card.text);
 	  if (sentinelcharacter) {
-	      targets.push({trait:'Sentinel',type:'character'});	      
+	      targets.push({trait:'Sentinel',type:'character'});
 	  }
 
 	  return targets;
@@ -934,7 +1024,7 @@
 	      if (deck[card.type][c].name_norm==card.name_norm){
 	  return 1;
 	      }
-	  }	
+	  }
 	  // We also do not want to suggest, for example, Galadriel ally if Galadriel Hero was added to the deck
 	  for (var c in deck['1hero']){
 	      if (deck['1hero'][c].name_norm==card.name_norm){
@@ -988,13 +1078,13 @@
 	      for (var c in deck[types[t]]) {
 	  if (deck[types[t]][c].name_norm==name_norm && deck[types[t]][c].exp==exp) return 1;
 	      }
-	  return 0;	
+	  return 0;
       };
       // Takes in a word and returns 1 if the word is found in the text/traits of the card
       suggested.isWordInCard = function(word,card) {
 	  if (suggested.isWordInString(word,card.text)) return 1;
 	  if (suggested.isWordInString(word,card.traits)) return 1;
-	  return 0;	
+	  return 0;
       };
       // Takes in a word and returns 1 if the word is found in the text/traits of a card in the deck
       suggested.isWordInDeck = function(word) {
@@ -1003,7 +1093,7 @@
 	  for(var t in types)
 	      for (var c in deck[types[t]])
 	  if (suggested.isWordInCard(word,deck[types[t]][c])) return 1;
-	  return 0;	
+	  return 0;
       };
       // Takes in a word and returns 1 if the word is found in the text of a card in the deck
       suggested.isWordInDeckText = function(word) {
@@ -1012,7 +1102,7 @@
 	  for(var t in types)
 	      for (var c in deck[types[t]])
 	  if (suggested.isWordInString(word,deck[types[t]][c].text)) return 1;
-	  return 0;	
+	  return 0;
       };
       // Takes in a trait and returns 1 if the trait is found in the text of a card in the deck
       suggested.isTraitInDeckText = function(trait) {
@@ -1020,25 +1110,25 @@
 	  var types = ['1hero','2ally','3attachment','4event','5quest'];
 	  for(var t in types)
 	      for (var c in deck[types[t]]) {
-	  // We do not want to include all Gondor cards just because Steward grants the 'Gondor trait' 
+	  // We do not want to include all Gondor cards just because Steward grants the 'Gondor trait'
 	  if (suggested.isWordInString('trait',deck[types[t]][c].text)) continue;
 	  if (suggested.isWordInString(trait,deck[types[t]][c].text)) return 1;
 	      }
-	  return 0;	
+	  return 0;
       };
       // Takes in a trait and returns 1 if the trait is found in the traits of a hero in the deck. We also consider keywords like Ranged to be traits.
       suggested.isTraitInHeroTraits = function(trait) {
 	  var deck = suggested.deck;
 	  for(var h in deck['1hero'])
 	      if (suggested.isWordInString(trait,deck['1hero'][h].traits) || suggested.isWordInString(trait,deck['1hero'][h].keywords)) return 1;
-	  return 0;	
+	  return 0;
       };
       // Takes in a trait and returns 1 if the trait is found in the traits of an ally in the deck. We also consider keywords like Ranged to be traits.
       suggested.isTraitInAllyTraits = function(trait) {
 	  var deck = suggested.deck;
 	  for(var h in deck['2ally'])
 	      if (suggested.isWordInString(trait,deck['2ally'][h].traits) || suggested.isWordInString(trait,deck['2ally'][h].keywords)) return 1;
-	  return 0;	
+	  return 0;
       };
       // Takes in a trait and returns 1 if the trait is found in the traits of a character in the deck
       suggested.isTraitInDeckTraits = function(trait) {
@@ -1186,26 +1276,26 @@
       	  };
       	  return heroes;
       };
-      
+
       suggested.countTotal = function() {
 	  return suggested.countAllies()+suggested.countAttachments()+suggested.countEvents()+suggested.countQuests();
       };
-      
+
       suggested.empty = function() {
 	  return (suggested.countAllies()+suggested.countAttachments()+suggested.countEvents()+suggested.countQuests()+suggested.countHeroes())==0;
       };
 
       // Remove from suggested
-      suggested.remove = function(card) {	
+      suggested.remove = function(card) {
           for (var c in suggested[card.type]){
               if (suggested[card.type][c].cycle==card.cycle && suggested[card.type][c].no==card.no){
 	  suggested[card.type].splice(c, 1);
               }
-	  }  
+	  }
 	  suggested.blacklist.push(card);
       }
       // Clear the blacklisted cards
-      suggested.clearBlacklist = function() {	
+      suggested.clearBlacklist = function() {
 	  suggested.blacklist=[];
 	  suggested.deckChange(suggested.deck);
       }
@@ -1225,18 +1315,18 @@
           style.clear();
       }
 
-      
+
       return suggested;
   }]);
 
-    
+
     app.controller('suggestedController',['$scope','suggested','image',function($scope,suggested,image){
 	$scope.suggested=suggested;
 	this.changepreview = function(card){
 	    image.update(card);
 	}
     }]);
-    
+
     app.directive('suggested', function() {
 	return {
 	    restrict: 'E',
@@ -1245,9 +1335,9 @@
 	    controllerAs: 'suggestedC'
 	};
     });
-    
-    
-    
+
+
+
   app.factory('image',function(){
     var image={};
     image.url="";
@@ -1262,8 +1352,8 @@
       text=text.replace(rx,"CARDNAME");
       text=text.replace(/(Orc|Noldor|Archer|Armor|Artifact|Beorning|Boon|Bree|Burglar|Condition|Craftsman|Creature|Dale|Dwarf|D\u00fanedain|Eagle|Ent|Esgaroth|Gondor|Healer|Hobbit|Instrument|Isengard|Istari|Item|Minstrel|Mount|Noble|Noldor|Outlands|Pipe|Ranger|Ring-bearer('s)?|Rohan|Scout|Signal|Silvan|Skill|Song|Spell|Tale|Title|Trait|Trap|Warrior|Weapon|Woodman) /g,
         "<b><i>$1</i></b> ");
-      
-      
+
+
       text=text.replace(/Valour Response:/g,"<b>Valour Response:</b>");
       text=text.replace(/Response:([^<])/g,"<b>Response:</b>$1");
       text=text.replace(/Forced:/g,"<b>Forced:</b>");
@@ -1276,12 +1366,12 @@
       text=text.replace(/Valour Action:/g,"<b>Valour Action:</b>");
       text=text.replace(/Action:([^<])/g,"<b>Action:</b>$1");
       text=text.replace(/([^>])Valour/g,"$1<b>Valour</b>");
-      
+
       text=text.replace(/Attack/g,"<img src='img/strength.gif'/>");
       text=text.replace(/Willpower/g,"<img src='img/willpower.gif'/>");
       text=text.replace(/Defense/g,"<img src='img/defense.gif'/>");
       text=text.replace(/Threat/g,"<img src='img/threat.png'/>");
-      
+
       text=text.replace(/Leadership/g,"<img src='img/spheres/1leadership.png'/>");
       text=text.replace(/Tactics/g,"<img src='img/spheres/2tactics.png'/>");
       text=text.replace(/Spirit/g,"<img src='img/spheres/3spirit.png'/>");
@@ -1289,12 +1379,12 @@
       text=text.replace(/Neutral/g,"<img src='img/spheres/5neutral.png'/>");
       text=text.replace(/Baggins/g,"<img src='img/spheres/6baggins.png'/>");
       text=text.replace(/Fellowship/g,"<img src='img/spheres/7fellowship.png'/>");
-      
+
       text=text.replace(/CARDNAME/g,cardname);
-      
+
       return text;
     }
-    
+
     image.update = function(card){
       if(image.url!=card.img){
         image.loaded = false;
@@ -1320,9 +1410,9 @@
     }
     return image;
   });
-  
-  
-  
+
+
+
   app.controller('cardPreview',['$scope','$sce','image','translate',function($scope,$sce,image,translate){
     $scope.trust = $sce.trustAsHtml;
     this.image=image;
@@ -1336,7 +1426,7 @@
       return image.text;
     }
   }]);
-  
+
   app.directive('cardpreview', function() {
     return {
       restrict: 'E',
@@ -1345,7 +1435,7 @@
       controllerAs: 'preview'
     };
   });
-  
+
   app.directive('imageonload',function() {
     return {
       restrict: 'A',
@@ -1358,8 +1448,8 @@
       }
     };
   });
-  
-  
+
+
   app.controller('myDecks',['deck','suggested','$localStorage','translate','$scope','cardObject','$location',function(deck,suggested,$localStorage,translate,$scope,cardObject,$location){
     if (!$localStorage.decks){
       $localStorage.decks={};
@@ -1402,7 +1492,7 @@
       $localStorage.decks[deckname].deckname = deckname;
       $localStorage.decks[deckname].decknotes = decknotes;
       $localStorage.decks[deckname].dateUTC = new Date().valueOf().toString();
-      
+
       var compressed = LZString.compressToEncodedURIComponent(JSON.stringify($localStorage.decks[deckname].deck));
       $location.url("/#"+compressed);
     };
@@ -1439,7 +1529,7 @@
         deck.decknotes = "";
       //};
     };
-    
+
     this.download = function(filename, text) {
       var pom = document.createElement('a');
       pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
@@ -1460,7 +1550,7 @@
       }
       return ret
     };
-    
+
     this.plaintext = function(deckArray,deckname,compressed) {
       var deck={};
       deck["1hero"] = [];
@@ -1468,7 +1558,7 @@
       deck["3attachment"] = [];
       deck["4event"] = [];
       deck["5quest"] = [];
-      
+
       deck.deckname = deckArray[0];
       for (var i=1; i<deckArray.length; i++) {
         for (var j in cardObject) {
@@ -1480,7 +1570,7 @@
           }
         }
       }
-      
+
       var text="";
       text+=deckname;
       text+="\r\n\r\nTotal Cards: ";
@@ -1547,7 +1637,7 @@
           }
         }
       }
-      
+
       return text;
     }
 
@@ -1559,7 +1649,7 @@
       deck["3attachment"] = [];
       deck["4event"] = [];
       deck["5quest"] = [];
-      
+
       deck.deckname = deckArray[0];
       for (var i=1; i<deckArray.length; i++) {
         for (var j in cardObject) {
@@ -1571,7 +1661,7 @@
           }
         }
       }
-      
+
       var text="#[";
       text+=deckname;
       text+="](http://ddddirk.github.io/lotrdb/#/#";
@@ -1648,12 +1738,12 @@
           }
         }
       }
-      
+
       text+="***\r\n^^Deck ^^built ^^with [^^Rivendell ^^Councilroom](http://ddddirk.github.io/lotrdb)";
       return text;
     }
-    
-    
+
+
     this.bbcode = function(deckArray,deckname,compressed) {
       var deck={};
       deck["1hero"] = [];
@@ -1661,7 +1751,7 @@
       deck["3attachment"] = [];
       deck["4event"] = [];
       deck["5quest"] = [];
-      
+
       deck.deckname = deckArray[0];
       for (var i=1; i<deckArray.length; i++) {
         for (var j in cardObject) {
@@ -1673,7 +1763,7 @@
           }
         }
       }
-      
+
       var text="[size=18][url=http://ddddirk.github.io/lotrdb/#/#";
       text+=compressed;
       text+="]";
@@ -1753,27 +1843,27 @@
           }
         }
       }
-      
+
       text+="\r\n[size=7]Deck built with [url=http://ddddirk.github.io/lotrdb]Rivendell Councilroom[/url][/size]";
       return text;
     }
-    
-    
 
-    
+
+
+
     this.downloadDeck = function(deckname){
       var deck= $localStorage.decks[deckname].deck;
       var notes=$localStorage.decks[deckname].decknotes;
       var CompressedDeck=LZString.compressToEncodedURIComponent(JSON.stringify(deck));
       var text="++++++++++++\r\n+For Reddit+\r\n++++++++++++ \r\n\r\n";
       text+=this.markdown(deck,deckname,CompressedDeck);
-      
+
       text+="\r\n\r\n\r\n\r\n\r\n+++++++++++++++++++ \r\n+For Boardgamegeek+\r\n+++++++++++++++++++  \r\n\r\n";
       text+=this.bbcode(deck,deckname,CompressedDeck);
-      
+
       text+="\r\n\r\n\r\n\r\n\r\n+++++++++++ \r\n+Plaintext+\r\n+++++++++++  \r\n\r\n";
       text+=this.plaintext(deck,deckname,CompressedDeck);
-      
+
       if (notes) {
         text+="\r\n\r\n\r\n\r\n\r\n++++++++++++ \r\n+Deck notes+\r\n++++++++++++  \r\n\r\n";
         text+=notes;
@@ -1797,7 +1887,7 @@
       var deck = this.currentdeck;
       if (file) {
         var r = new FileReader();
-          r.onload = function(e) { 
+          r.onload = function(e) {
           var contents = e.target.result.replace(/(\r\n|\n|\r)/gm,""); //strip newlines
           var encoded = contents.match(/\+{80}([A-Za-z0-9+\-\r\n]+)\+{80}/gm)[0];
           encoded = encoded.replace(/\+{80}/,"");
@@ -1808,13 +1898,13 @@
         r.readAsText(file);
       };
     };
-    
+
     this.uploadOctgn = function(file){
       var deckname = file.name.replace('.o8d','');
       var deck = this.currentdeck;
       if (file) {
         var r = new FileReader();
-          r.onload = function(e) { 
+          r.onload = function(e) {
           var deckArray = [deckname];
           var regexp = /<card\s+qty="(\d)"\s+id="([0-9a-f\-]+)">/gi, match;
           while (match = regexp.exec(e.target.result)) {
@@ -1840,8 +1930,8 @@
         r.readAsText(file);
       };
     }
-    
-    
+
+
     this.octgn = function(deckname) {
       var deck = {"1hero":[],"2ally":[],"3attachment":[],"4event":[],"5quest":[]};
       var warned = false;
@@ -1870,7 +1960,7 @@
       var text = "";
       text+= '<?xml version="1.0" encoding="utf-8" standalone="yes"?>\n';
       text+= '<deck game="a21af4e8-be4b-4cda-a6b6-534f9717391f">\n';
-      
+
       text+= '  <section name="Hero" shared="False">\n';
       for (var h in deck["1hero"]){
         text+='    <card qty="';
@@ -1882,7 +1972,7 @@
         text+='</card>\n';
       }
       text+= '  </section>\n';
-      
+
       text+= '  <section name="Ally" shared="False">\n';
       for (var h in deck["2ally"]){
         text+='    <card qty="';
@@ -1894,7 +1984,7 @@
         text+='</card>\n';
       }
       text+= '  </section>\n';
-      
+
       text+= '  <section name="Event" shared="False">\n';
       for (var h in deck["4event"]){
         text+='    <card qty="';
@@ -1906,7 +1996,7 @@
         text+='</card>\n';
       }
       text+= '  </section>\n';
-      
+
       text+= '  <section name="Attachment" shared="False">\n';
       for (var h in deck["3attachment"]){
         text+='    <card qty="';
@@ -1918,7 +2008,7 @@
         text+='</card>\n';
       }
       text+= '  </section>\n';
-      
+
       text+= '  <section name="Side Quest" shared="False">\n';
       for (var h in deck["5quest"]){
         text+='    <card qty="';
@@ -1930,9 +2020,9 @@
         text+='</card>\n';
       }
       text+= '  </section>\n';
-      
-      
-      
+
+
+
       text+='  <section name="Quest" shared="True" />\n'
       text+='  <section name="Encounter" shared="True" />\n'
       text+='  <section name="Special" shared="True" />\n'
@@ -1943,15 +2033,15 @@
       text+=notes.replace(/]]>/g, "]]]]><![CDATA[>");  // See http://stackoverflow.com/a/223773/2314532
       text+=']]></notes>';
       text+='</deck>';
-      
+
       this.download(deckname+".o8d",text);
     }
-    
-    
+
+
   }]);
-  
-  
-  
+
+
+
   app.directive('mydecks', function() {
     return {
       restrict: 'E',
@@ -1960,9 +2050,9 @@
       controllerAs: 'mydecks'
     };
   });
-  
-  
-  
+
+
+
   app.directive('stats', function() {
     return {
       restrict: 'E',
@@ -1971,14 +2061,14 @@
       controllerAs: 'stats'
     };
   });
-  
+
   app.controller('stats',['deck',function(deck){
     this.sphereCanvas = document.getElementById("spheres").getContext("2d");
     this.costCanvas = document.getElementById("cost").getContext("2d");
     this.typeCanvas = document.getElementById("type").getContext("2d");
-    
+
     this.filter = {sphere:null, cost:null, type:null};
-    
+
     this.reloadDeck = function() {
       this.cards = [];
       var types = ["2ally","3attachment","4event","5quest"]
@@ -1991,9 +2081,9 @@
           }
         }
       }
-      
+
     }
-    
+
     this.reshuffle = function() {
       this.reloadDeck();
       function shuffle(o){ //v1.0
@@ -2004,7 +2094,7 @@
       this.hand = this.cards.slice(0,6);
       this.deck = this.cards.slice(6).reverse();
     };
-    
+
     this.draw = function() {
       this.hand.push(this.deck.pop());
     }
@@ -2012,7 +2102,7 @@
     this.playCard = function(handIndex) {
       this.hand.splice(handIndex, 1);
     }
-    
+
     this.sphereSplit = function() {
       this.reloadDeck();
       var colors = ["purple","red","blue","green","grey","yellow","orange","lightgrey"];
@@ -2054,13 +2144,13 @@
       if (this.sphereChart) {
         this.sphereChart.destroy();
       }
-      
+
       this.sphereChart = new Chart(this.sphereCanvas).Pie(split);
       parent = this;
       this.sphereCanvas.canvas.onclick = function(evt){
         var sphere = parent.sphereChart.getSegmentsAtEvent(evt)[0].label;
         if (sphere){
-          
+
           parent.filter.type=null;
           parent.filter.cost=null;
           parent.sphereSplit();
@@ -2070,7 +2160,7 @@
         }
       };
     }
-    
+
     this.costSplit = function() {
       this.reloadDeck();
       var split = {labels: ['0','1','2','3','4','5','6','X'],
@@ -2092,9 +2182,9 @@
       }
       this.costChart = new Chart(this.costCanvas).Bar(split);
     }
-    
-    
-    
+
+
+
     this.typeSplit = function() {
       this.reloadDeck();
       var colors = ["red","green","blue","yellow","lightgrey"];
@@ -2125,12 +2215,12 @@
         this.typeChart.destroy();
       }
       this.typeChart = new Chart(this.typeCanvas).Pie(split);
-      
+
       parent = this;
       this.typeCanvas.canvas.onclick = function(evt){
         var type = parent.typeChart.getSegmentsAtEvent(evt)[0].label;
         if (type){
-          
+
           parent.filter.sphere=null;
           parent.filter.cost=null;
           parent.typeSplit();
@@ -2140,17 +2230,17 @@
         }
       };
     }
-    
-    
+
+
     this.refresh = function() {
       this.filter = {sphere:null, cost:null, type:null};
       this.sphereSplit();
       this.costSplit();
       this.typeSplit();
     }
-    
-    
-    
+
+
+
     this.sphereFilter = function(_sphere,colors) {
       var sphere=null;
       var i;
@@ -2219,11 +2309,11 @@
         this.sphereChart.segments[6]._saved.fillColor = colors[7];
         this.sphereChart.segments[i]._saved.fillColor = colors[i];
       }
-      
+
       return(this.sphereChart.update());
     }
-    
-    
+
+
     this.typeFilter = function(_type,colors) {
       var type=null;
       var i;
@@ -2268,20 +2358,20 @@
         this.typeChart.segments[3]._saved.fillColor = colors[4];
         this.typeChart.segments[i]._saved.fillColor = colors[i];
       }
-      
+
       return(this.typeChart.update());
     }
-    
+
   }]);
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
   app.factory('translate',function(){
     var translate={};
     translate[""]="";
@@ -2329,6 +2419,6 @@
     translate.tgh="The Grey Havens";
     return translate;
   });
-  
+
 
 })();
