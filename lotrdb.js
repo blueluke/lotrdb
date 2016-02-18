@@ -77,7 +77,28 @@
     // triggered by ng-change
     this.update = function() {
       // merge the seperate arrays to the master pack array
-      this.filtersettings.pack = this.core.concat(this.kd, this.hon, this.voi, this.tlr, this.tgh, this.saga);
+      this.filtersettings.pack=[];
+      if (this.core != null) {
+        this.filtersettings.pack.push.apply(this.filtersettings.pack, this.core);
+      }
+      if (this.kd != null) {
+        this.filtersettings.pack.push.apply(this.filtersettings.pack, this.kd);
+      }
+      if (this.hon != null) {
+        this.filtersettings.pack.push.apply(this.filtersettings.pack, this.hon);
+      }
+      if (this.voi != null) {
+        this.filtersettings.pack.push.apply(this.filtersettings.pack, this.voi);
+      }
+      if (this.tlr != null) {
+        this.filtersettings.pack.push.apply(this.filtersettings.pack, this.tlr);
+      }
+      if (this.tgh != null) {
+        this.filtersettings.pack.push.apply(this.filtersettings.pack, this.tgh);
+      }
+      if (this.saga != null) {
+        this.filtersettings.pack.push.apply(this.filtersettings.pack, this.saga);
+      }
       // save to localStorage
       $localStorage.pack = this.filtersettings.pack;
     }
@@ -139,7 +160,13 @@
           this.saga=[];
           break;
         default:
-          this.filtersettings.pack=[];
+          this.core=[];
+          this.kd=[];
+          this.hon=[];
+          this.voi=[];
+          this.tlr=[];
+          this.tgh=[];
+          this.saga=[];
       }
       this.update();
     };
@@ -168,7 +195,13 @@
           this.saga=this.saga_full.slice(0);
           break;
         default:
-        this.filtersettings.pack=this.full.slice(0); //make a clone
+          this.core=this.core_full.slice(0);
+          this.kd=this.kd_full.slice(0);
+          this.hon=this.hon_full.slice(0);
+          this.voi=this.voi_full.slice(0);
+          this.tlr=this.tlr_full.slice(0);
+          this.tgh=this.tgh_full.slice(0);
+          this.saga=this.saga_full.slice(0);
       }
       this.update();
     };
