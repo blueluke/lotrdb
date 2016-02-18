@@ -487,3 +487,14 @@ button.disabled {
 .pack-panel .panel-heading {
   padding: 5px 0px 5px 15px;
 }
+
+.pack-panel .form-control {
+  border-top-right-radius: 0px !important;
+  border-top-left-radius: 0px !important;
+}
+
+.pack-panel .panel-body {
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+}
