@@ -17,7 +17,7 @@
       <div id="herolist" class="panel-collapse collapse in">
         <table class="table table-hover">
           <tr class="card" ng-repeat="card in deck['1hero'] | orderBy:['sphere','name_norm']" ng-mouseover="deckC.changepreview(card)">
-            <td class="col-sm-5">
+            <td class="col-xs-5">
               <button class="btn btn-danger btn-sm" ng-class="{selected: deck.quantity(card)==0}" ng-click="deck.change(card,0)">X</button>
               <div class="btn-group btn-group-sm">
                 <button class="btn btn-success">1</button>
@@ -25,7 +25,7 @@
                 <button class="btn btn-default disabled">3</button>
               </div>
             </td>
-            <td class="c{{card.sphere}} col-sm-7" data-toggle="modal" data-target="#previewModal">{{card.name}}</td>
+            <td class="c{{card.sphere}} col-xs-7" data-toggle="modal" data-target="#previewModal">{{card.name}}</td>
           </td>
         </table>
        </div>
@@ -40,7 +40,7 @@
        <div id="allylist" class="panel-collapse collapse">
          <table class="table table-hover">
            <tr class="card" ng-repeat="card in deck['2ally'] | orderBy:['sphere','name_norm']" ng-mouseover="deckC.changepreview(card)">
-             <td class="col-sm-5">
+             <td class="col-xs-5">
                <button class="btn btn-danger btn-sm" ng-class="{selected: deck.quantity(card)==0}" ng-click="deck.change(card,0)">X</button>
                <div class="btn-group btn-group-sm">
                  <button class="btn btn-default" ng-class="{'btn-success': deck.quantity(card)==1}" ng-click="deck.change(card,1)">1</button>
@@ -48,7 +48,7 @@
                  <button class="btn btn-default" ng-class="{'btn-success': deck.quantity(card)==3, 'disabled': (card.restrict || (deck.filtersettings.onecore && card.corequantity < 3 && deck.quantity(card)<3 ) || (deck.filtersettings.twocore && card.corequantity < 2 && deck.quantity(card) < 3))}" ng-click="deck.change(card,3)">3</button>
                </div>
              </td>
-             <td class="c{{card.sphere}} col-sm-7" data-toggle="modal" data-target="#previewModal">{{card.name}}</td>
+             <td class="c{{card.sphere}} col-xs-7" data-toggle="modal" data-target="#previewModal">{{card.name}}</td>
            </tr>
          </table>
         </div>
@@ -63,7 +63,7 @@
         <div id="attachmentlist" class="panel-collapse collapse">
           <table class="table table-hover">
             <tr class="card" ng-repeat="card in deck['3attachment'] | orderBy:['sphere','name_norm']" ng-mouseover="deckC.changepreview(card)">
-              <td class="col-sm-5">
+              <td class="col-xs-5">
                 <button class="btn btn-danger btn-sm" ng-class="{selected: deck.quantity(card)==0}" ng-click="deck.change(card,0)">X</button>
                 <div class="btn-group btn-group-sm">
                   <button class="btn btn-default" ng-class="{'btn-success': deck.quantity(card)==1}" ng-click="deck.change(card,1)">1</button>
@@ -71,7 +71,7 @@
                   <button class="btn btn-default" ng-class="{'btn-success': deck.quantity(card)==3, 'disabled': (card.restrict || (deck.filtersettings.onecore && card.corequantity < 3 && deck.quantity(card)<3 ) || (deck.filtersettings.twocore && card.corequantity < 2 && deck.quantity(card) < 3))}" ng-click="deck.change(card,3)">3</button>
                 </div>
               </td>
-              <td class="c{{card.sphere}} col-sm-7" data-toggle="modal" data-target="#previewModal">{{card.name}}</td>
+              <td class="c{{card.sphere}} col-xs-7" data-toggle="modal" data-target="#previewModal">{{card.name}}</td>
             </tr>
           </table>
          </div>
@@ -86,7 +86,7 @@
          <div id="eventlist" class="panel-collapse collapse">
            <table class="table table-hover">
              <tr class="card" ng-repeat="card in deck['4event'] | orderBy:['sphere','name_norm']" ng-mouseover="deckC.changepreview(card)">
-              <td class="col-sm-5">
+              <td class="col-xs-5">
                 <button class="btn btn-danger btn-sm" ng-class="{selected: deck.quantity(card)==0}" ng-click="deck.change(card,0)">X</button>
                 <div class="btn-group btn-group-sm">
                   <button class="btn btn-default" ng-class="{'btn-success': deck.quantity(card)==1}" ng-click="deck.change(card,1)">1</button>
@@ -94,7 +94,7 @@
                   <button class="btn btn-default" ng-class="{'btn-success': deck.quantity(card)==3, 'disabled': (card.restrict || (deck.filtersettings.onecore && card.corequantity < 3 && deck.quantity(card)<3 ) || (deck.filtersettings.twocore && card.corequantity < 2 && deck.quantity(card) < 3))}" ng-click="deck.change(card,3)">3</button>
                 </div>
               </td>
-              <td class="c{{card.sphere}} col-sm-7" data-toggle="modal" data-target="#previewModal">{{card.name}}</td>
+              <td class="c{{card.sphere}} col-xs-7" data-toggle="modal" data-target="#previewModal">{{card.name}}</td>
            </tr>
          </table>
         </div>
@@ -109,7 +109,7 @@
         <div id="questlist" class="panel-collapse collapse">
           <table class="table table-hover">
             <tr class="card" ng-repeat="card in deck['5quest'] | orderBy:['sphere','name_norm']" ng-mouseover="deckC.changepreview(card)">
-              <td class="col-sm-5">
+              <td class="col-xs-5">
                 <button class="btn btn-danger btn-sm" ng-class="{selected: deck.quantity(card)==0}" ng-click="deck.change(card,0)">X</button>
                 <div class="btn-group btn-group-sm">
                   <button class="btn btn-default" ng-class="{'btn-success': deck.quantity(card)==1}" ng-click="deck.change(card,1)">1</button>
@@ -117,7 +117,7 @@
                   <button class="btn btn-default" ng-class="{'btn-success': deck.quantity(card)==3, 'disabled': (card.restrict || (deck.filtersettings.onecore && card.corequantity < 3 && deck.quantity(card)<3 ) || (deck.filtersettings.twocore && card.corequantity < 2 && deck.quantity(card) < 3))}" ng-click="deck.change(card,3)">3</button>
                 </div>
               </td>
-              <td class="c{{card.sphere}} col-sm-7" data-toggle="modal" data-target="#previewModal">{{card.name}}</td>
+              <td class="c{{card.sphere}} col-xs-7" data-toggle="modal" data-target="#previewModal">{{card.name}}</td>
           </tr>
         </table>
        </div>
