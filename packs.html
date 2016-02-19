@@ -1,31 +1,36 @@
 <div class="container" ng-show="tab.isSet(2)">
   <div class="row">
     <div class="col-sm-6">
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <div class="btn-group btn-group-justified">
-            <div class="btn-group">
-              <button class="btn btn-success" ng-click="packs.selectAll()">Select All Packs</button>
-            </div>
-            <div class="btn-group">
-              <button class="btn btn-warning" ng-click="packs.selectNone()">Select None</button>
-            </div>
-          </div>
-          <br>
-          <div class="btn-group btn-group-justified hidden-xs">
-            <div class="btn-group">
-              <button class="btn btn-info" ng-click="packs.toggleonecore()" ng-class="{'active': packs.filtersettings.onecore}">Limit to 1 Core Set</button>
-            </div>
-            <div class="btn-group">
-              <button class="btn btn-info" ng-click="packs.toggletwocore()" ng-class="{'active': packs.filtersettings.twocore}">Limit to 2 Core Sets</button>
+      <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="btn-group btn-group-justified">
+              <div class="btn-group">
+                <button class="btn btn-primary" ng-click="packs.selectAll()">Select All Packs</button>
+              </div>
+              <div class="btn-group">
+                <button class="btn btn-primary" ng-click="packs.selectNone()">Select None</button>
+              </div>
             </div>
           </div>
-          <div class="btn-group btn-group-justified visible-xs">
-            <div class="btn-group">
-              <button class="btn btn-info" ng-click="packs.toggleonecore()" ng-class="{'active': packs.filtersettings.onecore == true}">1 Core Set</button>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="btn-group btn-group-justified hidden-xs">
+              <div class="btn-group">
+                <button class="btn btn-info" ng-click="packs.toggleonecore()" ng-class="{'active': packs.filtersettings.onecore}">Limit to 1 Core Set</button>
+              </div>
+              <div class="btn-group">
+                <button class="btn btn-info" ng-click="packs.toggletwocore()" ng-class="{'active': packs.filtersettings.twocore}">Limit to 2 Core Sets</button>
+              </div>
             </div>
-            <div class="btn-group">
-              <button class="btn btn-info" ng-click="packs.toggletwocore()" ng-class="{'active': packs.filtersettings.twocore == true}">2 Core Sets</button>
+            <div class="btn-group btn-group-justified visible-xs">
+              <div class="btn-group">
+                <button class="btn btn-info" ng-click="packs.toggleonecore()" ng-class="{'active': packs.filtersettings.onecore == true}">1 Core Set</button>
+              </div>
+              <div class="btn-group">
+                <button class="btn btn-info" ng-click="packs.toggletwocore()" ng-class="{'active': packs.filtersettings.twocore == true}">2 Core Sets</button>
+              </div>
             </div>
           </div>
         </div>
