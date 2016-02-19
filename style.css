@@ -509,3 +509,8 @@ button.disabled {
     transition: height 0.01s;
   }
 }
+
+/* required for fixed top nav bar */
+body {
+  padding-top: 70px;
+}
