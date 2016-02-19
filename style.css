@@ -514,7 +514,7 @@ button.disabled {
   margin-bottom: 10px !important;
 }
 
-.stats-list ul {
+.stats-list {
   height: 225px;
   overflow-y: scroll;
 }
