@@ -1,34 +1,60 @@
 <div ng-show="tab.isSet(4)">
-  
-  <div class="carddraw">
-    <h3>Sample Hand</h3>
-    <br/>
-    <button ng-click="stats.reshuffle()">Start</button>
-    <button ng-click="stats.draw()">Draw</button>
-    <br/><br/>
-    <ul>
-      <li ng-repeat="card in stats.hand track by $index" ng-mouseover="deckC.changepreview(card)" class="card c{{card.sphere}}">
-        {{card.name}}
-        <span ng-click="stats.playCard($index)">Play Card</span>
-      </li>
-    </ul>
-  </div>
-  
   <script src="Chart.js"></script>
   <script>
     Chart.defaults.global.animation=false;
   </script>
-  
-  <div class="chartdiv">
-    <button ng-click="stats.refresh()">Refresh Charts</button><br/>
-    <canvas id="cost"></canvas>
-    <br/>Cost<br/><br/>
-    <canvas id="spheres"></canvas>
-    <br/>Spheres<br/><br/>
-    <canvas id="type"></canvas>
-    <br/>Types
-    
+
+  <div class="row stats-tab">
+    <div class="col-sm-5">
+      <h2 class="text-center"> Sample Hand </h2>
+      <div class="panel panel-default stats-panel">
+        <div class="panel-heading clearfix">
+          <button class="btn btn-primary pull-left" ng-click="stats.reshuffle()">Starting Hand</button>
+          <button class="btn btn-default pull-right" ng-click="stats.draw()">Draw Card</button>
+        </div>
+        <ul class="list-group stats-list">
+          <li ng-repeat="card in stats.hand track by $index" ng-mouseover="deckC.changepreview(card)" class="list-group-item c{{card.sphere}}">
+            {{card.name}}
+            <button class="btn btn-default btn-xs pull-right" ng-click="stats.playCard($index)">Play Card</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-sm-7">
+      <button class="btn btn-warning btn-block" ng-click="stats.refresh()">Refresh Charts</button>      
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <canvas id="cost"></canvas>
+        </div>
+        <div class="panel-footer">
+          <h2 class="panel-title text-center">Cost</h2>
+        </div>
+      </div>
+    </div>
   </div>
-  
-  
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="panel-title text-center">Spheres</h2>
+        </div>
+        <div class="panel-body">
+          <canvas id="spheres"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="panel-title text-center">Type</h2>
+        </div>
+        <div class="panel-body">
+          <canvas id="type"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

@@ -334,11 +334,7 @@ margin-bottom:2px;
 
 canvas {
   width: 100%;
-  min-height: 120px;
-  height: 23vh;
-  float: left;
-  margin: 0;
-  padding: 0;
+  height: auto;
 }
 
 
@@ -497,6 +493,30 @@ button.disabled {
   padding-left: 0px;
   padding-right: 0px;
   padding-bottom: 0px;
+}
+
+/* stats.html */
+
+.stats-panel .panel-heading {
+  padding: 6px 10px 6px 10px;
+}
+
+.stats-panel li {
+  font-size: 16px;
+  padding: 8px !important;
+}
+
+.stats-tab h2 {
+  margin-top: 0px;
+}
+
+.stats-tab .btn-block {
+  margin-bottom: 10px !important;
+}
+
+.stats-list ul {
+  height: 225px;
+  overflow-y: scroll;
 }
 
 /* Speed up collapse animation on mobile devices */
