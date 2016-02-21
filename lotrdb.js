@@ -1405,13 +1405,13 @@
       text=text.replace(/Defense/g,"<img src='img/defense.gif'/>");
       text=text.replace(/Threat/g,"<img src='img/threat.png'/>");
 
-      text=text.replace(/Leadership/g,"<img src='img/spheres/1leadership.png'/>");
-      text=text.replace(/Tactics/g,"<img src='img/spheres/2tactics.png'/>");
-      text=text.replace(/Spirit/g,"<img src='img/spheres/3spirit.png'/>");
-      text=text.replace(/Lore/g,"<img src='img/spheres/4lore.png'/>");
-      text=text.replace(/Neutral/g,"<img src='img/spheres/5neutral.png'/>");
-      text=text.replace(/Baggins/g,"<img src='img/spheres/6baggins.png'/>");
-      text=text.replace(/Fellowship/g,"<img src='img/spheres/7fellowship.png'/>");
+      text=text.replace(/Leadership/g,"<img class='img-sphere' src='img/spheres/1leadership.png'/>");
+      text=text.replace(/Tactics/g,"<img class='img-sphere' src='img/spheres/2tactics.png'/>");
+      text=text.replace(/Spirit/g,"<img class='img-sphere' src='img/spheres/3spirit.png'/>");
+      text=text.replace(/Lore/g,"<img class='img-sphere' src='img/spheres/4lore.png'/>");
+      text=text.replace(/Neutral/g,"<img class='img-sphere' src='img/spheres/5neutral.png'/>");
+      text=text.replace(/Baggins/g,"<img class='img-sphere' src='img/spheres/6baggins.png'/>");
+      text=text.replace(/Fellowship/g,"<img class='img-sphere' src='img/spheres/7fellowship.png'/>");
 
       text=text.replace(/CARDNAME/g,cardname);
 
