@@ -1054,9 +1054,9 @@
     "unique": true,
     "traits": " Item. Artifact.",
     "keywords": "Restricted.",
-    "text": "Attach to a hero.\nResponse: After a character leaves play, add 1 resource to attached hero's pool.",
+    "text": "Attach to a hero.\nResponse: After a character is destroyed, add 1 resource to attached hero's pool.",
     "flavor": null,
-    "textc": "Restricted.\nAttach to a hero.\nResponse: After a character leaves play, add 1 resource to attached hero's pool.",
+    "textc": "Restricted.\nAttach to a hero.\nResponse: After a character is destroyed, add 1 resource to attached hero's pool.",
     "name_norm": "Horn of Gondor",
     "corequantity": 1,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9042"
@@ -3714,9 +3714,9 @@
     "unique": false,
     "traits": " Condition.",
     "keywords": "",
-    "text": "Attach to a Lore hero. Limit 1 per hero.\nResponse: After a Song card is played, add 1 resource to attached hero's resource pool.",
+    "text": "Attach to a Lore hero. Limit 1 per hero.\nResponse: After a Song card is played, exhaust Love of Tales to add 1 resource to attached hero's resource pool.",
     "flavor": null,
-    "textc": "Attach to a Lore hero. Limit 1 per hero.\nResponse: After a Song card is played, add 1 resource to attached hero's resource pool.",
+    "textc": "Attach to a Lore hero. Limit 1 per hero.\nResponse: After a Song card is played, exhaust Love of Tales to add 1 resource to attached hero's resource pool.",
     "name_norm": "Love of Tales",
     "octgn": "51223bd0-ffd1-11df-a976-0801211c9019"
   },
