@@ -75,6 +75,11 @@ tr.card td {
   padding: 6px !important;
 }
 
+.panel-title img.img-cardtype {
+  margin-left: 3px;
+  margin-top: -3px;
+}
+
 
 /* cards.html */
 table.cardlist td {
@@ -95,10 +100,10 @@ button.disabled {
   height: 22px;
 }
 
-.panel-title img.img-cardtype {
-  margin-left: 3px;
-  margin-top: -3px;
+.form-group {
+  margin-bottom: 7px;
 }
+
 
 /* Filter buttons from CalebKester/lotrdb@75d94a0b473a13f30197c12883837bd953a6a820 */
 .filter-button {
