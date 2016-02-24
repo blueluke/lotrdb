@@ -1,55 +1,158 @@
+<div class="row" ng-show="tab.isSet(6)">
 
-<div class="suggesteddiv" ng-style="{'width':style.width, 'min-width':style.minwidth}">
-  
-  <button class="packbutton" style="width:200px;height:25px" ng-show="(!suggested.empty()||suggested.blacklist.length)&&!suggested.hidden&&!deck.empty()" ng-click="suggested.hide()" ng-class="">
-    Hide Suggestions
-  </button>
-  <button class="packbutton" style="width:200px;height:25px" ng-show="suggested.blacklist.length&&!suggested.hidden&&!deck.empty()" ng-click="suggested.clearBlacklist()" ng-class="">
-    Clear Blocked Suggestions
-  </button>
-  <table class="suggested" ng-show="!suggested.hidden">
-    <tr class="head" ng-show="suggested.countHeroes()"><td style="width:100px"></td><td>Heroes</td></tr>
-    <tr class="card" ng-repeat="card in suggested['1hero'] | orderBy:['sphere','name_norm']" ng-mouseover="suggestedC.changepreview(card)">
-      <td style="font-size:0;text-align:center;">
-        <button class="cardbutton" ng-class="" ng-click="suggested.remove(card)">X</button>
-        <button class="cardbutton" ng-class="{selected: deck.quantity(card)==1}" ng-click="deck.change(card,1)">1</button>
-      </td>
-      <td class="c{{card.sphere}}">{{card.name}}</td></li>
-    <tr class="head" ng-show="suggested.countAllies()"><td></td><td>Allies</td></tr>
-    <tr class="card" ng-repeat="card in suggested['2ally'] | orderBy:['sphere','name_norm']" ng-mouseover="suggestedC.changepreview(card)">
-      <td style="font-size:0;">
-        <button class="cardbutton" ng-class="" ng-click="suggested.remove(card)">X</button>
-        <button class="cardbutton" ng-class="{selected: deck.quantity(card)==1}" ng-click="deck.change(card,1)">1</button>
-        <button class="cardbutton" ng-class="{selected: deck.quantity(card)==2}" ng-click="deck.change(card,2)" ng-hide="card.restrict || (suggested.filtersettings.onecore && card.corequantity < 2 && deck.quantity(card)<2 )">2</button>
-        <button class="cardbutton" ng-class="{selected: deck.quantity(card)==3}" ng-click="deck.change(card,3)" ng-hide="card.restrict || (suggested.filtersettings.onecore && card.corequantity < 3 && deck.quantity(card)<3 ) || (suggested.filtersettings.twocore && card.corequantity < 2 && deck.quantity(card) < 3)">3</button>
-      </td>
-      <td class="c{{card.sphere}}">{{card.name}}</td></li>
-    <tr class="head" ng-show="suggested.countAttachments()"><td></td><td>Attachments</td></tr>
-    <tr class="card" ng-repeat="card in suggested['3attachment'] | orderBy:['sphere','name_norm']" ng-mouseover="suggestedC.changepreview(card)">
-      <td style="font-size:0;">
-        <button class="cardbutton" ng-class="" ng-click="suggested.remove(card)">X</button>
-        <button class="cardbutton" ng-class="{selected: deck.quantity(card)==1}" ng-click="deck.change(card,1)">1</button>
-        <button class="cardbutton" ng-class="{selected: deck.quantity(card)==2}" ng-click="deck.change(card,2)" ng-hide="card.restrict || (suggested.filtersettings.onecore && card.corequantity < 2 && deck.quantity(card)<2 )">2</button>
-        <button class="cardbutton" ng-class="{selected: deck.quantity(card)==3}" ng-click="deck.change(card,3)" ng-hide="card.restrict || (suggested.filtersettings.onecore && card.corequantity < 3 && deck.quantity(card)<3 ) || (suggested.filtersettings.twocore && card.corequantity < 2 && deck.quantity(card) < 3)">3</button>
-      </td>
-      <td class="c{{card.sphere}}">{{card.name}}</td></li>
-    <tr class="head" ng-show="suggested.countEvents()"><td></td><td>Events</td></tr>
-    <tr class="card" ng-repeat="card in suggested['4event'] | orderBy:['sphere','name_norm']" ng-mouseover="suggestedC.changepreview(card)">
-      <td style="font-size:0;">
-        <button class="cardbutton" ng-class="" ng-click="suggested.remove(card)">X</button>
-        <button class="cardbutton" ng-class="{selected: deck.quantity(card)==1}" ng-click="deck.change(card,1)">1</button>
-        <button class="cardbutton" ng-class="{selected: deck.quantity(card)==2}" ng-click="deck.change(card,2)" ng-hide="card.restrict || (suggested.filtersettings.onecore && card.corequantity < 2 && deck.quantity(card)<2 )">2</button>
-        <button class="cardbutton" ng-class="{selected: deck.quantity(card)==3}" ng-click="deck.change(card,3)" ng-hide="card.restrict || (suggested.filtersettings.onecore && card.corequantity < 3 && deck.quantity(card)<3 ) || (suggested.filtersettings.twocore && card.corequantity < 2 && deck.quantity(card) < 3)">3</button>
-      </td>
-      <td class="c{{card.sphere}}">{{card.name}}</td></tr>
-    <tr class="head" ng-show="suggested.countQuests()"><td></td><td>Quests</td></tr>
-    <tr class="card" ng-repeat="card in suggested['5quest'] | orderBy:['sphere','name_norm']" ng-mouseover="suggestedC.changepreview(card)">
-      <td style="font-size:0;">
-        <button class="cardbutton" ng-class="" ng-click="suggested.remove(card)">X</button>
-        <button class="cardbutton" ng-class="{selected: deck.quantity(card)==1}" ng-click="deck.change(card,1)">1</button>
-        <button class="cardbutton" ng-class="{selected: deck.quantity(card)==2}" ng-click="deck.change(card,2)" ng-hide="card.restrict || (suggested.filtersettings.onecore && card.corequantity < 2 && deck.quantity(card)<2 )">2</button>
-        <button class="cardbutton" ng-class="{selected: deck.quantity(card)==3}" ng-click="deck.change(card,3)" ng-hide="card.restrict || (suggested.filtersettings.onecore && card.corequantity < 3 && deck.quantity(card)<3 ) || (suggested.filtersettings.twocore && card.corequantity < 2 && deck.quantity(card) < 3)">3</button>
-      </td>
-      <td class="c{{card.sphere}}">{{card.name}}</td></tr>
-  </table>
+  <div class="col-md-12">
+    <div class="alert alert-warning">
+      <a href class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      <p><strong>New feature: Card suggestions</strong></p>
+      <p>In this tab you'll find a filtered selection of fitting <i>(spheres, heroes and traits)</i> and/or frequently used cards to help speed up the deck building process.</p>
+      <p>Just click on a panel to display or hide the suggestions and add them to your deck.</p>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+
+    <button class="btn btn-block btn-primary suggested-button" ng-disabled="(!suggested.blacklist.length)" ng-click="suggested.clearBlacklist()">
+      Clear Blocked Suggestions
+    </button>
+
+    <div class="panel-group">
+      <div class="panel panel-default" ng-class="{'panel-info': suggested.countHeroes()}">
+        <div class="panel-heading" data-toggle="collapse" data-target="#suggested-heroes" style="cursor: pointer">
+          <h2 class="panel-title"> Heroes </h2>
+        </div>
+        <div class="panel-collapse collapse" id="suggested-heroes">
+          <div class"panel-body">
+            <table class="table table-hover">
+              <tr ng-hide="suggested.countHeroes()">
+                <td>
+                  <h5>No suggestions available.</h5></td>
+              </tr>
+              <tr class="suggested-table" ng-repeat="card in suggested['1hero'] | orderBy:['sphere','name_norm']" ng-mouseover="suggestedC.changepreview(card)">
+                <td class="col-xs-5">
+                  <button class="btn btn-danger btn-sm" ng-click="suggested.remove(card)">X</button>
+                  <div class="btn-group btn-group-sm">
+                    <button class="btn btn-default" ng-click="deck.change(card,1)">1</button>
+                    <button class="btn btn-default disabled">2</button>
+                    <button class="btn btn-default disabled">3</button>
+                  </div>
+                </td>
+                <td class="c{{card.sphere}} col-xs-7" data-toggle="modal" data-target="#previewModal">{{card.name}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default" ng-class="{'panel-info': suggested.countAllies()}">
+        <div class="panel-heading" data-toggle="collapse" data-target="#suggested-allies" style="cursor: pointer">
+          <h2 class="panel-title"> Allies </h2>
+        </div>
+        <div class="panel-collapse collapse" id="suggested-allies">
+          <div class"panel-body">
+            <table class="table table-hover">
+              <tr ng-hide="suggested.countAllies()">
+                <td>
+                  <h5>No suggestions available.</h5></td>
+              </tr>
+              <tr class="suggested-table" ng-repeat="card in suggested['2ally'] | orderBy:['sphere','name_norm']" ng-mouseover="suggestedC.changepreview(card)">
+                <td class="col-xs-5">
+                  <button class="btn btn-danger btn-sm" ng-click="suggested.remove(card)">X</button>
+                  <div class="btn-group btn-group-sm">
+                    <button class="btn btn-default" ng-click="deck.change(card,1)">1</button>
+                    <button class="btn btn-default" ng-class="{'disabled': (card.restrict || (deck.filtersettings.onecore && card.corequantity < 2 && deck.quantity(card)<2 ))}" ng-click="deck.change(card,2)">2</button>
+                    <button class="btn btn-default" ng-class="{'disabled': (card.restrict || (deck.filtersettings.onecore && card.corequantity < 3 && deck.quantity(card)<3 ) || (deck.filtersettings.twocore && card.corequantity < 2 && deck.quantity(card) < 3))}" ng-click="deck.change(card,3)">3</button>
+                  </div>
+                <td class="c{{card.sphere}} col-xs-7" data-toggle="modal" data-target="#previewModal">{{card.name}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="panel-group">
+      <div class="panel panel-default" ng-class="{'panel-info': suggested.countAttachments()}">
+        <div class="panel-heading" data-toggle="collapse" data-target="#suggested-attachments" style="cursor: pointer">
+          <h2 class="panel-title"> Attachments </h2>
+        </div>
+        <div class="panel-collapse collapse" id="suggested-attachments">
+          <div class"panel-body">
+            <table class="table table-hover">
+              <tr ng-hide="suggested.countAttachments()">
+                <td>
+                  <h5>No suggestions available.</h5></td>
+              </tr>
+              <tr class="suggested-table" ng-repeat="card in suggested['3attachment'] | orderBy:['sphere','name_norm']" ng-mouseover="suggestedC.changepreview(card)">
+                <td class="col-xs-5">
+                  <button class="btn btn-danger btn-sm" ng-click="suggested.remove(card)">X</button>
+                  <div class="btn-group btn-group-sm">
+                    <button class="btn btn-default" ng-click="deck.change(card,1)">1</button>
+                    <button class="btn btn-default" ng-class="{'disabled': (card.restrict || (deck.filtersettings.onecore && card.corequantity < 2 && deck.quantity(card)<2 ))}" ng-click="deck.change(card,2)">2</button>
+                    <button class="btn btn-default" ng-class="{'disabled': (card.restrict || (deck.filtersettings.onecore && card.corequantity < 3 && deck.quantity(card)<3 ) || (deck.filtersettings.twocore && card.corequantity < 2 && deck.quantity(card) < 3))}" ng-click="deck.change(card,3)">3</button>
+                  </div>
+                </td>
+                <td class="c{{card.sphere}} col-xs-7" data-toggle="modal" data-target="#previewModal">{{card.name}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default" ng-class="{'panel-info': suggested.countEvents()}">
+        <div class="panel-heading" data-toggle="collapse" data-target="#suggested-events" style="cursor: pointer">
+          <h2 class="panel-title"> Events </h2>
+        </div>
+        <div class="panel-collapse collapse" id="suggested-events">
+          <div class"panel-body">
+            <table class="table table-hover">
+              <tr ng-hide="suggested.countEvents()">
+                <td>
+                  <h5>No suggestions available.</h5></td>
+              </tr>
+              <tr class="suggested-table" ng-repeat="card in suggested['4event'] | orderBy:['sphere','name_norm']" ng-mouseover="suggestedC.changepreview(card)">
+                <td class="col-xs-5">
+                  <button class="btn btn-danger btn-sm" ng-click="suggested.remove(card)">X</button>
+                  <div class="btn-group btn-group-sm">
+                    <button class="btn btn-default" ng-click="deck.change(card,1)">1</button>
+                    <button class="btn btn-default" ng-class="{'disabled': (card.restrict || (deck.filtersettings.onecore && card.corequantity < 2 && deck.quantity(card)<2 ))}" ng-click="deck.change(card,2)">2</button>
+                    <button class="btn btn-default" ng-class="{'disabled': (card.restrict || (deck.filtersettings.onecore && card.corequantity < 3 && deck.quantity(card)<3 ) || (deck.filtersettings.twocore && card.corequantity < 2 && deck.quantity(card) < 3))}" ng-click="deck.change(card,3)">3</button>
+                  </div>
+                </td>
+                <td class="c{{card.sphere}} col-xs-7" data-toggle="modal" data-target="#previewModal">{{card.name}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default" ng-class="{'panel-info': suggested.countQuests()}">
+        <div class="panel-heading" data-toggle="collapse" data-target="#suggested-quests" style="cursor: pointer">
+          <h2 class="panel-title"> Sidequests </h2>
+        </div>
+        <div class="panel-collapse collapse" id="suggested-quests">
+          <div class"panel-body">
+            <table class="table table-hover">
+              <tr ng-hide="suggested.countQuests()">
+                <td>
+                  <h5>No suggestions available.</h5></td>
+              </tr>
+              <tr class="suggested-table" ng-repeat="card in suggested['5quest'] | orderBy:['sphere','name_norm']" ng-mouseover="suggestedC.changepreview(card)">
+                <td class="col-xs-5">
+                  <button class="btn btn-danger btn-sm" ng-click="suggested.remove(card)">X</button>
+                  <div class="btn-group btn-group-sm">
+                    <button class="btn btn-default" ng-click="deck.change(card,1)">1</button>
+                    <button class="btn btn-default" ng-class="{'disabled': (card.restrict || (deck.filtersettings.onecore && card.corequantity < 2 && deck.quantity(card)<2 ))}" ng-click="deck.change(card,2)">2</button>
+                    <button class="btn btn-default" ng-class="{'disabled': (card.restrict || (deck.filtersettings.onecore && card.corequantity < 3 && deck.quantity(card)<3 ) || (deck.filtersettings.twocore && card.corequantity < 2 && deck.quantity(card) < 3))}" ng-click="deck.change(card,3)">3</button>
+                  </div>
+                </td>
+                <td class="c{{card.sphere}} col-xs-7" data-toggle="modal" data-target="#previewModal">{{card.name}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
