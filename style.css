@@ -1,189 +1,27 @@
-.packbutton {
-  font-size: 10px;
-  width:   100%;
-  height: 50px;
-  border-radius: 6px;
-  background-color: #EEEEEE;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #eee #555 #555 #eee;
-}
-.packbutton.selected {
-  background-color: #bbb;
-  border-color: #555 #eee #eee #555;
-}
-.packbutton:active {
-  background-color: #bbb;
-  border-color: #555 #eee #eee #555;
-}
-.packbutton:hover {
-  border-color: black;
-}
-.packbutton:disabled {
-  color: lightgrey;
-  background-color: grey;
-  border-color: grey;
+/* Stuff affecting the whole site */
+
+/* Speed up collapse animation on mobile devices */
+@media(max-width:767px) {
+  .collapsing {
+    -webkit-transition: height 0.01s;
+    -moz-transition: height 0.01s;
+    -ms-transition: height 0.01s;
+    -o-transition: height 0.01s;
+    transition: height 0.01s;
+  }
 }
 
-
-.cardbutton {
-  font-size:9px;
-  width:22px;
-  height:22px;
-  border-radius: 6px;
-  background-color: #EEEEEE;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #eee #555 #555 #eee;
-}
-.cardbutton:hover {
-  border-color: black;
-}
-.cardbutton.selected{
-  background-color: #bbb;
-  border-color: #555 #eee #eee #555;
-}
-.cardbutton:active{
-  background-color: #bbb;
-  border-color: #555 #eee #eee #555;
+/* Required for fixed top nav bar */
+body {
+  padding-top: 70px;
 }
 
-
-
-.filterbutton {
-  width: 40px;
-  height: 40px;
-  border-radius: 6px;
-  background-color: #EEEEEE;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #eee #555 #555 #eee;
-}
-.filterbutton.selected {
-  background-color: #bbb;
-  border-color: #555 #eee #eee #555;
-}
-.filterbutton:active {
-  background-color: #bbb;
-  border-color: #555 #eee #eee #555;
-}
-.filterbutton:hover{
-  border-color: black;
+/* Removes bottom margin from all bootstrap tables */
+.table {
+  margin-bottom: 0px !important;
 }
 
-.cardpreview {
-  width: 90%;
-  height: auto;
-  border: no;
-}
-
-
-.leftdiv {
-  width: 20%;
-  min-width: 200px;
-  float: left;
-  height:108%;
-  overflow-y: auto;
-  padding-left: 5px;
-}
-
-.suggesteddiv {
-  width: 20%;
-  min-width: 200px;
-  float: left;
-  height:108%;
-  overflow-y: auto;
-  padding-left: 5px;
-}
-
-
-.cardpreviewdiv {
-  text-align: center;
-  width:25%;
-  min-width: 100px;
-  float: left;
-  height:108%;
-  overflow:hidden;
-}
-
-.rightdiv {
-  width: 35%;
-  min-width: 300px;
-  height: 100%;
-  float:left;
-  padding-right: 5px;
-}
-
-.headerdiv{
-  margin-top: 10px;
-  padding:0;
-  height:6vh;
-}
-
-.footer{
-  margin: 0;
-  padding:0;
-  height:6vh;
-  width: 100%;
-  font-size: 9px;
-  text-align: center;
-  background-color: lightgrey;
-  position: absolute;
-  bottom: 0px;
-}
-
-.footerdiv{
-  width: 90%;
-  text-align: justify;
-  margin: 0 auto;
-}
-
-.cardsdiv {
-  display: flex;
-  flex-direction: column;
-  height:100%;
-  width:100%;
-}
-
-.cards {
-  flex:1;
-  overflow-y: scroll;
-}
-
-
-.cardrow:nth-child(even) {
-  background-color: #EEEEEE;
-}
-.cardrow:nth-child(odd) {
-  background-color: #FFFFFF;
-}
-
-.cardrow:hover {
-  background-color: #CCCCFF;
-}
-
-.filterdiv {
-  font-size:0px;
-}
-
-
-table.deck {
-  padding:0;
-  margin: 0 0 15px 0;
-  width: 100%
-}
-
-table.suggested {
-  padding:0;
-  margin: 0;
-  width: 100%
-}
-
-
-tr.head {
-  font-weight: bold;
-}
-
+/* Colours used for the cardnames */
 .c1leadership {
   color: purple;
 }
@@ -207,163 +45,12 @@ tr.head {
   color: orange;
 }
 
-.card:hover {
-  background-color: lightgrey;
-}
-
-
-
-.savebutton {
-  width: 100%;
-  border-radius: 6px;
-  background-color: #EEEEEE;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #eee #555 #555 #eee;
-  height: 30px;
-  font-weight: normal;
-  text-align: center;
-}
-.savebutton:hover{
-  border-color: black;
-}
-
-.savebutton:active {
-  background-color: #bbb;
-  border-color: #555 #eee #eee #555;
-}
-
-div.upload {
-  margin-top:5px;
-}
-
-
-td.decks {
-  padding: 0px;
-  width: 80px;
-  vertical-align: top;
-}
-
-
-/*.activetab {
-  color: #fff !important;
-  background-color: #337ab7 !important;
-}
-*/
-
-section.tab{
-margin-bottom:2px;
-
-}
-
-
-
-.carddraw {
-  width: 40%;
-  height: 86vh;
-  overflow-y: auto;
-  float:left;
-}
-
-.carddraw > ul,
-.carddraw > li {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.carddraw > button,
-.chartdiv > button {
-  width: 40%;
-  border-radius: 6px;
-  background-color: #EEEEEE;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #eee #555 #555 #eee;
-  height: 30px;
-  font-weight: normal;
-  text-align: center;
-}
-.carddraw > button:hover,
-.chartdiv > button:hover{
-  border-color: black;
-}
-
-.carddraw > button:active,
-.chartdiv > button:active {
-  background-color: #bbb;
-  border-color: #555 #eee #eee #555;
-}
-
-.carddraw li span {
-  color: #337ab7;
-  font-size: 11px;
-  float: right;
-  line-height: 1.8;
-  cursor: pointer;
-  margin-right: 4px;
-  display: none;
-}
-.carddraw li:hover span {
-  display: inline-block;
-}
-
-
-
-.mydecks{
-  height: 86vh;
-  overflow-y:auto;
-}
-
-.unique{
+/* Used for the unique card icon */
+.unique {
   height:10px;
   width:auto;
   margin-bottom: 2px;
 }
-
-
-.chartdiv {
-  width: 60%;
-  height: 86vh;
-  overflow: hidden;
-  float:left;
-  text-align: center;
-  font-weight:bold;
-  font-size:11px;
-}
-
-canvas {
-  width: 100%;
-  height: auto;
-}
-
-
-.packtable {
-  border-spacing:0px;
-  width:100%;
-  border-collapse: separate;
-}
-
-.about {
-  text-align: justify;
-  height: 86vh;
-  overflow-y: scroll;
-}
-
-.about-inner {
-  text-align: justify;
-  margin: 25px;
-}
-
-.about-inner > ul >li > p {
-  font-size: 12px;
-  margin-top: 0;
-}
-
-.about-inner >ul>li>p>a {
-  font-weight: bold;
-}
-
 
 .preload {
   visibility: hidden;
@@ -380,12 +67,14 @@ canvas {
   margin-top: 10px;
 }
 
+
 /* deck.html */
 tr.card td {
   vertical-align: middle !important;
   font-size: 16px;
   padding: 6px !important;
 }
+
 
 /* cards.html */
 table.cardlist td {
@@ -469,6 +158,7 @@ button.disabled {
   background-color: #313843;
 }
 
+
 /* packs.html */
 .pack-panel h2 {
   padding-top: 6.5px;
@@ -494,7 +184,12 @@ button.disabled {
   padding-bottom: 0px;
 }
 
+
 /* stats.html */
+canvas {
+  width: 100%;
+  height: auto;
+}
 
 .stats-panel .panel-heading {
   padding: 6px 10px 6px 10px;
@@ -527,24 +222,4 @@ button.disabled {
 .suggested-table > td {
   vertical-align: middle !important;
   font-size: 16px;
-}
-
-/* Speed up collapse animation on mobile devices */
-@media(max-width:767px) {
-  .collapsing {
-    -webkit-transition: height 0.01s;
-    -moz-transition: height 0.01s;
-    -ms-transition: height 0.01s;
-    -o-transition: height 0.01s;
-    transition: height 0.01s;
-  }
-}
-
-/* required for fixed top nav bar */
-body {
-  padding-top: 70px;
-}
-
-.table {
-  margin-bottom: 0px !important;
 }
