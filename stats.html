@@ -1,4 +1,13 @@
 <div ng-show="tab.isSet(4)">
+  <div class="alert alert-warning">
+    <a href class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <p><strong>The Statistics Tab</strong></p>
+    <p>Here you can inspect the deck you've made. On the left side you can create sample starting hands. Just press 'Start' to draw six cards and 'Draw' to draw additional cards. <br/>
+    This should give you an impression of what a first turn would look like and what kind of opening strategies suit a deck. Be sure to press 'Start' after every change to the deck, as it is not updated automatically.</p>
+    <p><strong>Press the "Refresh Charts" button to display several graphs visualizing the card cost as well as the division of spheres and card types in the deck.</strong></p>
+    <p>Clicking on either a sphere or a card type will update to other two graphs to reflect only the cards from that particular sphere or type.
+    After any change to the deck or after loading a new deck you'll have to press 'Refresh' again to update the graphs. </p>
+  </div>
   <script src="Chart.js"></script>
   <script>
     Chart.defaults.global.animation=false;
@@ -22,7 +31,7 @@
     </div>
 
     <div class="col-sm-7">
-      <button class="btn btn-warning btn-block" ng-click="stats.refresh()">Refresh Charts</button>      
+      <button class="btn btn-warning btn-block" ng-click="stats.refresh()">Refresh Charts</button>
       <div class="panel panel-default">
         <div class="panel-body">
           <canvas id="cost"></canvas>

@@ -1,4 +1,14 @@
 <div class="panel-group" ng-show="tab.isSet(1)">
+  <!-- Dismissable alert with usage instructions -->
+  <div class="alert alert-warning">
+    <a href class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <p><strong>Card Search Tab</strong></p>
+    <p>Here you can browse cards to add to your deck. <br/>
+    This tab also gives you the ability to search for cards by card trait, card text, card type, card sphere or name.</p>
+    <p><em>(Be sure not to use accents! Type 'Gloin' to find Glóin, for instance)</em></p>
+    <p>You can also sort the cards by name, sphere, cost, willpower, attack, defense or hitpoints by clicking on the relevant row headers.</p>
+    <p><strong>Make sure to go to the 'Packs' tab to select the packs you own - Otherwise you'll only see cards from the Core Set.</strong></p>
+  </div>
   <!-- Collapsible panel containing trait, type and sphere filters -->
   <div class="panel panel-default filter-panel hidden-xs" id=filterpanel>
     <div class="panel-heading">
