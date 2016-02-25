@@ -1446,6 +1446,9 @@
     this.getImg = function() {
       return this.image.getUrl();
     };
+    this.exp = function() {
+      return translate[image.exp];
+    }
     this.name = function() {
       return image.name + " (" + translate[image.exp] +")";
     }
