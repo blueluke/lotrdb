@@ -328,6 +328,7 @@
       filtersettings.search.name_norm="";
       filtersettings.search.traits="";
       filtersettings.search.textc="";
+      filtersettings.search.categories="";
     };
     this.toggleType = function(t,$event){
       if($event.shiftKey){
@@ -366,6 +367,13 @@
     return {
       restrict: 'E',
       templateUrl: 'traitchoice.html'
+    };
+  });
+
+  app.directive('categories', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'categories.html'
     };
   });
 

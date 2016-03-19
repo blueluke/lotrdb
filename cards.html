@@ -42,9 +42,23 @@
     <div class="panel-collapse collapse" id="filterlist">
       <div class="list-group">
         <div class="list-group-item">
-          <div class="form">
-            <label class="sr-only" for="traitfilter">Filter by trait</label>
-              <traits></traits>
+          <div class="form-horizontal">
+            <div class="form-group">
+              <label class="control-label col-sm-3" for="traitfilter">Filter by Card Trait:</label>
+              <div class="col-sm-9">
+                <traits></traits>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="list-group-item">
+          <div class="form-horizontal">
+            <div class="form-group">
+              <label class="control-label col-sm-3" for="categoryfilter">Filter by Category:</label>
+              <div class="col-sm-9">
+                <categories></categories>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -54,8 +68,7 @@
   <div class="panel panel-primary visible-xs" id=filterpanel-xs>
     <div class="panel-heading clearfix" data-toggle="collapse" data-parent="#filterpanel-xs" style="cursor: pointer;" data-target="#filterlist-xs">
       <h2 class="panel-title">
-        <a data-toggle="collapse" style="vertical-align: middle;"> <span class="glyphicon glyphicon-filter"></span> Show Filters</a>
-        <button class="btn btn-default btn-xs pull-right" ng-click="cards.resetSearch();"> Reset </button>
+        <a data-toggle="collapse"> <span class="glyphicon glyphicon-filter"></span> Show Filters</a>
       </h2>
     </div>
     <div class="panel-collapse collapse" id="filterlist-xs">
@@ -86,15 +99,24 @@
             </form>
           </div>
           <div class="list-group-item">
-            <div class="form">
-              <label class="sr-only" for="traitfilter">Filter by trait</label>
-                <traits></traits>
-            </div>
-          </div>
-          <div class="list-group-item">
             <form class="form-inline">
               <input class="form-control" ng-model="cards.filtersettings.search.textc" type="search" placeholder="Search by card text">
             </form>
+          </div>
+          <div class="list-group-item">
+            <div class="form">
+              <label class="sr-only" for="traitfilter">Filter by trait</label>
+              <traits></traits>
+            </div>
+          </div>
+          <div class="list-group-item">
+            <div class="form">
+              <label class="sr-only" for="traitfilter">Filter by categories</label>
+              <categories></categories>
+            </div>
+          </div>
+          <div class="list-group-item">
+            <button class="btn btn-primary btn-block" ng-click="cards.resetSearch();"> Reset Filters</button>
           </div>
       </div>
     </div>
