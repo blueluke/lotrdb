@@ -110,7 +110,7 @@
     "textc": "Ranged.\nResponse: After Legolas participates in an attack that destroys an enemy, place 2 progress tokens on the current quest.",
     "name_norm": "Legolas",
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9005",
-    "categories": ""
+    "categories": "Location Control"
   },
   {
     "name": "Thalin",
@@ -154,7 +154,7 @@
     "textc": "Action: Discard 1 card from your hand to give \u00c9owyn +1 Willpower until the end of the phase. This effect may be triggered by each player once each round.",
     "name_norm": "Eowyn",
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9007",
-    "categories": ""
+    "categories": "Willpower Bonus"
   },
   {
     "name": "Eleanor",
@@ -198,7 +198,7 @@
     "textc": "D\u00fanhere can target enemies in the staging area when he attacks alone. When doing so, he gets +1 Attack.",
     "name_norm": "Dunhere",
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9009",
-    "categories": "Attack Bonus"
+    "categories": "Attack Bonus, Staging Area Attack"
   },
   {
     "name": "Denethor",
@@ -310,7 +310,7 @@
     "name_norm": "Faramir",
     "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9014",
-    "categories": ""
+    "categories": "Willpower Bonus"
   },
   {
     "name": "Son of Arnor",
@@ -358,7 +358,7 @@
     "name_norm": "Snowbourn Scout",
     "corequantity": 3,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9016",
-    "categories": ""
+    "categories": "Location Control"
   },
   {
     "name": "Silverlode Archer",
@@ -566,7 +566,7 @@
     "name_norm": "Lorien Guide",
     "corequantity": 3,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9044",
-    "categories": ""
+    "categories": "Location Control"
   },
   {
     "name": "Northern Tracker",
@@ -590,7 +590,7 @@
     "name_norm": "Northern Tracker",
     "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9045",
-    "categories": ""
+    "categories": "Location Control"
   },
   {
     "name": "Daughter of the Nimrodel",
@@ -858,7 +858,7 @@
     "name_norm": "Celebrian's Stone",
     "corequantity": 1,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9027",
-    "categories": "Resource Smoothing"
+    "categories": "Resource Smoothing, Willpower Bonus"
   },
   {
     "name": "Blade Mastery",
@@ -1013,7 +1013,7 @@
     "name_norm": "Blade of Gondolin",
     "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9039",
-    "categories": "Attack Bonus"
+    "categories": "Attack Bonus, Location Control"
   },
   {
     "name": "Citadel Plate",
@@ -1109,7 +1109,7 @@
     "name_norm": "Strength of Will",
     "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9047",
-    "categories": ""
+    "categories": "Location Control"
   },
   {
     "name": "Hasty Stroke",
@@ -1263,7 +1263,7 @@
     "name_norm": "The Favor of the Lady",
     "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9055",
-    "categories": ""
+    "categories": "Willpower Bonus"
   },
   {
     "name": "Power in the Earth",
@@ -1282,7 +1282,7 @@
     "name_norm": "Power in the Earth",
     "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9056",
-    "categories": ""
+    "categories": "Location Control"
   },
   {
     "name": "Unexpected Courage",
@@ -1455,7 +1455,7 @@
     "name_norm": "Protector of Lorien",
     "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9070",
-    "categories": "Defense Bonus"
+    "categories": "Defense Bonus, Willpower Bonus"
   },
   {
     "name": "Dark Knowledge",
@@ -1886,7 +1886,7 @@
     "textc": "Action: Spend 1 Lore resource to give Longbeard Map-Maker +1 Willpower until the end of the phase.",
     "name_norm": "Longbeard Map-Maker",
     "octgn": "51223bd0-ffd1-11df-a976-0801202c9014",
-    "categories": ""
+    "categories": "Willpower Bonus"
   },
   {
     "name": "A Burning Brand",
@@ -1964,7 +1964,7 @@
     "textc": "Attach to a hero.\nAttached hero gains +1 Willpower.\nAction: Pay 1 resource from attached hero's pool to attach Dunedain Quest to another hero.",
     "name_norm": "Dunedain Quest",
     "octgn": "51223bd0-ffd1-11df-a976-0801203c9008",
-    "categories": ""
+    "categories": "Willpower Bonus"
   },
   {
     "name": "Parting Gifts",
@@ -2046,7 +2046,7 @@
     "textc": "While committed to a quest, Escort from Edoras gets +2 Willpower.\nForced: After resolving a quest to which Escort from Edoras was committed, discard Escort from Edoras from play.",
     "name_norm": "Escort from Edoras",
     "octgn": "51223bd0-ffd1-11df-a976-0801203c9009",
-    "categories": ""
+    "categories": "Willpower Bonus"
   },
   {
     "name": "Ancient Mathom",
@@ -2192,7 +2192,7 @@
     "textc": "Quest Action: Discard a Leadership ally to give each hero committed to this quest +1 Willpower until the end of the phase.",
     "name_norm": "Rear Guard",
     "octgn": "51223bd0-ffd1-11df-a976-0801204c9012",
-    "categories": ""
+    "categories": "Willpower Bonus"
   },
   {
     "name": "Descendant of Thorondor",
@@ -2254,7 +2254,7 @@
     "textc": "Action: Exhaust and discard The Riddermark's Finest to place 2 progress tokens on any location.",
     "name_norm": "The Riddermark's Finest",
     "octgn": "51223bd0-ffd1-11df-a976-0801204c9023",
-    "categories": ""
+    "categories": "Location Control"
   },
   {
     "name": "Ride to Ruin",
@@ -2272,7 +2272,7 @@
     "textc": "Action: Discard a Rohan ally to choose a location. Place 3 progress tokens on that location.",
     "name_norm": "Ride to Ruin",
     "octgn": "51223bd0-ffd1-11df-a976-0801204c9013",
-    "categories": ""
+    "categories": "Location Control"
   },
   {
     "name": "Gildor Inglorion",
@@ -2561,7 +2561,7 @@
     "textc": "While Dain Ironfoot is ready, Dwarf characters get +1 Attack and +1 Willpower.",
     "name_norm": "Dain Ironfoot",
     "octgn": "51223bd0-ffd1-11df-a976-0801206c9005",
-    "categories": "Attack Bonus"
+    "categories": "Attack Bonus, Willpower Bonus"
   },
   {
     "name": "D\u00fanedain Signal",
@@ -2662,7 +2662,7 @@
     "textc": "Response: After you play West Road Traveller from your hand, switch the active location with any other location in the staging area.",
     "name_norm": "West Road Traveller",
     "octgn": "51223bd0-ffd1-11df-a976-0801206c9026",
-    "categories": ""
+    "categories": "Location Control"
   },
   {
     "name": "Astonishing Speed",
@@ -2681,7 +2681,7 @@
     "textc": "Action: Until the end of the phase, all Rohan characters get +2 Willpower.",
     "name_norm": "Astonishing Speed",
     "octgn": "51223bd0-ffd1-11df-a976-0801206c9003",
-    "categories": ""
+    "categories": "Willpower Bonus"
   },
   {
     "name": "Mirkwood Runner",
@@ -2824,7 +2824,7 @@
     "textc": "Action: Choose a Dwarf hero. That hero gets +2 Willpower, +2 Attack, and +2 Defense until the end of the round.",
     "name_norm": "Durin's Song",
     "octgn": "51223bd0-ffd1-11df-a976-0801207c9024",
-    "categories": "Attack Bonus, Defense Bonus"
+    "categories": "Attack Bonus, Defense Bonus, Willpower Bonus"
   },
   {
     "name": "Ever Onward",
@@ -2942,7 +2942,7 @@
     "textc": "Action: Each Dwarf character gets +1 Willpower until the end of the phase. (+2 Willpower instead if the active location is an Underground or Dark location.)",
     "name_norm": "Untroubled by Darkness",
     "octgn": "51223bd0-ffd1-11df-a976-0801207c9083",
-    "categories": ""
+    "categories": "Willpower Bonus"
   },
   {
     "name": "Erebor Record Keeper",
@@ -2982,7 +2982,7 @@
     "textc": "Action: Exhaust a Dwarf character to place 2 progress tokens on the active location. (4 progress tokens instead if it is an Underground or Mountain location.)",
     "name_norm": "Ancestral Knowledge",
     "octgn": "51223bd0-ffd1-11df-a976-0801207c9007",
-    "categories": ""
+    "categories": "Location Control"
   },
   {
     "name": "Boots from Erebor",
@@ -3353,7 +3353,7 @@
     "textc": "Action: Exhaust Bombur to choose a location. That location gets -1 Threat until the end of the phase. (That location does not contribute its Threat instead if it is an Underground location.)",
     "name_norm": "Bombur",
     "octgn": "51223bd0-ffd1-11df-a976-0801209c9007",
-    "categories": ""
+    "categories": "Location Control"
   },
   {
     "name": "Out of the Wild",
@@ -3447,7 +3447,7 @@
     "textc": "Attach to a hero. Attached hero gains a Leadership resource icon.\nIf attached hero is Aragorn, each character you control gets +1 Willpower.",
     "name_norm": "Sword that was Broken",
     "octgn": "51223bd0-ffd1-11df-a976-0801210c9018",
-    "categories": "Resource Smoothing"
+    "categories": "Resource Smoothing, Willpower Bonus"
   },
   {
     "name": "Watcher of the Bruinen",
@@ -3527,7 +3527,7 @@
     "textc": "Action: If you control a unique Noldor character, give another character +1 Willpower until the end of the phase and lower your threat by 3.",
     "name_norm": "Elrond's Counsel",
     "octgn": "51223bd0-ffd1-11df-a976-0801210c9005",
-    "categories": "Threat Control"
+    "categories": "Threat Control, Willpower Bonus"
   },
   {
     "name": "Short Cut",
@@ -3545,7 +3545,7 @@
     "textc": "Response: After a location enters play, exhaust a Hobbit character to shuffle that location back into the encounter deck. Then, reveal 1 card from the encounter deck and add it to the staging area.",
     "name_norm": "Short Cut",
     "octgn": "51223bd0-ffd1-11df-a976-0801210c9014",
-    "categories": ""
+    "categories": "Location Control"
   },
   {
     "name": "Legacy of Durin",
@@ -3824,7 +3824,7 @@
     "textc": "Response: After Longbeard Elder commits to a quest, look at the top card of the encounter deck. If that card is a location, place 1 progress token on the current quest. Otherwise, Longbeard Elder gets -1 Willpower until the end of the phase.",
     "name_norm": "Longbeard Elder",
     "octgn": "51223bd0-ffd1-11df-a976-0801212c9021",
-    "categories": ""
+    "categories": "Location Control"
   },
   {
     "name": "Path of Need",
@@ -3981,7 +3981,7 @@
     "textc": "Attach to a Noldor or Silvan hero.\nAction: Exhaust Asfaloth to place 1 progress token on any location. (2 tokens instead if attached hero is Glorfindel.)",
     "name_norm": "Asfaloth",
     "octgn": "51223bd0-ffd1-11df-a976-0801212c9001",
-    "categories": ""
+    "categories": "Location Control"
   },
   {
     "name": "Elrond",
@@ -4058,7 +4058,7 @@
     "textc": "Action: Exhaust a character you control with ranged to immediately declare it as an attacker (and resolve its attack) against an enemy in the staging area. It gets +1 Attack during this attack.",
     "name_norm": "Hands Upon the Bow",
     "octgn": "51223bd0-ffd1-11df-a976-0801213c9007",
-    "categories": "Attack Bonus"
+    "categories": "Attack Bonus, Staging Area Attack"
   },
   {
     "name": "O Elbereth! Gilthonial!",
@@ -4094,7 +4094,7 @@
     "textc": "Attach to a hero.\nAction: Discard Miruvor to (choose two): ready attached hero, add 1 resource to attached hero's resource pool, attached hero gets +1 Willpower until the end of the round, or put Miruvor on the top of your deck.",
     "name_norm": "Miruvor",
     "octgn": "51223bd0-ffd1-11df-a976-0801213c9016",
-    "categories": "Readying, Resource Acceleration"
+    "categories": "Readying, Resource Acceleration, Willpower Bonus"
   },
   {
     "name": "Master of the Forge",
@@ -4675,7 +4675,7 @@
     "textc": "Each Outlands character you control gets +1 Willpower.",
     "name_norm": "Ethir Swordsman",
     "octgn": "1c149f93-9e3b-42fa-878c-80b29563a283",
-    "categories": ""
+    "categories": "Willpower Bonus"
   },
   {
     "name": "Ring of Barahir",
@@ -5144,7 +5144,7 @@
     "textc": "Play Ithilien Pit into the staging area unattached.\n\nIf unattached, attach Ithilien Pit to the next eligible enemy that enters the staging area.\n\nAny character may choose attached enemy as the target of an attack.",
     "name_norm": "Ithilien Pit",
     "octgn": "fd89bdbf-7475-4f3e-96fc-8f5315a90029",
-    "categories": ""
+    "categories": "Staging Area Attack"
   },
   {
     "name": "Hobbit-sense",
@@ -5246,7 +5246,7 @@
     "textc": "If each of your heroes has a printed Tactics resource icon, Knight of Minas Tirith gains: `Response: After Knight of Minas Tirith enters play, choose an enemy in the staging area. Engage that enemy and exhaust Knight of Minas Tirith to declare it as attacker (and resolve its attack) against that enemy.`",
     "name_norm": "Knight of Minas Tirith",
     "octgn": "237b31e7-d0b0-4c1e-bd4a-40a175f7d7d1",
-    "categories": ""
+    "categories": "Staging Area Attack"
   },
   {
     "name": "Gondorian Fire",
@@ -5287,7 +5287,7 @@
     "textc": "Pelargir Shipwright gets +1 Willpower for each hero you control with a printed Spirit resource icon.",
     "name_norm": "Pelargir Shipwright",
     "octgn": "d8d1e7b4-3639-4ca0-bc83-daa7f78554b2",
-    "categories": ""
+    "categories": "Willpower Bonus"
   },
   {
     "name": "Map of Earnil",
@@ -5324,7 +5324,7 @@
     "textc": "Restricted.\nAttach to a Ranger character.\nAction: Exhaust Ranger Bow and attached character to deal 1 damage to an enemy in the staging area.",
     "name_norm": "Ranger Bow",
     "octgn": "3fa0b17f-a7d1-4f0c-a779-c20cb6084e78",
-    "categories": "Direct Damage"
+    "categories": "Direct Damage, Staging Area Attack"
   },
   {
     "name": "Forest Patrol",
@@ -5507,7 +5507,7 @@
     "textc": "Action: Choose a Silvan or Noldor ally you control. That ally gets +2 Willpower until the end of the phase. At the end of the phase, shuffle that ally into its owner's deck if it is still in play.",
     "name_norm": "Children of the Sea",
     "octgn": "65d3b334-df93-43c6-9525-12674bbb7f06",
-    "categories": ""
+    "categories": "Willpower Bonus"
   },
   {
     "name": "Anborn",
@@ -5590,7 +5590,7 @@
     "textc": "Sentinel.\nEach hero with a printed Tactics resource icon gets +1 Willpower.",
     "name_norm": "Theoden",
     "octgn": "29d5feef-6165-4077-bb80-692526a8a924",
-    "categories": ""
+    "categories": "Willpower Bonus"
   },
   {
     "name": "Pelargir Ship Captain",
@@ -5631,7 +5631,7 @@
     "textc": "Attach to a Gondor hero.\nWhile attached hero has at least 1 resource in its resource pool, Gondor characters get +1 Willpower.",
     "name_norm": "Visionary Leadership",
     "octgn": "2f0a3f18-c84f-4458-b6f7-2e6be9acee6b",
-    "categories": ""
+    "categories": "Willpower Bonus"
   },
   {
     "name": "Spear of the Mark",
@@ -5707,7 +5707,7 @@
     "textc": "Action: Choose a Spirit hero. Until the end of the phase, that hero gets +1 Willpower for each resource in its resource pool.",
     "name_norm": "Lay of Nimrodel",
     "octgn": "b442354c-887d-403e-815b-a11f10a8760d",
-    "categories": ""
+    "categories": "Willpower Bonus"
   },
   {
     "name": "Ered Nimrais Prospector",
@@ -5880,7 +5880,7 @@
     "textc": "Response: After you raise your threat from the Doomed keyword, Isengard Messenger gets +1 Willpower until the end of the round. (Limit twice per round.)",
     "name_norm": "Isengard Messenger",
     "octgn": "fe60620b-9ea1-4bf8-8d41-e7fd81a28427",
-    "categories": ""
+    "categories": "Willpower Bonus"
   },
   {
     "name": "Westfold Outrider",
@@ -6101,7 +6101,7 @@
     "textc": "Response: After a Silvan ally enters play, that ally gets +1 Willpower, +1 Attack and +1 Defense until the end of the round.",
     "name_norm": "Celeborn",
     "octgn": "4c4cccd3-576a-41f1-8b6c-ba11b4cc3d4b",
-    "categories": "Attack Bonus, Defense Bonus"
+    "categories": "Attack Bonus, Defense Bonus, Willpower Bonus"
   },
   {
     "name": "Naith Guide",
@@ -6413,7 +6413,7 @@
     "textc": "You may give Greyflood Wanderer doomed 2 when you play from your hand. If you do, it gains: `Response: After you play Greyflood Wanderer, place 1 progress token on each location in play.`",
     "name_norm": "Greyflood Wanderer",
     "octgn": "284838f8-1ea0-466f-a373-032c7ad6e836",
-    "categories": ""
+    "categories": "Location Control"
   },
   {
     "name": "Warden of Arnor",
@@ -6432,7 +6432,7 @@
     "textc": "Attach to a Scout hero.\nWhile attached character is committed to the quest, place 1 progress on the first location revealed by the encounter deck each round.",
     "name_norm": "Warden of Arnor",
     "octgn": "f9b39223-3b12-4682-8db5-9ef4116b4919",
-    "categories": ""
+    "categories": "Location Control"
   },
   {
     "name": "Message from Elrond",
@@ -6512,7 +6512,7 @@
     "textc": "Ranged.\nCombat Action: If you have not engaged an enemy this round, exhaust Haldir of L\u00f3rien to declare him as an attacker (and resolve his attack) against an enemy not engaged with you. Limit once per round.",
     "name_norm": "Haldir of Lorien",
     "octgn": "9d548a43-0ef8-45e6-ab95-7356d218d203",
-    "categories": ""
+    "categories": "Staging Area Attack"
   },
   {
     "name": "Herald of An\u00f3rien",
@@ -6615,7 +6615,7 @@
     "textc": "Action: Choose a hero. That hero gets +2 Willpower until the end of the phase. Then, if your threat is 20 or less and this is the first time you played a copy of Courage Awakened this round, return this card to your hand instead of discarding it.",
     "name_norm": "Courage Awakened",
     "octgn": "72ec977b-6d24-459c-aaa8-49c2a01f0766",
-    "categories": "Secrecy"
+    "categories": "Secrecy, Willpower Bonus"
   },
   {
     "name": "Free to Choose",
@@ -7113,7 +7113,7 @@
     "textc": "Attach to Galadriel. She gains a Lore resource icon.\nQuest Action: Exhaust Nenya and Galadriel to add her Willpower to another character's Willpower until the end of the phase.",
     "name_norm": "Nenya",
     "octgn": "17ed9b53-19f5-4ad1-ab91-14c2859e5a60",
-    "categories": "Resource Smoothing"
+    "categories": "Resource Smoothing, Willpower Bonus"
   },
   {
     "name": "Erkenbrand",
@@ -7455,7 +7455,7 @@
     "textc": "Warden of Ann\u00faminas gets +1 Willpower for each enemy engaged with you.",
     "name_norm": "Warden of Annuminas",
     "octgn": "a933917f-4c7e-416e-8b08-ee2e60f6ab5f",
-    "categories": ""
+    "categories": "Willpower Bonus"
   },
   {
     "name": "Ranger Summons",
@@ -7512,7 +7512,7 @@
     "textc": "Response: After you engage an enemy, exhaust a Scout or Ranger character to place X progress tokens on a location. X is the engaged enemy's printed Threat.",
     "name_norm": "Expert Trackers",
     "octgn": "86583668-7581-4bca-ba10-a4752878740e",
-    "categories": ""
+    "categories": "Location Control"
   },
   {
     "name": "Heir of Valandil",
@@ -7588,7 +7588,7 @@
     "textc": "Attach to a D\u00fanedain or Noldor hero. Limit 1 per hero.\nWhile you are engaged with an enemy, attached hero gets +1 Willpower and cannot have its Willpower reduced.",
     "name_norm": "Star Brooch",
     "octgn": "130df5c3-a050-4690-8dac-d1ae937a2e3c",
-    "categories": ""
+    "categories": "Willpower Bonus"
   },
   {
     "name": "Gather Information",
@@ -7630,7 +7630,7 @@
     "textc": "Encounter. Surge. Ranged. Sentinel.\nWhen Revealed: The first player chooses a player to take control of Ranger of the North. Then either deal 2 damage to an enemy or place 2 progress tokens on a location.",
     "name_norm": "ZZ_Ranger of the North",
     "octgn": "156ed210-ab6e-4da9-b8c0-48984711edf2",
-    "categories": "Direct Damage"
+    "categories": "Direct Damage, Location Control"
   },
   {
     "name": "Merry",
@@ -7676,7 +7676,7 @@
     "textc": "Ingold gets +1 Willpower for each hero you control with at least 1 resource in its resource pool.",
     "name_norm": "Ingold",
     "octgn": "1e28318c-e82a-4d50-b6db-d08e6e9a6b53",
-    "categories": ""
+    "categories": "Willpower Bonus"
   },
   {
     "name": "Rallying Cry",
@@ -7800,7 +7800,7 @@
     "textc": "East Road Ranger gets +2 Willpower while committed to a side quest.",
     "name_norm": "East Road Ranger",
     "octgn": "8b95d0c6-eda4-4820-8279-6bdddae7b499",
-    "categories": ""
+    "categories": "Willpower Bonus"
   },
   {
     "name": "Scout Ahead",
@@ -7865,7 +7865,7 @@
     "textc": "If the active location shares a Trait with a location in the victory display, Rossiel gets +2 Willpower.\n If the attacking enemy shares a Trait with an enemy in the victory display, Rossiel gets +2 Defense.",
     "name_norm": "Rossiel",
     "octgn": "18fea279-cd38-4a5e-b271-b94d4f64eda1",
-    "categories": "Defense Bonus"
+    "categories": "Defense Bonus, Willpower Bonus"
   },
   {
     "name": "Veteran of Osgiliath",
@@ -7888,7 +7888,7 @@
     "textc": "Veteran of Osgiliath gets +1 Willpower, +1 Attack, and +1 Defense while your threat is 40 or higher.",
     "name_norm": "Veteran of Osgiliath",
     "octgn": "0484e428-6a72-4841-b2d5-d8df7cfb51bf",
-    "categories": "Defense Bonus"
+    "categories": "Defense Bonus, Willpower Bonus"
   },
   {
     "name": "Descendants of Kings",
@@ -8028,7 +8028,7 @@
     "textc": "Action: Exhaust a Ranger or Scout character to discard a non-unique active location. Then, search the encounter deck and discard pile for a non-unique location and make it the active location. Shuffle the encounter deck.",
     "name_norm": "Distant Stars",
     "octgn": "3ba15db9-9967-48b8-9b38-4fdfb4866676",
-    "categories": ""
+    "categories": "Location Control"
   },
   {
     "name": "Keen as Lances",
@@ -8168,7 +8168,7 @@
     "textc": "Attach to a Spirit or Noldor hero. Restricted.\nResponse: After attached hero commits to a quest, discard a card from your hand to place 2 progress on the active location.",
     "name_norm": "Steed of Imladris",
     "octgn": "8741c7a7-be7d-462a-b39a-0c9bfe4042a3",
-    "categories": ""
+    "categories": "Location Control"
   },
   {
     "name": "Fair and Perilous",
@@ -8187,7 +8187,7 @@
     "textc": "Action: Choose a Noldor or Silvan character. Until the end of the phase, add that character's Willpower to its Attack.",
     "name_norm": "Fair and Perilous",
     "octgn": "475d185f-403f-4b3e-9e8b-6b9f539c2423",
-    "categories": ""
+    "categories": "Willpower Bonus"
   },
   {
     "name": "Wellinghall Preserver",
@@ -8582,7 +8582,7 @@
     "textc": "Lords of the Eldar can only be played from your discard pile.\nAction: Place Lords of the Eldar on the bottom of your deck from your discard pile. Then, until the end of the round all Noldor characters get +1 Willpower, +1 Attack, and +1 Defense.",
     "name_norm": "Lords of the Eldar",
     "octgn": "ff265d76-021b-4f23-9e62-a57e16b3e77d",
-    "categories": "Attack Bonus, Defense Bonus"
+    "categories": "Attack Bonus, Defense Bonus, Willpower Bonus"
   },
   {
     "name": "The Long Defeat",
@@ -8774,7 +8774,7 @@
     "textc": "Action: Exhaust a Noldor character to ready a D\u00fanedain character, or vice-versa. Until the end of the phase, add the exhausted character's printed Willpower to the other character's Willpower, Attack, and Defense.",
     "name_norm": "Tale of Tinuviel",
     "octgn": "4d71af80-33cd-4df8-b6da-c479c8a3ae74",
-    "categories": "Readying"
+    "categories": "Readying, Willpower Bonus"
   },
   {
     "name": "Galadhrim Healer",
@@ -8992,7 +8992,7 @@
     "textc": "Attach to a Leadership or a Scout character.\nResponse: At the beginning of the travel phase, exhaust Mariner's Compass and attached character to search the top 5 cards of the encounter deck for a location. Switch that location with a location in the staging area. Shuffle the encounter deck.",
     "name_norm": "Mariner's Compass",
     "octgn": "fe1a0aef-10bd-441b-a27b-0527810fef57",
-    "categories": ""
+    "categories": "Location Control"
   },
   {
     "name": "Lindon Navigator",
@@ -9032,7 +9032,7 @@
     "textc": "Action: Place 2 progress on any location. Resolve that effect again for each copy of The Evening Star currently in your discard pile (you may choose new targets).",
     "name_norm": "The Evening Star",
     "octgn": "b6729381-3bfc-41fa-abd1-99f410eb19b8",
-    "categories": ""
+    "categories": "Location Control"
   },
   {
     "name": "Explorer's Almanac",
@@ -9050,7 +9050,7 @@
     "textc": "Attach to a location in the staging area.\nProgress from questing successfully may be placed on the attached location before it is placed on the current quest.",
     "name_norm": "Explorer's Almanac",
     "octgn": "21f0acdb-5d11-409e-80f8-c717fab87ab9",
-    "categories": ""
+    "categories": "Location Control"
   },
   {
     "name": "Sailor of Lune",
@@ -9072,7 +9072,7 @@
     "textc": "While the top card of your discard pile is an event, Sailor of Lune gets +1 Willpower and gains: \"Cannot be damaged while committed to the quest.\"",
     "name_norm": "Sailor of Lune",
     "octgn": "85a269eb-63f1-4f63-83c9-30b718d364f6",
-    "categories": ""
+    "categories": "Willpower Bonus"
   },
   {
     "name": "Elwing's Flight",
@@ -9090,7 +9090,7 @@
     "textc": "Quest Action: Ready a questing character and give that character +1 Willpower until the end of the phase. Resolve that effect again for each copy of Elwing's Flight currently in your discard pile (you may choose different targets).",
     "name_norm": "Elwing's Flight",
     "octgn": "d25dfbee-85c4-42f8-9653-c0536d3e5095",
-    "categories": "Readying"
+    "categories": "Readying, Willpower Bonus"
   },
   {
     "name": "To the Sea, to the Sea!",
@@ -9514,7 +9514,7 @@
     "textc": "Action: Bilbo Baggins gets +2 Willpower, +2 Attack, and +2 Defense until the end of the phase. (You may spend a Baggins resource from Bilbo Baggins' resource pool to play this card even if you do not control Bilbo Baggins.)",
     "name_norm": "Burglar Baggins",
     "octgn": "51223bd0-ffd1-11df-a976-1801204c9020",
-    "categories": "Defense Bonus"
+    "categories": "Defense Bonus, Willpower Bonus"
   },
   {
     "name": "Bilbo Baggins",
@@ -9753,7 +9753,7 @@
     "textc": "Action: Exhaust a hero you control to shuffle the encounter deck and look at its top card. Place progress tokens on the current quest equal to the revealed card's Threat. Then, put that card back on top of the encounter deck.",
     "name_norm": "Ravens of the Mountain",
     "octgn": "6d442a61-e9e9-4729-bac1-da3d76af6afa",
-    "categories": ""
+    "categories": "Location Control"
   },
   {
     "name": "To me! O my kinsfolk!",
@@ -9790,7 +9790,7 @@
     "textc": "Action: Choose a character in play (other than Bilbo Baggins). Add Bilbo Baggins' total Willpower, Attack, and Defense to that character's Willpower, Attack, and Defense respectively until the end of the phase.",
     "name_norm": "The Lucky Number",
     "octgn": "65407141-e013-4d1c-8f70-4328e707d0cc",
-    "categories": ""
+    "categories": "Willpower Bonus"
   },
   {
     "name": "Great Yew Bow",
@@ -9808,7 +9808,7 @@
     "textc": "Restricted.\nAttach to a hero with printed Ranged keyword.\nCombat Action: Choose an enemy in the staging area. Exhaust Great Yew Bow and attached hero to make a ranged attack against that enemy. Declare attached hero as the attacker. No other attackers can be declared for this attack.",
     "name_norm": "Great Yew Bow",
     "octgn": "833664a0-6bab-4e93-b5f1-88e7b6456569",
-    "categories": ""
+    "categories": "Staging Area Attack"
   },
   {
     "name": "Black Arrow",
@@ -9847,7 +9847,7 @@
     "textc": "Attacht to a hero.\nResponse: After a location is added to the staging area, attach Thror's Key to that location. While attached to a location, Thror's Key gains: 'Treat attached location's printed text box as blank, except for traits.'",
     "name_norm": "Thror's Key",
     "octgn": "f4490261-317e-4e9e-9440-a5c58dcddcbf",
-    "categories": ""
+    "categories": "Location Control"
   },
   {
     "name": "Expert Treasure-hunter",
@@ -9930,7 +9930,7 @@
     "textc": "Response: After you engage an enemy with a higher engagement cost than your threat, ready Sam Gamgee. He gets +1 Willpower, +1 Attack and +1 Defense until the end of the round.",
     "name_norm": "Sam Gamgee",
     "octgn": "4124136c-8c86-4f86-830c-94c8c76df161",
-    "categories": "Defense Bonus"
+    "categories": "Defense Bonus, Willpower Bonus"
   },
   {
     "name": "Merry",
@@ -10087,7 +10087,7 @@
     "textc": "Action: Choose a Hobbit character. That character gets +2 Willpower, +2 Attack and +2 Defense until the end of the phase.",
     "name_norm": "Halfling Determination",
     "octgn": "8e7e5c8d-0ea4-46df-ae38-d8d2fee7ca8b",
-    "categories": "Attack Bonus, Defense Bonus"
+    "categories": "Attack Bonus, Defense Bonus, Willpower Bonus"
   },
   {
     "name": "Smoke Rings",
@@ -10106,7 +10106,7 @@
     "textc": "Action: Reduce your threat by 1 for each Pipe you control. Each hero with a Pipe attachment gets +1 Willpower until the end of the phase.",
     "name_norm": "Smoke Rings",
     "octgn": "9418c634-54c6-47de-9aae-798038a4a35b",
-    "categories": "Threat Control"
+    "categories": "Threat Control, Willpower Bonus"
   },
   {
     "name": "Take No Notice",
@@ -10144,7 +10144,7 @@
     "textc": "Action: Each hero you control gets +1 Willpower until the end of the round. Draw 1 card for each Hobbit hero you control.",
     "name_norm": "Frodo's Intuition",
     "octgn": "96350b97-5c68-4033-bb2f-4305696a7ae7",
-    "categories": ""
+    "categories": "Willpower Bonus"
   },
   {
     "name": "Hobbit Cloak",
@@ -10430,7 +10430,7 @@
     "textc": "Attach to the Ring-bearer.\nEach hero gets +1 Willpower.\nForced: After a character is destroyed, discard Fellowship of the Ring.",
     "name_norm": "Fellowship of the Ring",
     "octgn": "d5f09d24-be50-4958-b0d0-41b1ad09b7af",
-    "categories": ""
+    "categories": "Willpower Bonus"
   },
   {
     "name": "Aragorn",
@@ -10499,7 +10499,7 @@
     "textc": "Cannot have restricted attachments.\nAction: Deal 1 damage to Treebeard to give him +1 Willpower and +1 Attack until the end of the phase. (Limit 5 times per phase.)",
     "name_norm": "Treebeard",
     "octgn": "94f6738a-c946-4415-9b38-0ce3a443fa33",
-    "categories": ""
+    "categories": "Willpower Bonus"
   },
   {
     "name": "Gimli",
@@ -10610,7 +10610,7 @@
     "textc": "Attach to a hero or Legolas.\nResponse: After attached character participates in an attack that destroys an enemy, exhaust Arod to place 1 progress token on any location.",
     "name_norm": "Arod",
     "octgn": "6646bb07-0b44-4051-94a7-39c600b38481",
-    "categories": ""
+    "categories": "Location Control"
   },
   {
     "name": "Ent Draught",
@@ -10705,7 +10705,7 @@
     "textc": "Play only if you control Fellowship Aragorn.\nQuest Action: Choose 3 heroes committed to the quest. Ready those heroes. Until the end of the round, each of the chosen heroes gets +1 Willpower, +1 Attack, and +1 Defense.",
     "name_norm": "The Three Hunters",
     "octgn": "4101f975-3317-43f8-ba60-19785e01959c",
-    "categories": "Readying, Defense Bonus"
+    "categories": "Readying, Defense Bonus, Willpower Bonus"
   },
   {
     "name": "Shadowfax",
@@ -10747,7 +10747,7 @@
     "textc": "Action: Spend 1 Fellowship resource and exhaust The One Ring to give Frodo Baggins +2 Willpower and +2 Attack until the end of the round.",
     "name_norm": "Frodo Baggins",
     "octgn": "fe58a6d3-7028-41c1-ab00-5e33e7d77b5f",
-    "categories": ""
+    "categories": "Willpower Bonus"
   },
   {
     "name": "Faramir",
