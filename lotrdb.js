@@ -321,7 +321,8 @@
     $scope.suggested=suggested;
     this.image = image;
     this.filtersettings=filtersettings;
-    this.order=['sphere','name_norm'];
+    $scope.order="sphere";
+    $scope.reverse=false;
     $scope.allcards = cardObject;
     this.allcards = $scope.allcards;
     this.resetSearch = function(){
@@ -345,8 +346,24 @@
       }
       this.filtersettings.spheres[s] = !(this.filtersettings.spheres[s]);
     };
-    this.orderby = function(o){
-      this.order = o;
+    this.updateorder = function(neworder){
+      $scope.reverse = ($scope.order === neworder) ? !$scope.reverse : false;
+      $scope.order = neworder;
+    };
+    this.orderby = function(card){
+      reversefactor = $scope.reverse ? -1 : 1;
+      order = $scope.order;
+      cardval = card[order];
+      if(order=="willpower" || order=="strength" || order=="defense" || order=="hitpoints" || order=="cost"){
+        if(angular.isUndefined(cardval) || cardval == null){
+          return 42; // Always sort null rows to the bottom of the list (i.e. events without willpower values)
+        }
+        else {
+          return reversefactor*cardval;
+        }
+      }
+      // sort oder for name or type
+      return reversefactor*cardval.charCodeAt(0);
     };
     this.changepreview = function(card){
       this.image.update(card);
