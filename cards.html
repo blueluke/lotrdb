@@ -35,7 +35,7 @@
               <button title="Fellowship" class="filter-button" ng-class="{selected: cards.filtersettings.spheres['7fellowship']}" ng-click="cards.toggleSphere('7fellowship',$event)"><img src="img/spheres/7fellowship.png"/></button>
             </div>
           </div>
-          <button class="btn btn-primary pull-right hidden-xs" data-toggle="collapse" data-parent="#filterpanel" data-target="#filterlist"> <span class="glyphicon glyphicon-filter"></span> Advanced Filters </button>
+          <button class="btn btn-primary pull-right" data-toggle="collapse" data-parent="#filterpanel" data-target="#filterlist"> <span class="glyphicon glyphicon-filter"></span> Advanced Filters </button>
         </form>
       </h2>
     </div>
@@ -124,7 +124,7 @@
   <!-- panel containing text filters and cardlist -->
   <div class="panel panel-default" id="cardlistpanel">
     <div class="panel-heading hidden-xs">
-      <button type="button" class="btn btn-primary btn-sm pull-right hidden-xs" ng-click="cards.resetSearch();"> Reset </button>
+      <button type="button" class="btn btn-primary btn-sm pull-right" style="min-width: 150px;" ng-click="cards.resetSearch();"> Reset </button>
       <form class="form-inline">
         <div class="form-group form-group-sm">
           <input class="form-control" ng-model="cards.filtersettings.search.name_norm" type="search" placeholder="Search by card name">
