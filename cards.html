@@ -140,18 +140,18 @@
             <thead>
               <tr>
                 <td class="text-center"><a href>Add to Deck</a></td>
-                <td class="text-center"><a href ng-click="cards.orderby('name_norm')">Name</a></td>
-                <td class="text-center"><a href ng-click="cards.orderby(['sphere','name_norm'])">Sphere</a></td>
-                <td class="text-center"><a href ng-click="cards.orderby(['cost','name_norm'])">Cost</a></td>
-                <td class="text-center"><a href ng-click="cards.orderby(['type','name_norm'])">Type</a></td>
-                <td class="text-center"><a href ng-click="cards.orderby(['-willpower','name_norm'])"><img title="Willpower" src="img/willpower.gif"/></a></td>
-                <td class="text-center"><a href ng-click="cards.orderby(['-strength','name_norm'])"><img title="Attack" src="img/strength.gif"/></a></td>
-                <td class="text-center"><a href ng-click="cards.orderby(['-defense','name_norm'])"><img title="Defense" src="img/defense.gif"/></a></td>
-                <td class="text-center"><a href ng-click="cards.orderby(['-hitpoints','name_norm'])"><img title="Hit Points" src="img/hitpoints.png" style="width:20px;height:20px;"/></a></td>
+                <td class="text-center"><a href ng-click="cards.updateorder('name_norm')">Name</a></td>
+                <td class="text-center"><a href ng-click="cards.updateorder('sphere')">Sphere</a></td>
+                <td class="text-center"><a href ng-click="cards.updateorder('cost')">Cost</a></td>
+                <td class="text-center"><a href ng-click="cards.updateorder('type')">Type</a></td>
+                <td class="text-center"><a href ng-click="cards.updateorder('willpower')"><img title="Willpower" src="img/willpower.gif"/></a></td>
+                <td class="text-center"><a href ng-click="cards.updateorder('strength')"><img title="Attack" src="img/strength.gif"/></a></td>
+                <td class="text-center"><a href ng-click="cards.updateorder('defense')"><img title="Defense" src="img/defense.gif"/></a></td>
+                <td class="text-center"><a href ng-click="cards.updateorder('hitpoints')"><img title="Hit Points" src="img/hitpoints.png" style="width:20px;height:20px;"/></a></td>
               </tr>
             </thead>
             <tbody>
-              <tr ng-repeat="card in cards.allcards | cardfilter:cards | filter:cards.filtersettings.search | orderBy:cards.order" ng-mouseover="cards.changepreview(card)">
+              <tr ng-repeat="card in cards.allcards | cardfilter:cards | filter:cards.filtersettings.search | orderBy:[cards.orderby,'name_norm']" ng-mouseover="cards.changepreview(card)">
                 <td class="text-center">
                   <img class="preload"  ng-src="{{cards.image.loaded && card.img || ''}}" /> <!-- This doesn't preload images if there's an image we want to load right now -->
                   <div class="btn-group btn-group-sm" style="min-width: 115px;">
