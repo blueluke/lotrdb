@@ -5,7 +5,7 @@ A simple deck builder for the Lord of the Rings Living Card Game by Fantasy Flig
 ## [Live version](http://blueluke.github.io/lotrdb)
 
 
-This is a fork of [dddirk's original (now unmaintained) deckbuilder](https://github.com/ddddirk/lotrdb) with a focus on mobile useability.  
+This is a fork of [ddddirk's original (now unmaintained) deckbuilder](https://github.com/ddddirk/lotrdb) with a focus on mobile useability.  
 It's a single-page application built on Angular.js and Bootstrap.
 
 ## Features
@@ -21,7 +21,7 @@ It's a single-page application built on Angular.js and Bootstrap.
 * Simple deck statistics (card type and sphere distribution, sample draws).
 
 The Rivendell Councilroom does not have a deck database or other community features.  
-You can try the great [Love of Tales](seastan.github.io) or [ringsDB](ringsdb.com) instead if you need additional features.
+You can try the great [Love of Tales](http://seastan.github.io) or [ringsDB](http://ringsdb.com) instead if you need additional features.
 
 ## Running your own copy
 
