@@ -35,7 +35,7 @@ Feel free to open a [new issue](https://github.com/blueluke/lotrdb/issues/new) t
 
 ## Credits and Thanks
 
-* [dddirk](http://github.com/dddrik) for creating the Rivendell Councilroom.
+* [ddddirk](http://github.com/ddddirk) for creating the Rivendell Councilroom.
 * [CalebKester](http://github.com/calebkester) for the sphere/type buttons and some of the icons.
 * [Seastan](http://github.com/seastan) for his card suggestions feature. Ceck out his [new deckbuilder](http://seastan.github.io)!
 * [Hall of Beorn](http://http://hallofbeorn.com/) for his awesome card search.
