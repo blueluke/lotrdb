@@ -210,21 +210,21 @@
   app.directive('about', function() {
     return {
       restrict: 'E',
-      templateUrl: 'about.html'
+      templateUrl: 'views/about.html'
     };
   });
 
   app.directive('news', function() {
     return {
       restrict: 'E',
-      templateUrl: 'news.html'
+      templateUrl: 'views/news.html'
     };
   });
 
   app.directive('packs', function() {
     return {
       restrict: 'E',
-      templateUrl: 'packs.html',
+      templateUrl: 'views/packs.html',
       controller: 'packSelect',
       controllerAs: 'packs'
     };
@@ -233,7 +233,7 @@
   app.directive('auto', function() {
     return {
       restrict: 'E',
-      templateUrl: 'auto.html',
+      templateUrl: 'views/auto.html',
     };
   });
 
@@ -273,7 +273,7 @@
   app.directive('header', function() {
     return {
       restrict: 'E',
-      templateUrl: 'header.html',
+      templateUrl: 'views/header.html',
       controller: 'init'
     };
   });
@@ -281,7 +281,7 @@
   app.directive('myfooter', function() {
     return {
       restrict: 'E',
-      templateUrl: 'footer.html'
+      templateUrl: 'views/footer.html'
     };
   });
 
@@ -374,7 +374,7 @@
   app.directive('cards', function() {
     return {
       restrict: 'E',
-      templateUrl: 'cards.html',
+      templateUrl: 'views/cards.html',
       controller: 'cardControl',
       controllerAs: 'cards'
     };
@@ -383,14 +383,14 @@
   app.directive('traits', function() {
     return {
       restrict: 'E',
-      templateUrl: 'traitchoice.html'
+      templateUrl: 'views/traitchoice.html'
     };
   });
 
   app.directive('categories', function() {
     return {
       restrict: 'E',
-      templateUrl: 'categories.html'
+      templateUrl: 'views/categories.html'
     };
   });
 
@@ -547,7 +547,7 @@
   app.directive('deck', function() {
     return {
       restrict: 'E',
-      templateUrl: 'deck.html',
+      templateUrl: 'views/deck.html',
       controller: 'deckController',
       controllerAs: 'deckC'
     };
@@ -1382,7 +1382,7 @@
     app.directive('suggested', function() {
 	return {
 	    restrict: 'E',
-	    templateUrl: 'suggested.html',
+	    templateUrl: 'views/suggested.html',
 	    controller: 'suggestedController',
 	    controllerAs: 'suggestedC'
 	};
@@ -1485,7 +1485,7 @@
   app.directive('cardpreview', function() {
     return {
       restrict: 'E',
-      templateUrl: 'cardpreview.html',
+      templateUrl: 'views/cardpreview.html',
       controller: 'cardPreview',
       controllerAs: 'preview'
     };
@@ -2100,7 +2100,7 @@
   app.directive('mydecks', function() {
     return {
       restrict: 'E',
-      templateUrl: 'mydecks.html',
+      templateUrl: 'views/mydecks.html',
       controller: 'myDecks',
       controllerAs: 'mydecks'
     };
@@ -2111,7 +2111,7 @@
   app.directive('stats', function() {
     return {
       restrict: 'E',
-      templateUrl: 'stats.html',
+      templateUrl: 'views/stats.html',
       controller: 'stats',
       controllerAs: 'stats'
     };
