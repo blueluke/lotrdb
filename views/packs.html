@@ -7,46 +7,37 @@
     The packs you've selected are stored in your browser data and will be remembered for subsequent visits to the deckbuilder.</p>
   </div>
   <div class="row">
-    <div class="col-sm-6">
-      <div class="panel-group">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <div class="btn-group btn-group-justified">
-              <div class="btn-group">
-                <button class="btn btn-primary" ng-click="packs.selectAll()">Select All Packs</button>
-              </div>
-              <div class="btn-group">
-                <button class="btn btn-primary" ng-click="packs.selectNone()">Select None</button>
-              </div>
-            </div>
-          </div>
+    <div class="col-sm-4">
+      <div class="btn-group btn-group-justified" style="margin-bottom:10px;">
+        <div class="btn-group">
+          <button class="btn btn-success" ng-click="packs.selectAll()">Select All Packs</button>
         </div>
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <div class="btn-group btn-group-justified hidden-xs">
-              <div class="btn-group">
-                <button class="btn btn-info" ng-click="packs.toggleonecore()" ng-class="{'active': packs.filtersettings.onecore}">Limit to 1 Core Set</button>
-              </div>
-              <div class="btn-group">
-                <button class="btn btn-info" ng-click="packs.toggletwocore()" ng-class="{'active': packs.filtersettings.twocore}">Limit to 2 Core Sets</button>
-              </div>
-            </div>
-            <div class="btn-group btn-group-justified visible-xs">
-              <div class="btn-group">
-                <button class="btn btn-info" ng-click="packs.toggleonecore()" ng-class="{'active': packs.filtersettings.onecore == true}">1 Core Set</button>
-              </div>
-              <div class="btn-group">
-                <button class="btn btn-info" ng-click="packs.toggletwocore()" ng-class="{'active': packs.filtersettings.twocore == true}">2 Core Sets</button>
-              </div>
-            </div>
-          </div>
+        <div class="btn-group">
+          <button class="btn btn-success" ng-click="packs.selectNone()">Select No Pack</button>
+        </div>
+      </div>
+
+      <div class="btn-group btn-group-justified hidden-xs" style="margin-bottom:20px;">
+        <div class="btn-group">
+          <button class="btn btn-warning" ng-click="packs.toggleonecore()" ng-class="{'active': packs.filtersettings.onecore}">Limit to 1 Core Set</button>
+        </div>
+        <div class="btn-group">
+          <button class="btn btn-warning" ng-click="packs.toggletwocore()" ng-class="{'active': packs.filtersettings.twocore}">Limit to 2 Core Sets</button>
+        </div>
+      </div>
+      <div class="btn-group btn-group-justified visible-xs" style="margin-bottom:20px;">
+        <div class="btn-group">
+          <button class="btn btn-warning" ng-click="packs.toggleonecore()" ng-class="{'active': packs.filtersettings.onecore == true}">1 Core Set</button>
+        </div>
+        <div class="btn-group">
+          <button class="btn btn-warning" ng-click="packs.toggletwocore()" ng-class="{'active': packs.filtersettings.twocore == true}">2 Core Sets</button>
         </div>
       </div>
 
       <div class="panel panel-default pack-panel">
         <div class="panel-heading clearfix">
-          <button class="btn btn-warning btn-sm pull-right" ng-click="packs.selectNone('core')">Select None</button>
-          <button class="btn btn-success btn-sm pull-right" ng-click="packs.selectAll('core')">Select All</button>
+          <button class="btn btn-warning btn-sm pull-right" data-toggle="tooltip" title="Select None" ng-click="packs.selectNone('core')"><span class="glyphicon glyphicon-minus"></span></button>
+          <button class="btn btn-success btn-sm pull-right" data-toggle="tooltip" title="Select All" ng-click="packs.selectAll('core')"><span class="glyphicon glyphicon-plus"></span></button>
           <h2 class="panel-title">Core Set - Mirkwood Cycle</h2>
         </div>
         <select class="form-control" ng-model="packs.core" ng-change="packs.update()" size="7" multiple>
@@ -62,11 +53,11 @@
 
       <div class="panel panel-default pack-panel">
         <div class="panel-heading clearfix">
-          <button class="btn btn-warning btn-sm pull-right" ng-click="packs.selectNone('kd')">Select None</button>
-          <button class="btn btn-success btn-sm pull-right" ng-click="packs.selectAll('kd')">Select All</button>
+          <button class="btn btn-warning btn-sm pull-right" data-toggle="tooltip" title="Select None" ng-click="packs.selectNone('kd')"><span class="glyphicon glyphicon-minus"></span></button>
+          <button class="btn btn-success btn-sm pull-right" data-toggle="tooltip" title="Select All" ng-click="packs.selectAll('kd')"><span class="glyphicon glyphicon-plus"></span></button>
           <h2 class="panel-title">Dwarrowdelf Cycle</h2>
         </div>
-        <select class="form-control" ng-model="packs.kd" ng-change="packs.update()" size="5" multiple>
+        <select class="form-control" ng-model="packs.kd" ng-change="packs.update()" size="7" multiple>
           <option ng-selected="packs.filtersettings.pack.indexOf('kd')>=0" value="kd"> <strong>Khazad-Dûm (Deluxe Expansion)</strong> </option>
           <option ng-selected="packs.filtersettings.pack.indexOf('trg')>=0" value="trg"> The Redhorn Gate </option>
           <option ng-selected="packs.filtersettings.pack.indexOf('rtr')>=0" value="rtr"> Road to Rivendell </option>
@@ -76,47 +67,13 @@
           <option ng-selected="packs.filtersettings.pack.indexOf('saf')>=0" value="saf"> Shadow and Flame </option>
         </select>
       </div>
-
-      <div class="panel panel-default pack-panel">
-        <div class="panel-heading clearfix">
-          <button class="btn btn-warning btn-sm pull-right" ng-click="packs.selectNone('voi')">Select None</button>
-          <button class="btn btn-success btn-sm pull-right" ng-click="packs.selectAll('voi')">Select All</button>
-          <h2 class="panel-title">The Ringmaker Cycle</h2>
-        </div>
-        <select class="form-control" ng-model="packs.voi" ng-change="packs.update()" size="5" multiple>
-          <option ng-selected="packs.filtersettings.pack.indexOf('voi')>=0" value="voi"> <strong>The Voice of Isengard (Deluxe Expansion)</strong> </option>
-          <option ng-selected="packs.filtersettings.pack.indexOf('tdt')>=0" value="tdt"> The Dunland Trap</option>
-          <option ng-selected="packs.filtersettings.pack.indexOf('ttt')>=0" value="ttt"> The Three Trials </option>
-          <option ng-selected="packs.filtersettings.pack.indexOf('tit')>=0" value="tit"> Trouble in Tharbad </option>
-          <option ng-selected="packs.filtersettings.pack.indexOf('nie')>=0" value="nie"> The Nîn-in-Eilph </option>
-          <option ng-selected="packs.filtersettings.pack.indexOf('cs')>=0" value="cs"> Celebrimbor's Secret </option>
-          <option ng-selected="packs.filtersettings.pack.indexOf('tac')>=0" value="tac"> The Antlered Crown </option>
-        </select>
-      </div>
     </div>
 
-    <div class="col-sm-6">
+    <div class="col-sm-4">
       <div class="panel panel-default pack-panel">
         <div class="panel-heading clearfix">
-          <button class="btn btn-warning btn-sm pull-right" ng-click="packs.selectNone('saga')">Select None</button>
-          <button class="btn btn-success btn-sm pull-right" ng-click="packs.selectAll('saga')">Select All</button>
-          <h2 class="panel-title">Saga Packs</h2>
-        </div>
-        <select class="form-control" ng-model="packs.saga" ng-change="packs.update()" size="7" multiple>
-          <option ng-selected="packs.filtersettings.pack.indexOf('thohauh')>=0" value="thohauh"> The Hobbit - Over Hill and Under Hill </option>
-          <option ng-selected="packs.filtersettings.pack.indexOf('thotd')>=0" value="thotd"> The Hobbit - On the Doorstep </option>
-          <option ng-selected="packs.filtersettings.pack.indexOf('tbr')>=0" value="tbr"> The Black Riders</option>
-          <option ng-selected="packs.filtersettings.pack.indexOf('rd')>=0" value="rd"> The Road Darkens </option>
-          <option ng-selected="packs.filtersettings.pack.indexOf('tos')>=0" value="tos"> The Treason of Saruman </option>
-          <option ng-selected="packs.filtersettings.pack.indexOf('tlos')>=0" value="tlos"> The Land of Shadow </option>
-          <option ng-selected="packs.filtersettings.pack.indexOf('tfotw')>=0" value="tfotw" disabled=""> The Flame of the West </option>
-        </select>
-      </div>
-
-      <div class="panel panel-default pack-panel">
-        <div class="panel-heading clearfix">
-          <button class="btn btn-warning btn-sm pull-right" ng-click="packs.selectNone('hon')">Select None</button>
-          <button class="btn btn-success btn-sm pull-right" ng-click="packs.selectAll('hon')">Select All</button>
+          <button class="btn btn-warning btn-sm pull-right" data-toggle="tooltip" title="Select None" ng-click="packs.selectNone('hon')"><span class="glyphicon glyphicon-minus"></span></button>
+          <button class="btn btn-success btn-sm pull-right" data-toggle="tooltip" title="Select All" ng-click="packs.selectAll('hon')"><span class="glyphicon glyphicon-plus"></span></button>
           <h2 class="panel-title">Against the Shadows Cycle</h2>
         </div>
         <select class="form-control" ng-model="packs.hon" ng-change="packs.update()" size="5" multiple>
@@ -132,11 +89,28 @@
 
       <div class="panel panel-default pack-panel">
         <div class="panel-heading clearfix">
-          <button class="btn btn-warning btn-sm pull-right" ng-click="packs.selectNone('tlr')">Select None</button>
-          <button class="btn btn-success btn-sm pull-right" ng-click="packs.selectAll('tlr')">Select All</button>
+          <button class="btn btn-warning btn-sm pull-right" data-toggle="tooltip" title="Select None" ng-click="packs.selectNone('voi')"><span class="glyphicon glyphicon-minus"></span></button>
+          <button class="btn btn-success btn-sm pull-right" data-toggle="tooltip" title="Select All" ng-click="packs.selectAll('voi')"><span class="glyphicon glyphicon-plus"></span></button>
+          <h2 class="panel-title">The Ringmaker Cycle</h2>
+        </div>
+        <select class="form-control" ng-model="packs.voi" ng-change="packs.update()" size="5" multiple>
+          <option ng-selected="packs.filtersettings.pack.indexOf('voi')>=0" value="voi"> <strong>The Voice of Isengard (Deluxe Expansion)</strong> </option>
+          <option ng-selected="packs.filtersettings.pack.indexOf('tdt')>=0" value="tdt"> The Dunland Trap</option>
+          <option ng-selected="packs.filtersettings.pack.indexOf('ttt')>=0" value="ttt"> The Three Trials </option>
+          <option ng-selected="packs.filtersettings.pack.indexOf('tit')>=0" value="tit"> Trouble in Tharbad </option>
+          <option ng-selected="packs.filtersettings.pack.indexOf('nie')>=0" value="nie"> The Nîn-in-Eilph </option>
+          <option ng-selected="packs.filtersettings.pack.indexOf('cs')>=0" value="cs"> Celebrimbor's Secret </option>
+          <option ng-selected="packs.filtersettings.pack.indexOf('tac')>=0" value="tac"> The Antlered Crown </option>
+        </select>
+      </div>
+
+      <div class="panel panel-default pack-panel">
+        <div class="panel-heading clearfix">
+          <button class="btn btn-warning btn-sm pull-right" data-toggle="tooltip" title="Select None" ng-click="packs.selectNone('tlr')"><span class="glyphicon glyphicon-minus"></span></button>
+          <button class="btn btn-success btn-sm pull-right" data-toggle="tooltip" title="Select All" ng-click="packs.selectAll('tlr')"><span class="glyphicon glyphicon-plus"></span></button>
           <h2 class="panel-title">Angmar Awakens Cycle</h2>
         </div>
-        <select class="form-control" ng-model="packs.tlr" ng-change="packs.update()" size="4" multiple>
+        <select class="form-control" ng-model="packs.tlr" ng-change="packs.update()" size="5" multiple>
           <option ng-selected="packs.filtersettings.pack.indexOf('tlr')>=0" value="tlr"> <strong>The Lost Realm (Deluxe Expansion)</strong> </option>
           <option ng-selected="packs.filtersettings.pack.indexOf('twoe')>=0" value="twoe"> The Wastes of Eriador </option>
           <option ng-selected="packs.filtersettings.pack.indexOf('efmg')>=0" value="efmg"> Escape from Mount Gram </option>
@@ -146,19 +120,38 @@
           <option ng-selected="packs.filtersettings.pack.indexOf('tdr')>=0" value="tdr"> The Dread Realm </option>
         </select>
       </div>
+    </div>
 
+    <div class="col-sm-4">
       <div class="panel panel-default pack-panel">
         <div class="panel-heading clearfix">
-          <button class="btn btn-warning btn-sm pull-right" ng-click="packs.selectNone('tgh')">Select None</button>
-          <button class="btn btn-success btn-sm pull-right" ng-click="packs.selectAll('tgh')">Select All</button>
+          <button class="btn btn-warning btn-sm pull-right" data-toggle="tooltip" title="Select None" ng-click="packs.selectNone('tgh')"><span class="glyphicon glyphicon-minus"></span></button>
+          <button class="btn btn-success btn-sm pull-right" data-toggle="tooltip" title="Select All" ng-click="packs.selectAll('tgh')"><span class="glyphicon glyphicon-plus"></span></button>
           <h2 class="panel-title">The Dreamchaser Cycle</h2>
         </div>
-        <select class="form-control" ng-model="packs.tgh" ng-change="packs.update()" multiple>
+        <select class="form-control" ng-model="packs.tgh" ng-change="packs.update()" size="5" multiple>
           <option ng-selected="packs.filtersettings.pack.indexOf('tgh')>=0" value="tgh"> <strong>The Grey Havens (Deluxe Expansion)</strong> </option>
           <option ng-selected="packs.filtersettings.pack.indexOf('')>=0" value="" disabled> Flight of the Stormcaller </option>
           <option ng-selected="packs.filtersettings.pack.indexOf('')>=0" value="" disabled> The Thing in the Depths </option>
           <option ng-selected="packs.filtersettings.pack.indexOf('')>=0" value="" disabled> Temple of the Deceived </option>
           <option ng-selected="packs.filtersettings.pack.indexOf('')>=0" value="" disabled>  The Drowned Ruins </option>
+        </select>
+      </div>
+
+      <div class="panel panel-default pack-panel">
+        <div class="panel-heading clearfix">
+          <button class="btn btn-warning btn-sm pull-right" data-toggle="tooltip" title="Select None" ng-click="packs.selectNone('saga')"><span class="glyphicon glyphicon-minus"></span></button>
+          <button class="btn btn-success btn-sm pull-right" data-toggle="tooltip" title="Select All" ng-click="packs.selectAll('saga')"><span class="glyphicon glyphicon-plus"></span></button>
+          <h2 class="panel-title">Saga Packs</h2>
+        </div>
+        <select class="form-control" ng-model="packs.saga" ng-change="packs.update()" size="7" multiple>
+          <option ng-selected="packs.filtersettings.pack.indexOf('thohauh')>=0" value="thohauh"> The Hobbit - Over Hill and Under Hill </option>
+          <option ng-selected="packs.filtersettings.pack.indexOf('thotd')>=0" value="thotd"> The Hobbit - On the Doorstep </option>
+          <option ng-selected="packs.filtersettings.pack.indexOf('tbr')>=0" value="tbr"> The Black Riders</option>
+          <option ng-selected="packs.filtersettings.pack.indexOf('rd')>=0" value="rd"> The Road Darkens </option>
+          <option ng-selected="packs.filtersettings.pack.indexOf('tos')>=0" value="tos"> The Treason of Saruman </option>
+          <option ng-selected="packs.filtersettings.pack.indexOf('tlos')>=0" value="tlos"> The Land of Shadow </option>
+          <option ng-selected="packs.filtersettings.pack.indexOf('tfotw')>=0" value="tfotw" disabled=""> The Flame of the West </option>
         </select>
       </div>
     </div>
