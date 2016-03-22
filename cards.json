@@ -154,7 +154,7 @@
     "textc": "Action: Discard 1 card from your hand to give \u00c9owyn +1 Willpower until the end of the phase. This effect may be triggered by each player once each round.",
     "name_norm": "Eowyn",
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9007",
-    "categories": "Willpower Bonus"
+    "categories": "Willpower Bonus, Discard from Hand"
   },
   {
     "name": "Eleanor",
@@ -220,7 +220,7 @@
     "textc": "Action: Exhaust Denethor to look at the top card of the encounter deck. You may move that card to the bottom of the deck.",
     "name_norm": "Denethor",
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9010",
-    "categories": "Encounter Control"
+    "categories": "Encounter Control, Encounter Scrying"
   },
   {
     "name": "Glorfindel",
@@ -334,7 +334,7 @@
     "name_norm": "Son of Arnor",
     "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9015",
-    "categories": ""
+    "categories": "Staging Area Control"
   },
   {
     "name": "Snowbourn Scout",
@@ -428,7 +428,7 @@
     "name_norm": "Brok Ironfist",
     "corequantity": 1,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9019",
-    "categories": ""
+    "categories": "Leaves Play"
   },
   {
     "name": "Veteran Axehand",
@@ -636,7 +636,7 @@
     "name_norm": "Erebor Hammersmith",
     "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9059",
-    "categories": "Discard Pile"
+    "categories": "Discard Pile, Recursion"
   },
   {
     "name": "Henamarth Riversong",
@@ -659,7 +659,7 @@
     "name_norm": "Henamarth Riversong",
     "corequantity": 1,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9060",
-    "categories": "Encounter Control"
+    "categories": "Encounter Control, Encounter Scrying"
   },
   {
     "name": "Miner of the Iron Hills",
@@ -781,7 +781,7 @@
     "name_norm": "Sneak Attack",
     "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9023",
-    "categories": ""
+    "categories": "Mustering, Leaves Play"
   },
   {
     "name": "Valiant Sacrifice",
@@ -800,7 +800,7 @@
     "name_norm": "Valiant Sacrifice",
     "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9024",
-    "categories": "Card Draw"
+    "categories": "Card Draw, Leaves Play"
   },
   {
     "name": "Grim Resolve",
@@ -1148,7 +1148,7 @@
     "name_norm": "Will of the West",
     "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9049",
-    "categories": "Discard Pile"
+    "categories": "Discard Pile, Recursion"
   },
   {
     "name": "A Test of Will",
@@ -1187,7 +1187,7 @@
     "name_norm": "Stand and Fight",
     "corequantity": 3,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9051",
-    "categories": "Discard Pile"
+    "categories": "Discard Pile, Mustering"
   },
   {
     "name": "A Light in the Dark",
@@ -1206,7 +1206,7 @@
     "name_norm": "A Light in the Dark",
     "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9052",
-    "categories": ""
+    "categories": "Staging Area Control"
   },
   {
     "name": "Dwarven Tomb",
@@ -1225,7 +1225,7 @@
     "name_norm": "Dwarven Tomb",
     "corequantity": 1,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9053",
-    "categories": "Discard Pile"
+    "categories": "Discard Pile, Recursion"
   },
   {
     "name": "Fortune or Fate",
@@ -1359,7 +1359,7 @@
     "name_norm": "Radagast's Cunning",
     "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9065",
-    "categories": ""
+    "categories": "Staging Area Control, Quest Action"
   },
   {
     "name": "Secret Paths",
@@ -1379,7 +1379,7 @@
     "name_norm": "Secret Paths",
     "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9066",
-    "categories": ""
+    "categories": "Staging Area Control, Quest Action"
   },
   {
     "name": "Gandalf's Search",
@@ -1398,7 +1398,7 @@
     "name_norm": "Gandalf's Search",
     "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9067",
-    "categories": ""
+    "categories": "Player Deck Scyring"
   },
   {
     "name": "Beorn's Hospitality",
@@ -1455,7 +1455,7 @@
     "name_norm": "Protector of Lorien",
     "corequantity": 2,
     "octgn": "51223bd0-ffd1-11df-a976-0801200c9070",
-    "categories": "Defense Bonus, Willpower Bonus"
+    "categories": "Defense Bonus, Willpower Bonus, Discard from Hand"
   },
   {
     "name": "Dark Knowledge",
@@ -1779,7 +1779,7 @@
     "textc": "Action: Each player returns the topmost attachment card from his discard pile to his hand.",
     "name_norm": "Second Breakfast",
     "octgn": "51223bd0-ffd1-11df-a976-0801202c9024",
-    "categories": "Discard Pile"
+    "categories": "Discard Pile, Recursion"
   },
   {
     "name": "Beorning Beekeeper",
@@ -1844,7 +1844,7 @@
     "textc": "Response: After \u00c9omund leaves play, ready all Rohan characters in play.",
     "name_norm": "Eomund",
     "octgn": "51223bd0-ffd1-11df-a976-0801202c9009",
-    "categories": "Readying"
+    "categories": "Readying, Leaves Play"
   },
   {
     "name": "Nor am I a Stranger",
@@ -1946,7 +1946,7 @@
     "textc": "Response: After a character leaves play, ready Prince Imrahil. (Limit once per round.)",
     "name_norm": "Prince Imrahil",
     "octgn": "51223bd0-ffd1-11df-a976-0801203c9001",
-    "categories": "Readying"
+    "categories": "Readying, Leaves Play"
   },
   {
     "name": "D\u00fanedain Quest",
@@ -2174,7 +2174,7 @@
     "textc": "Response: After Keen-eyed Took enters play, reveal the top card of each player's deck.\nAction: Return Keen-eyed Took to your hand to discard the top card of each player's deck.",
     "name_norm": "Keen-eyed Took",
     "octgn": "51223bd0-ffd1-11df-a976-0801204c9008",
-    "categories": ""
+    "categories": "Leaves Play, Player Deck Scrying"
   },
   {
     "name": "Rear Guard",
@@ -2192,7 +2192,7 @@
     "textc": "Quest Action: Discard a Leadership ally to give each hero committed to this quest +1 Willpower until the end of the phase.",
     "name_norm": "Rear Guard",
     "octgn": "51223bd0-ffd1-11df-a976-0801204c9012",
-    "categories": "Willpower Bonus"
+    "categories": "Willpower Bonus, Quest Action"
   },
   {
     "name": "Descendant of Thorondor",
@@ -2214,7 +2214,7 @@
     "textc": "Descendant of Thorondor cannot have restricted attachments.\nResponse: After Descendant of Thorondor enters or leaves play, deal 2 damage to any 1 enemy in the staging area.",
     "name_norm": "Descendant of Thorondor",
     "octgn": "51223bd0-ffd1-11df-a976-0801204c9004",
-    "categories": "Direct Damage"
+    "categories": "Direct Damage, Leaves Play"
   },
   {
     "name": "Meneldor's Flight",
@@ -2294,7 +2294,7 @@
     "textc": "Action: Exhaust Gildor Inglorion to look at the top 3 cards of your deck. Switch one of those cards with a card from your hand. Then, return the 3 cards to the top of your deck, in any order.",
     "name_norm": "Gildor Inglorion",
     "octgn": "51223bd0-ffd1-11df-a976-0801204c9005",
-    "categories": ""
+    "categories": "Player Deck Scyring"
   },
   {
     "name": "Gildor's Counsel",
@@ -2620,7 +2620,7 @@
     "textc": "Eagles of the Misty Mountains cannot have restricted attachments. Eagles of the Misty Mountains gets +1 Attack and +1 Defense for each facedown attachment it has.\nResponse: After another Eagle character leaves play, you may attach that card facedown to Eagles of the Misty Mountains.",
     "name_norm": "Eagles of the Misty Mountains",
     "octgn": "51223bd0-ffd1-11df-a976-0801206c9009",
-    "categories": "Attack Bonus, Defense Bonus"
+    "categories": "Attack Bonus, Defense Bonus, Leaves Play"
   },
   {
     "name": "Support of the Eagles",
@@ -2723,7 +2723,7 @@
     "textc": "Action: Look at the top card of the encounter deck. Then, you may pay 1 Lore resource to return Rumour from the Earth to your hand.",
     "name_norm": "Rumour from the Earth",
     "octgn": "51223bd0-ffd1-11df-a976-0801206c9017",
-    "categories": "Encounter Control"
+    "categories": "Encounter Control, Encounter Scrying"
   },
   {
     "name": "Shadow of the Past",
@@ -3058,7 +3058,7 @@
     "textc": "Secrecy 3.\nAction: Reveal the top 5 cards of your deck and put 1 revealed ally into play, if able. Shuffle all other revealed cards back into your deck.",
     "name_norm": "Timely Aid",
     "octgn": "bd20ff6a-d77f-47d8-81dd-202e5f21cfaf",
-    "categories": "Secrecy"
+    "categories": "Secrecy, Mustering"
   },
   {
     "name": "Unseen Strike",
@@ -3076,7 +3076,7 @@
     "textc": "Action: Choose a character you control. Until the end of the phase, that character gets +3 Attack while attacking an enemy with a higher engagement cost than your threat.",
     "name_norm": "Unseen Strike",
     "octgn": "c1c21875-2650-4e7d-b8c7-c0c0970ce8b0",
-    "categories": ""
+    "categories": "Surprise"
   },
   {
     "name": "Keeping Count",
@@ -3116,7 +3116,7 @@
     "textc": "Quest Action: Spend 1 Spirit resource to put Bofur into play from your hand, exhausted and committed to a quest. If you quest successfully this phase and Bofur is still in play, return him to your hand.",
     "name_norm": "Bofur",
     "octgn": "c00bdeff-c186-4d83-bf24-2142fdd39b19",
-    "categories": ""
+    "categories": "Leaves Play, Quest Action"
   },
   {
     "name": "Renewed Friendship",
@@ -3175,7 +3175,7 @@
     "textc": "Secrecy 2.\nAction: Raise your threat by 1 to look at the top card of the encounter deck. Then, reduce your threat by X, where X is the threat of that card.",
     "name_norm": "Needful to Know",
     "octgn": "28a27a2b-d9c9-40ab-95ec-b44eca301102",
-    "categories": "Threat Control, Secrecy, Encounter Control"
+    "categories": "Threat Control, Secrecy, Encounter Control, Encounter Scrying"
   },
   {
     "name": "Good Meal",
@@ -3371,7 +3371,7 @@
     "textc": "Secrecy 2.\nAction: Search the top 5 cards of the encounter deck for any 1 non-objective card worth no victory points and add it to your victory display. Shuffle the encounter deck.",
     "name_norm": "Out of the Wild",
     "octgn": "51223bd0-ffd1-11df-a976-0801209c9020",
-    "categories": "Secrecy"
+    "categories": "Secrecy, Victory Display"
   },
   {
     "name": "The End Comes",
@@ -3389,7 +3389,7 @@
     "textc": "Response: After a Dwarf character leaves play, shuffle the encounter discard pile back into the encounter deck.",
     "name_norm": "The End Comes",
     "octgn": "51223bd0-ffd1-11df-a976-0801209c9027",
-    "categories": "Discard Pile"
+    "categories": "Discard Pile, Leaves Play"
   },
   {
     "name": "Aragorn",
@@ -3429,7 +3429,7 @@
     "textc": "Response: After a character leaves play, add its Attack to another character's Attack until the end of the round.",
     "name_norm": "Grave Cairn",
     "octgn": "51223bd0-ffd1-11df-a976-0801210c9007",
-    "categories": "Attack Bonus"
+    "categories": "Attack Bonus, Leaves Play"
   },
   {
     "name": "Sword that was Broken",
@@ -3469,7 +3469,7 @@
     "textc": "Sentinel.\nWatcher of the Bruinen does not exhaust to defend.\nForced: After Watcher of the Bruinen defends, either discard it from play or discard 1 card from your hand.",
     "name_norm": "Watcher of the Bruinen",
     "octgn": "51223bd0-ffd1-11df-a976-0801210c9025",
-    "categories": ""
+    "categories": "Discard from Hand"
   },
   {
     "name": "Rivendell Bow",
@@ -3603,7 +3603,7 @@
     "textc": "Response: After Hama is declared as an attacker, return a Tactics event from your discard pile to your hand. Then, choose and discard 1 card from your hand.",
     "name_norm": "Hama",
     "octgn": "51223bd0-ffd1-11df-a976-0801211c9016",
-    "categories": "Discard Pile"
+    "categories": "Discard Pile, Recursion, Discard from Hand"
   },
   {
     "name": "Erestor",
@@ -3625,7 +3625,7 @@
     "textc": "Action: Choose and discard 1 card from your hand to draw 1 card. (Limit once per round.)",
     "name_norm": "Erestor",
     "octgn": "51223bd0-ffd1-11df-a976-0801211c9008",
-    "categories": "Card Draw"
+    "categories": "Card Draw, Discard from Hand"
   },
   {
     "name": "Fresh Tracks",
@@ -3824,7 +3824,7 @@
     "textc": "Response: After Longbeard Elder commits to a quest, look at the top card of the encounter deck. If that card is a location, place 1 progress token on the current quest. Otherwise, Longbeard Elder gets -1 Willpower until the end of the phase.",
     "name_norm": "Longbeard Elder",
     "octgn": "51223bd0-ffd1-11df-a976-0801212c9021",
-    "categories": "Location Control, Encounter Control"
+    "categories": "Location Control, Encounter Control, Encounter Scrying"
   },
   {
     "name": "Path of Need",
@@ -3865,7 +3865,7 @@
     "textc": "Ranged.\nTrollshaw Scout does not exhaust to attack.\nForced: After Trollshaw Scout attacks, either discard it from play or discard 1 card from your hand.",
     "name_norm": "Trollshaw Scout",
     "octgn": "51223bd0-ffd1-11df-a976-0801212c9033",
-    "categories": ""
+    "categories": "Discard from Hand"
   },
   {
     "name": "Heavy Stroke",
@@ -3906,7 +3906,7 @@
     "textc": "Action: Exhaust Imladris Stargazer to choose a player. That player looks at the top 5 cards of his deck and then returns them to the top of his deck in any order.",
     "name_norm": "Imladris Stargazer",
     "octgn": "51223bd0-ffd1-11df-a976-0801212c9019",
-    "categories": ""
+    "categories": "Player Deck Scyring"
   },
   {
     "name": "Light of Valinor",
@@ -3944,7 +3944,7 @@
     "textc": "Action: Draw 2 cards. Then, discard 1 card from your hand.",
     "name_norm": "Daeron's Runes",
     "octgn": "51223bd0-ffd1-11df-a976-0801212c9010",
-    "categories": "Card Draw"
+    "categories": "Card Draw, Discard from Hand"
   },
   {
     "name": "Healing Herbs",
@@ -4152,7 +4152,7 @@
     "textc": "Secrecy 3.\nAction: Look at the top 3 cards of the encounter deck. You may select 1 card and move it to the bottom of the encounter deck. Return any unselected cards to the top of the encounter deck, in any order.",
     "name_norm": "Risk Some Light",
     "octgn": "51223bd0-ffd1-11df-a976-0801213c9022",
-    "categories": "Secrecy, Encounter Control"
+    "categories": "Secrecy, Encounter Control, Encounter Scrying"
   },
   {
     "name": "Vilya",
@@ -4170,7 +4170,7 @@
     "textc": "Attach to Elrond. He gains a Spirit resource icon.\nAction: Exhaust Elrond and Vilya to reveal the top card of your deck. You can immediately play or put into play the revealed card for no cost, if able. Otherwise, move the revealed card to the bottom of your deck.",
     "name_norm": "Vilya",
     "octgn": "51223bd0-ffd1-11df-a976-0801213c9027",
-    "categories": "Resource Smoothing"
+    "categories": "Resource Smoothing, Mustering"
   },
   {
     "name": "Beregond",
@@ -4418,7 +4418,7 @@
     "textc": "Response: After a location leaves play as an explored location, return it to the top of the encounter deck.",
     "name_norm": "A Watchful Peace",
     "octgn": "4823aae3-46ef-4a75-89f9-cbd3aa1b9002",
-    "categories": "Encounter Control"
+    "categories": "Encounter Control, Leaves Play"
   },
   {
     "name": "Blood of N\u00famenor",
@@ -4878,7 +4878,7 @@
     "textc": "Forced: After a character leaves play, discard Silvan Refugee from play.",
     "name_norm": "Silvan Refugee",
     "octgn": "e4fd6e25-982a-464f-82d8-812269864d46",
-    "categories": ""
+    "categories": "Leaves Play"
   },
   {
     "name": "Against the Shadow",
@@ -5126,7 +5126,7 @@
     "textc": "Ranged.\nResponse: After Ithilien Archer attacks and damages an enemy, return that enemy to the staging area.",
     "name_norm": "Ithilien Archer",
     "octgn": "fd89bdbf-7475-4f3e-96fc-8f5315a90028",
-    "categories": ""
+    "categories": "Staging Area Control"
   },
   {
     "name": "Ithilien Pit",
@@ -5224,7 +5224,7 @@
     "textc": "Action: Return X Outlands allies from your discard pile to your hand.",
     "name_norm": "Men of the West",
     "octgn": "a2d440c4-6150-4b6f-9a36-faa51ace7908",
-    "categories": "Discard Pile"
+    "categories": "Discard Pile, Recursion"
   },
   {
     "name": "Knight of Minas Tirith",
@@ -5246,7 +5246,7 @@
     "textc": "If each of your heroes has a printed Tactics resource icon, Knight of Minas Tirith gains: `Response: After Knight of Minas Tirith enters play, choose an enemy in the staging area. Engage that enemy and exhaust Knight of Minas Tirith to declare it as attacker (and resolve its attack) against that enemy.`",
     "name_norm": "Knight of Minas Tirith",
     "octgn": "237b31e7-d0b0-4c1e-bd4a-40a175f7d7d1",
-    "categories": "Staging Area Attack"
+    "categories": "Staging Area Attack, Staging Area Control"
   },
   {
     "name": "Gondorian Fire",
@@ -5361,7 +5361,7 @@
     "textc": "Attach to a Noble hero.\nPlanning Action: Exhaust Palantir and attached hero to name a card type and look at the top 3 cards of the encounter deck. For each of those cards that matches the named type, draw a card. For each of those cards that does not match the named type, raise your threat by 2.",
     "name_norm": "Palantir",
     "octgn": "1e9a6c59-8dc7-4dc4-a5a4-f5f4f9ccdc55",
-    "categories": "Card Draw, Encounter Control"
+    "categories": "Card Draw, Encounter Control, Encounter Scrying"
   },
   {
     "name": "Caldara",
@@ -5384,7 +5384,7 @@
     "textc": "Action: Discard Caldara to put 1 Spirit ally from your discard pile into play for each other hero you control with a printed Spirit resource icon.",
     "name_norm": "Caldara",
     "octgn": "60725069-031c-4251-9b2c-3f368545e9ac",
-    "categories": "Discard Pile"
+    "categories": "Discard Pile, Mustering"
   },
   {
     "name": "Squire of the Citadel",
@@ -5407,7 +5407,7 @@
     "textc": "Response: After Squire of the Citadel leaves play, add 1 resource to a Gondor hero's resource pool.",
     "name_norm": "Squire of the Citadel",
     "octgn": "d4f034b0-2444-4b61-a249-8d86e8856f7c",
-    "categories": "Resource Acceleration"
+    "categories": "Resource Acceleration, Leaves Play"
   },
   {
     "name": "Tome of Atanatar",
@@ -5530,7 +5530,7 @@
     "textc": "Action: Exhaust Anborn to return 1 Trap card from your discard pile to your hand.",
     "name_norm": "Anborn",
     "octgn": "ef8aec20-e0c9-4d02-9dea-20b6e7c2278b",
-    "categories": "Discard Pile"
+    "categories": "Discard Pile, Recursion"
   },
   {
     "name": "Poisoned Stakes",
@@ -5729,7 +5729,7 @@
     "textc": "Response: After Ered Nimrais Prospector enters play, discard the top 3 cards of your deck. Then, choose and shuffle 1 card from your discard pile back into your deck.",
     "name_norm": "Ered Nimrais Prospector",
     "octgn": "3eb1141f-bf1f-401e-a69d-e4df0af2a8ab",
-    "categories": "Discard Pile"
+    "categories": "Discard Pile, Recursion"
   },
   {
     "name": "Scroll of Isildur",
@@ -5789,7 +5789,7 @@
     "textc": "Response: After a character leaves play, \u00c9omer gets +2 Attack until the end of the round. (Limit once per round.)",
     "name_norm": "Eomer",
     "octgn": "21cfb9e9-6777-4bc6-ace6-08fe68e949a4",
-    "categories": "Attack Bonus"
+    "categories": "Attack Bonus, Leaves Play"
   },
   {
     "name": "Gr\u00edma",
@@ -5903,7 +5903,7 @@
     "textc": "Action: Discard Westfold Outrider to choose an enemy not engaged with you. Engage the chosen enemy.",
     "name_norm": "Westfold Outrider",
     "octgn": "93a364f6-2a0f-4872-9770-aa7a1bd30d3d",
-    "categories": ""
+    "categories": "Staging Area Control"
   },
   {
     "name": "Westfold Horse-breeder",
@@ -6245,7 +6245,7 @@
     "textc": "Secrecy 2.\nResponse: After Ithilien Lookout enters play, look at the top card of the encounter deck. If it is an enemy, you may discard it.",
     "name_norm": "Ithilien Lookout",
     "octgn": "86edf661-e3d8-4372-9325-f2d2d5ac354a",
-    "categories": "Secrecy, Encounter Control"
+    "categories": "Secrecy, Encounter Control, Encounter Scrying"
   },
   {
     "name": "The Tree People",
@@ -6264,7 +6264,7 @@
     "textc": "Action: Return a Silvan ally you control to your hand to search the top 5 cards of your deck for a Silvan ally. Put that ally into play and shuffle the other cards back into your deck. You can only play 1 copy of The Tree People each phase.",
     "name_norm": "The Tree People",
     "octgn": "f39eaad9-134d-406b-9111-e03c33e0cd16",
-    "categories": "Card Search"
+    "categories": "Card Search, Mustering"
   },
   {
     "name": "The White Council",
@@ -6470,7 +6470,7 @@
     "textc": "Action: Choose an enemy in the staging area. That enemy does not make engagement checks this round. Then, if your threat is 20 or less and this is the first time you played a copy of Noiseless Movement this round, return this card to your hand instead of discarding it.",
     "name_norm": "Noiseless Movement",
     "octgn": "b520fbc1-3cb9-49aa-9b37-2dad3b3ba333",
-    "categories": "Secrecy"
+    "categories": "Secrecy, Staging Area Control"
   },
   {
     "name": "Leaf Brooch",
@@ -6577,7 +6577,7 @@
     "textc": "Cannot have restricted attachments.\nResponse: After Gwaihir enters play, search your discard pile for an Eagle ally and put it into play under your control. At the end of the round, if that ally is still in play, add it to your hand.",
     "name_norm": "Gwaihir",
     "octgn": "2e7f22cc-218e-4dad-b4e4-00b2208713d9",
-    "categories": "Discard Pile"
+    "categories": "Discard Pile, Mustering, Leaves Play"
   },
   {
     "name": "Pursuing the Enemy",
@@ -6699,7 +6699,7 @@
     "textc": "Sentinel.\nResponse: After a Silvan ally you control leaves play, ready Defender of the Naith.",
     "name_norm": "Defender of the Naith",
     "octgn": "b91ba94d-e6b9-41f6-89ed-df1fb1f22335",
-    "categories": ""
+    "categories": "Leaves Play"
   },
   {
     "name": "Mablung",
@@ -6825,7 +6825,7 @@
     "textc": "Secrecy 2.\nResponse: After Celduin Traveler enters play, look at the top card of the encounter deck. If it is a location, you may discard it.",
     "name_norm": "Celduin Traveler",
     "octgn": "c541b65a-d6d4-4b2c-8925-96c31d52aa1c",
-    "categories": "Secrecy, Encounter Control"
+    "categories": "Secrecy, Encounter Control, Encounter Scrying"
   },
   {
     "name": "Island Amid Perils",
@@ -6968,7 +6968,7 @@
     "textc": "Ranged.\nResponse: After Orophin enters play, return a Silvan ally from your discard pile to your hand.",
     "name_norm": "Orophin",
     "octgn": "9220dbae-e7fc-43fc-b772-043af7d4bda1",
-    "categories": "Discard Pile"
+    "categories": "Discard Pile, Recursion"
   },
   {
     "name": "Henneth Ann\u00fbn Guard",
@@ -7113,7 +7113,7 @@
     "textc": "Attach to Galadriel. She gains a Lore resource icon.\nQuest Action: Exhaust Nenya and Galadriel to add her Willpower to another character's Willpower until the end of the phase.",
     "name_norm": "Nenya",
     "octgn": "17ed9b53-19f5-4ad1-ab91-14c2859e5a60",
-    "categories": "Resource Smoothing, Willpower Bonus"
+    "categories": "Resource Smoothing, Willpower Bonus, Quest Action"
   },
   {
     "name": "Erkenbrand",
@@ -7239,7 +7239,7 @@
     "textc": "Quest Action: Choose a non-unique enemy in the staging area. Until the end of the phase, progress that would be placed on the quest from questing successfully is instead assigned as damage to the chosen enemy. (Progress must still be placed on any active location first.)",
     "name_norm": "Ride Them Down",
     "octgn": "6461b502-cb47-4528-b18a-db45988f1692",
-    "categories": "Direct Damage"
+    "categories": "Direct Damage, Quest Action"
   },
   {
     "name": "Shadows Give Way",
@@ -7277,7 +7277,7 @@
     "textc": "Response: When an encounter card is revealed but before resolving any of that card's keywords or `when revealed` effects, choose a character comited to the quest. Ready that character and remove it from the quest.",
     "name_norm": "Don't Be Hasty",
     "octgn": "31406925-1626-4c17-b3ee-2e2700a99c14",
-    "categories": "Readying"
+    "categories": "Readying, Quest Action"
   },
   {
     "name": "Waters of Nimrodel",
@@ -7341,7 +7341,7 @@
     "textc": "Each enemy engaged with you gets -1 Defense.\nResponse: After Aragorn participates in an attack that destroys an enemy, choose an enemy not engaged with you and engage that enemy.",
     "name_norm": "Aragorn",
     "octgn": "09ebd71c-8286-4838-b661-36a8633c9f0c",
-    "categories": ""
+    "categories": "Staging Area Control"
   },
   {
     "name": "Halbarad",
@@ -7493,7 +7493,7 @@
     "textc": "Play only before the resolving enemy attacks step.\nCombat Action: Choose an enemy not engaged with you. Engage that enemy. Then, discard a shadow card from that enemy, if able.",
     "name_norm": "Tireless Hunters",
     "octgn": "cda0276f-d412-47f6-aecf-02ae8dc64c9a",
-    "categories": "Shadow Control"
+    "categories": "Shadow Control, Staging Area Control"
   },
   {
     "name": "Expert Trackers",
@@ -7695,7 +7695,7 @@
     "textc": "Response: After an ally leaves play, add it to its owner's hand instead of placing it in the discard pile.\nValour Action: Until the end of the phase, add each ally that leaves play to its owner's hand instead of placing it in the discard pile.",
     "name_norm": "Rallying Cry",
     "octgn": "1c6d209d-8ff3-4b81-a03f-e81e132e3b5e",
-    "categories": "Discard Pile"
+    "categories": "Discard Pile, Leaves Play, Valour"
   },
   {
     "name": "Honour Guard",
@@ -7717,7 +7717,7 @@
     "textc": "Response: Exhaust Honour Guard to cancel the first point of damage just dealt to a character.\nValour Response: Exhaust and discard Honour Guard to cancel up to 5 damage just dealt to a character",
     "name_norm": "Honour Guard",
     "octgn": "7a8f5eb3-4c89-4516-974b-812b589cb818",
-    "categories": ""
+    "categories": "Valour"
   },
   {
     "name": "Raven-winged Helm",
@@ -7777,7 +7777,7 @@
     "textc": "Attach to a Hobbit hero. Restricted.\nQuest Action: If attached hero is not committed to the quest, exhaust Hobbit Pony and attached hero to commit attached hero to the quest.",
     "name_norm": "Hobbit Pony",
     "octgn": "ebcb133a-1777-49cf-a7d4-137a65b2c2d5",
-    "categories": ""
+    "categories": "Quest Action"
   },
   {
     "name": "East Road Ranger",
@@ -7865,7 +7865,7 @@
     "textc": "If the active location shares a Trait with a location in the victory display, Rossiel gets +2 Willpower.\n If the attacking enemy shares a Trait with an enemy in the victory display, Rossiel gets +2 Defense.",
     "name_norm": "Rossiel",
     "octgn": "18fea279-cd38-4a5e-b271-b94d4f64eda1",
-    "categories": "Defense Bonus, Willpower Bonus"
+    "categories": "Defense Bonus, Willpower Bonus, Victory Display"
   },
   {
     "name": "Veteran of Osgiliath",
@@ -7971,7 +7971,7 @@
     "textc": "Action: Discard 2 cards from your hand to put Elven Jeweler into play from your hand, under your control.",
     "name_norm": "Elven Jeweler",
     "octgn": "9c42d496-267e-4822-8df4-6fcc7ae4c2d1",
-    "categories": ""
+    "categories": "Discard from Hand"
   },
   {
     "name": "Double Back",
@@ -8009,7 +8009,7 @@
     "textc": "Limit 3 copies of Leave No Trace in the victory display.\nResponse: After a non-unique location is explored, add Leave No Trace to the victory display to add that location to the victory display.",
     "name_norm": "Leave No Trace",
     "octgn": "57658f13-fb9c-4a87-bb05-965a022cc69d",
-    "categories": ""
+    "categories": "Victory Display"
   },
   {
     "name": "Distant Stars",
@@ -8046,7 +8046,7 @@
     "textc": "Reduce the cost to play Keen as Lances by 1 for each card worth no victory points in the victory display.\nAction: Add Keen as Lances to the victory display. Then, choose one: add 2 resources to a hero's resource pool, draw 3 cards, or reduce your threat by 4.",
     "name_norm": "Keen as Lances",
     "octgn": "ede00b4b-15e0-4469-aaf6-ea60c9376898",
-    "categories": "Card Draw, Resource Acceleration, Threat Control"
+    "categories": "Card Draw, Resource Acceleration, Threat Control, Victory Display"
   },
   {
     "name": "Dori",
@@ -8168,7 +8168,7 @@
     "textc": "Attach to a Spirit or Noldor hero. Restricted.\nResponse: After attached hero commits to a quest, discard a card from your hand to place 2 progress on the active location.",
     "name_norm": "Steed of Imladris",
     "octgn": "8741c7a7-be7d-462a-b39a-0c9bfe4042a3",
-    "categories": "Location Control"
+    "categories": "Location Control, Discard from Hand"
   },
   {
     "name": "Fair and Perilous",
@@ -8228,7 +8228,7 @@
     "textc": "Limit 3 copies of None Return in the victory display.\nResponse: After a non-unique enemy is destroyed, add None Return to the victory display to add that enemy to the victory display.",
     "name_norm": "None Return",
     "octgn": "6cf22f3e-29bd-4bbb-8459-92b7b4bc6b02",
-    "categories": ""
+    "categories": "Victory Display"
   },
   {
     "name": "Hope Rekindled",
@@ -8247,7 +8247,7 @@
     "textc": "Action: Reduce the cost of the next event that has a Valour trigger you play this phase by 2.\nValour Action: Search the top 10 cards of your deck for an event that has a Valour trigger and add it to your hand. Shuffle your deck.",
     "name_norm": "Hope Rekindled",
     "octgn": "809470ac-05c2-4578-9556-8c64b84d4619",
-    "categories": "Card Search"
+    "categories": "Card Search, Valour"
   },
   {
     "name": "Erestor",
@@ -8269,7 +8269,7 @@
     "textc": "Draw 3 additional cards at the beginning of the resource phase. \nAt the end of the round, discard all cards in your hand.",
     "name_norm": "Erestor",
     "octgn": "b188f729-0314-4664-95a0-7f93f4d44133",
-    "categories": "Card Draw"
+    "categories": "Card Draw, Discard from Hand"
   },
   {
     "name": "Reinforcements",
@@ -8287,7 +8287,7 @@
     "textc": "You must spend resources from 3 different heroes' resource pools to play this card. \nAction: The players, as a group, can put up to 2 allies into play from their hands. Each of these allies may enter play under any player's control. At the end of the phase, return each of those allies that are still in play to their owners' hands.",
     "name_norm": "Reinforcements",
     "octgn": "b9339072-5665-45c7-a2ca-a8c844c5762d",
-    "categories": ""
+    "categories": "Mustering"
   },
   {
     "name": "Send for Aid",
@@ -8324,7 +8324,7 @@
     "textc": "Attach to a Noldor or Silvan hero. Restricted. \nAction: Discard a card from your hand to give attached hero +1 Attack until the end of the phase. Limit 3 times per phase.",
     "name_norm": "Elven Spear",
     "octgn": "6ba569dd-92d4-4de4-bfa4-385e2d50eddb",
-    "categories": "Attack Bonus"
+    "categories": "Attack Bonus, Discard from Hand"
   },
   {
     "name": "Horn's Cry",
@@ -8342,7 +8342,7 @@
     "textc": "Action: All enemies get -1 Attack until the end of the phase. \nValour Action: Choose a player. Each enemy engaged with that player gets -3 Attack until the end of the phase.",
     "name_norm": "Horn's Cry",
     "octgn": "7d906063-149f-4b7d-b271-e1532afea7c0",
-    "categories": ""
+    "categories": "Valour"
   },
   {
     "name": "Galadhrim Weaver",
@@ -8382,7 +8382,7 @@
     "textc": "Attach to a Spirit hero. Restricted. \nResponse: After a card is discarded from your hand, exhaust Silver Harp to return that card to your hand.",
     "name_norm": "Silver Harp",
     "octgn": "41b56fc4-6ecd-4c9a-80d4-3074c267e823",
-    "categories": ""
+    "categories": "Discard from Hand"
   },
   {
     "name": "Galdor of the Havens",
@@ -8404,7 +8404,7 @@
     "textc": "Response: After 1 or more cards are discarded from your hand, draw 1 card. Limit once per round.",
     "name_norm": "Galdor of the Havens",
     "octgn": "608ac037-89dd-4aac-8b6d-057bd0fa7507",
-    "categories": "Card Draw"
+    "categories": "Card Draw, Discard from Hand"
   },
   {
     "name": "The Door is Closed!",
@@ -8422,7 +8422,7 @@
     "textc": "Response: After an encounter card is revealed from the encounter deck, cancel its effects and discard it if there is a card with the same title in the victory display.",
     "name_norm": "The Door is Closed",
     "octgn": "f9f464e9-188c-42aa-bbea-b325a6d0f16d",
-    "categories": "Encounter Control"
+    "categories": "Encounter Control, Victory Display"
   },
   {
     "name": "Elf-friend",
@@ -8502,7 +8502,7 @@
     "textc": "Planning Action: Until the end of the round, players do not raise their threat from questing unsuccessfully.\nValour Planning Action: Raise each player's threat by 2 to skip the quest phase this round.",
     "name_norm": "Doom Hangs Still",
     "octgn": "c48b1c7f-f3df-4e5c-ad63-a68efc66c02c",
-    "categories": ""
+    "categories": "Valour"
   },
   {
     "name": "Beechbone",
@@ -8542,7 +8542,7 @@
     "textc": "Action: Choose and ready a sentinel character.\nValour Action: Ready all sentinel characters.",
     "name_norm": "Hold Your Ground",
     "octgn": "8588e98f-1aaf-4e90-95b9-48b76c0fc4be",
-    "categories": "Readying"
+    "categories": "Readying, Valour"
   },
   {
     "name": "Lindir",
@@ -8658,7 +8658,7 @@
     "textc": "Action: Discard a card from your hand to add 1 resource to a Noldor hero's resource pool, or to Aragorn's resource pool. (Limit once per round.)",
     "name_norm": "Arwen Undomiel",
     "octgn": "21f0ac18-21ea-44b7-b67b-4d1c5baaae0f",
-    "categories": "Resource Acceleration"
+    "categories": "Resource Acceleration, Discard from Hand"
   },
   {
     "name": "\u00c9othain",
@@ -8738,7 +8738,7 @@
     "textc": "Action: Choose a hero. Until the end of the phase, the chose hero does not exhaust to attack or defend.\nValour Action: Choose a player. Until the end of the phase, each of that player's heroes do not exhaust to attack or defend.",
     "name_norm": "Hour of Wrath",
     "octgn": "f88c0606-5076-4df7-beed-a7182af0dece",
-    "categories": ""
+    "categories": "Valour"
   },
   {
     "name": "Elven-light",
@@ -8854,7 +8854,7 @@
     "textc": "Draw 1 additional card at the beginning of the resource phase.\nForced: After drawing cards at the beginning of the resource phase, choose and discard 1 of those cards.",
     "name_norm": "Cirdan the Shipwright",
     "octgn": "76ee3df4-3ebe-4d2d-9d7f-a0bbe759358a",
-    "categories": "Card Draw"
+    "categories": "Card Draw, Discard from Hand"
   },
   {
     "name": "Galdor of the Havens",
@@ -8876,7 +8876,7 @@
     "textc": "Response: After drawing your setup hand, instead of taking a mulligan, you may discard any number of cards from your hand. Then, draw that many cards.\nAction: If you have no cards in your hand, draw 6 cards. (Limit once per game.)",
     "name_norm": "Galdor of the Havens",
     "octgn": "52e217a6-ddc0-4082-9ec2-09d92e8c25c7",
-    "categories": "Card Draw"
+    "categories": "Card Draw, Discard from Hand"
   },
   {
     "name": "Mithlond Sea-watcher",
@@ -8934,7 +8934,7 @@
     "textc": "Attach to a character.\nQuest Action: Discard Grappling Hook and exhaust attached character to commit attached character to the quest, using its Attack instead of its Willpower (or instead of its Defense if the current quest has the siege keyword).",
     "name_norm": "Grappling Hook",
     "octgn": "1ccd4cc5-9e8a-41ea-b897-61e47bba5ae6",
-    "categories": ""
+    "categories": "Quest Action"
   },
   {
     "name": "Warden of the Havens",
@@ -9014,7 +9014,7 @@
     "textc": "Lindon Navigator does not exhaust to commit to a quest, and can commit to quests while exhausted.\nForced: After resolving a quest to which Lindon Navigator was committed, either discard it from play or discard 1 card from your hand.",
     "name_norm": "Lindon Navigator",
     "octgn": "a09013c9-0eeb-459d-b7fc-d803d1b0ad1d",
-    "categories": ""
+    "categories": "Discard from Hand"
   },
   {
     "name": "The Evening Star",
@@ -9090,7 +9090,7 @@
     "textc": "Quest Action: Ready a questing character and give that character +1 Willpower until the end of the phase. Resolve that effect again for each copy of Elwing's Flight currently in your discard pile (you may choose different targets).",
     "name_norm": "Elwing's Flight",
     "octgn": "d25dfbee-85c4-42f8-9653-c0536d3e5095",
-    "categories": "Readying, Willpower Bonus, Discard Pile"
+    "categories": "Readying, Willpower Bonus, Discard Pile, Quest Action"
   },
   {
     "name": "To the Sea, to the Sea!",
@@ -9108,7 +9108,7 @@
     "textc": "Attach to a Noldor character.\nAction: Exhaust To the Sea, to the Sea! and discard X cards from your hand to reduce the cost of the next Noldor ally played this phase by X (to a minimum of 1).",
     "name_norm": "To the Sea to the Sea",
     "octgn": "d0180ea8-15e3-4a9a-80c6-dfd6549753c9",
-    "categories": ""
+    "categories": "Discard from Hand"
   },
   {
     "name": "Narya",
@@ -9404,7 +9404,7 @@
     "textc": "Attach to a hero.\nTravel Action: Exhaust Thror's Map to choose a location in the staging area. Make that location the active location. (If there is another active location, return it to the staging area.)",
     "name_norm": "Thror's Map",
     "octgn": "51223bd0-ffd1-11df-a976-1801204c9084",
-    "categories": ""
+    "categories": "Staging Area Control"
   },
   {
     "name": "A Very Good Tale",
@@ -9422,7 +9422,7 @@
     "textc": "Action: Exhaust 2 allies you control to shuffle your deck and discard the top 5 cards. Put up to 2 allies discarded by this effect into play under your control. The total cost of the allies put into play cannot exceed the total cost of the allies exhausted to pay for this effect.",
     "name_norm": "A Very Good Tale",
     "octgn": "51223bd0-ffd1-11df-a976-1801204c9011",
-    "categories": ""
+    "categories": "Mustering"
   },
   {
     "name": "Foe-hammer",
@@ -9478,7 +9478,7 @@
     "textc": "Quest Action: Exhaust a character you control that is not committed to the quest to commit that character to the quest.",
     "name_norm": "Late Adventurer",
     "octgn": "51223bd0-ffd1-11df-a976-1801204c9057",
-    "categories": ""
+    "categories": "Quest Action"
   },
   {
     "name": "Expecting Mischief",
@@ -9753,7 +9753,7 @@
     "textc": "Action: Exhaust a hero you control to shuffle the encounter deck and look at its top card. Place progress tokens on the current quest equal to the revealed card's Threat. Then, put that card back on top of the encounter deck.",
     "name_norm": "Ravens of the Mountain",
     "octgn": "6d442a61-e9e9-4729-bac1-da3d76af6afa",
-    "categories": "Location Control, Encounter Control"
+    "categories": "Location Control, Encounter Control, Encounter Scrying"
   },
   {
     "name": "To me! O my kinsfolk!",
@@ -9772,7 +9772,7 @@
     "textc": "Action: If you control at least 1 Dwarf hero, put a Dwarf ally from your discard pile into play under your control. Put that ally on the bottom of your deck at the end of the phase.",
     "name_norm": "To me O my kinsfolk",
     "octgn": "16ae4f56-d8bb-41b8-a992-1da3b6ec1fdb",
-    "categories": "Discard Pile"
+    "categories": "Discard Pile, Mustering"
   },
   {
     "name": "The Lucky Number",
@@ -9808,7 +9808,7 @@
     "textc": "Restricted.\nAttach to a hero with printed Ranged keyword.\nCombat Action: Choose an enemy in the staging area. Exhaust Great Yew Bow and attached hero to make a ranged attack against that enemy. Declare attached hero as the attacker. No other attackers can be declared for this attack.",
     "name_norm": "Great Yew Bow",
     "octgn": "833664a0-6bab-4e93-b5f1-88e7b6456569",
-    "categories": "Staging Area Attack"
+    "categories": "Staging Area Attack, Staging Area Control"
   },
   {
     "name": "Black Arrow",
@@ -9930,7 +9930,7 @@
     "textc": "Response: After you engage an enemy with a higher engagement cost than your threat, ready Sam Gamgee. He gets +1 Willpower, +1 Attack and +1 Defense until the end of the round.",
     "name_norm": "Sam Gamgee",
     "octgn": "4124136c-8c86-4f86-830c-94c8c76df161",
-    "categories": "Defense Bonus, Willpower Bonus"
+    "categories": "Defense Bonus, Willpower Bonus, Surprise"
   },
   {
     "name": "Merry",
@@ -9976,7 +9976,7 @@
     "textc": "Each enemy in play gets +1 engagement cost for each Hobbit hero you control.\nResponse: After you engage an enemy with an engagement cost higher than your threat, draw a card.",
     "name_norm": "Pippin",
     "octgn": "ce96b767-c569-48b8-a998-d8009b0143c7",
-    "categories": "Card Draw"
+    "categories": "Card Draw, Staging Area Control, Surprise"
   },
   {
     "name": "Fatty Bolger",
@@ -9999,7 +9999,7 @@
     "textc": "Action: Exhaust Fatty Bolger to choose an enemy in the staging area and raise your threat by that enemy's Threat. Until the end of the phase, that enemy does not contribute its Threat. (Limit once per round.)",
     "name_norm": "Fatty Bolger",
     "octgn": "5d75d4dd-7300-43d7-87f2-963271c9c904",
-    "categories": ""
+    "categories": "Staging Area Control"
   },
   {
     "name": "Bill the Pony",
@@ -10068,7 +10068,7 @@
     "textc": "Response: After Farmer Maggot enters play, deal 1 damage to an enemy engaged with you. (Deal 2 damage instead if that enemy's engagement cost is higher than your threat.)",
     "name_norm": "Farmer Maggot",
     "octgn": "9d8ccd1a-48d3-4123-bcca-3c0ab88347ec",
-    "categories": "Direct Damage"
+    "categories": "Direct Damage, Surprise"
   },
   {
     "name": "Halfling Determination",
@@ -10125,7 +10125,7 @@
     "textc": "Lower the cost play Take No Notice by 1 for each Hobbit or Ranger hero you control.\nAction: Add 5 to each enemy's engagement cost until the end of the round.",
     "name_norm": "Take No Notice",
     "octgn": "768ae041-2d15-44a3-a928-62838536a160",
-    "categories": ""
+    "categories": "Staging Area Control"
   },
   {
     "name": "Frodo's Intuition",
@@ -10163,7 +10163,7 @@
     "textc": "Attach to a Hobbit hero. Limit 1 per hero.\nAttached hero gets +2 Defense while defending against an attack by an enemy with an engagement cost higher than your threat.",
     "name_norm": "Hobbit Cloak",
     "octgn": "8e49ea86-375a-472e-b497-16a1164ae27f",
-    "categories": "Defense Bonus"
+    "categories": "Defense Bonus, Surprise"
   },
   {
     "name": "Dagger of Westernesse",
@@ -10182,7 +10182,7 @@
     "textc": "Restricted.\nAttach to a hero.\nAttached hero gets +1 Attack (+2 Attack instead if attacking an enemy with an engagement cost higher than your threat).",
     "name_norm": "Dagger of Westernesse",
     "octgn": "418e6de7-af19-4ea7-bfbe-2a02838c6de4",
-    "categories": "Attack Bonus"
+    "categories": "Attack Bonus, Surprise"
   },
   {
     "name": "Hobbit Pipe",
@@ -10220,7 +10220,7 @@
     "textc": "Attach to the active location. Attached location gets +1 quest point.\nResponse: After attached location leaves play as an explored location, the first player puts 1 ally into play from his hand.",
     "name_norm": "Elf-stone",
     "octgn": "9bb32f2c-29fb-43ba-b7ba-2227b28f7b58",
-    "categories": ""
+    "categories": "Mustering"
   },
   {
     "name": "Frodo Baggins",
@@ -10266,7 +10266,7 @@
     "textc": "Play with the top card of your deck faceup. Once per phase, you may play the top card of your deck as if it was in your hand. When playing a card this way, Gandalf is considered to have the printed Leadership, Lore, Tactics, and Spirit icons.",
     "name_norm": "Gandalf",
     "octgn": "3e055edf-4540-4cf1-94ce-afbf5fc28f82",
-    "categories": ""
+    "categories": "Player Deck Scyring"
   },
   {
     "name": "Galadriel",
@@ -10310,7 +10310,7 @@
     "textc": "Boromir gets +2 Defense while defending against an enemy with an engagement cost higher than your threat.\nResponse: After Boromir takes any amount of damage, ready him.",
     "name_norm": "Boromir",
     "octgn": "36b26228-1c01-4064-a109-d110e00d8e4b",
-    "categories": "Readying, Defense Bonus"
+    "categories": "Readying, Defense Bonus, Surprise"
   },
   {
     "name": "Elrond",
@@ -10412,7 +10412,7 @@
     "textc": "Attach to an Istari character. Limit 1 per character.\nAction: Exhaust Wizard Pipe to exchange a card in your hand with the top card of your deck.",
     "name_norm": "Wizard Pipe",
     "octgn": "428256aa-e03e-4f57-9b38-b8f7b5f17578",
-    "categories": ""
+    "categories": "Player Deck Scyring"
   },
   {
     "name": "Fellowship of the Ring",
@@ -10705,7 +10705,7 @@
     "textc": "Play only if you control Fellowship Aragorn.\nQuest Action: Choose 3 heroes committed to the quest. Ready those heroes. Until the end of the round, each of the chosen heroes gets +1 Willpower, +1 Attack, and +1 Defense.",
     "name_norm": "The Three Hunters",
     "octgn": "4101f975-3317-43f8-ba60-19785e01959c",
-    "categories": "Readying, Defense Bonus, Willpower Bonus"
+    "categories": "Readying, Defense Bonus, Willpower Bonus, Quest Action"
   },
   {
     "name": "Shadowfax",
@@ -10839,7 +10839,7 @@
     "textc": "Response: After Mablung enters play, choose an enemy to get +5 engagement cost until the end of the round. Then, you may engage that enemy, or return it to the staging area.",
     "name_norm": "Mablung",
     "octgn": "a870e2b3-4b9d-46ea-bc37-425fd682f114",
-    "categories": "Resource Acceleration"
+    "categories": "Resource Acceleration, Staging Area Control"
   },
   {
     "name": "Skinbark",
@@ -10904,7 +10904,7 @@
     "textc": "Attach to a Gondor or Hobbit hero. Restricted.\nResponse: After attached hero exhausts to defend an attack from an enemy with engagement cost higher than your threat, exhaust Staff of Lebethron to discard a shadow card from that enemy.",
     "name_norm": "Staff of Lebethron",
     "octgn": "c86cc6c9-8c50-4069-aa85-4d1cc11f796d",
-    "categories": "Shadow Control"
+    "categories": "Shadow Control, Surprise"
   },
   {
     "name": "Ambush",
@@ -10961,7 +10961,7 @@
     "textc": "Response: After a hero you control defends an attack made by an enemy with engagement cost higher than your threat, ready that hero. Until the end of the phase, that hero gets +2 Attack while attacking that enemy.",
     "name_norm": "Taste it Again",
     "octgn": "1ddaf688-b39b-4d15-8058-1e2957e021ca",
-    "categories": "Readying"
+    "categories": "Readying, Surprise"
   },
   {
     "name": "In the Shadows",
@@ -10980,7 +10980,7 @@
     "textc": "Lower the cost to play In the Shadows by 1 for each Hobbit or Ranger hero you control.\nCombat Action: Each enemy engaged with you with an engagement cost higher than your threat gets -1 Attack and -1 Defense until the end of the phase.",
     "name_norm": "In the Shadows",
     "octgn": "f9351811-479d-4bad-a6b3-ac745739b63f",
-    "categories": ""
+    "categories": "Surprise"
   },
   {
     "name": "Speak Your Promise!",
