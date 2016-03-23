@@ -1,14 +1,9 @@
 <div ng-show="tab.isSet(1) || tab.isSet(3) || tab.isSet(4) || tab.isSet(6)">
 
   <!-- display message if the deck is empty -->
-  <div class="panel panel-primary" ng-show="!deck.countHeroes()">
-    <div class="panel-heading">
-      <h3 class="panel-title" style="font-weight:700;">Empty Deck - No cards selected!</h3>
-    </div>
-  </div>
-  <div class="alert alert-info" ng-show="!deck.countHeroes()">
+  <div class="alert" ng-show="!deck.countHeroes()">
     <h4>There's nothing here! ☹</h4>
-    <h4>Add some card's to get started.</h4>
+    <h4>Add some cards to get started.</h4>
     <h4>You can also upload your previously saved decks or import OCTGN files.</h4>
   </div>
 
